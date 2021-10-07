@@ -18,6 +18,7 @@
 		4F712C1F270F1AD200E80077 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F712C1E270F1AD200E80077 /* Roboto-Medium.ttf */; };
 		4F712C21270F1AE800E80077 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F712C20270F1AE800E80077 /* Roboto-Bold.ttf */; };
 		4F712C2C270F1D7500E80077 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C2B270F1D7400E80077 /* UIFont.swift */; };
+		4F712C2E270F1FF500E80077 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C2D270F1FF500E80077 /* UIColor.swift */; };
 		70DA521294D16FB8ED8E7AFD /* RocketsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29877C5A14525B9B800811A6 /* RocketsListViewController.swift */; };
 		7F75BC947FEFA56D80D7D69C /* RocketsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */; };
 		927BF85AA092E444100FD2B6 /* RocketsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF02C8C79208E0F79130BB /* RocketsListPresenter.swift */; };
@@ -71,6 +72,7 @@
 		4F712C1E270F1AD200E80077 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		4F712C20270F1AE800E80077 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		4F712C2B270F1D7400E80077 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		4F712C2D270F1FF500E80077 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		520735A20F621F456A8D6CBB /* RocketsListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouterInput.swift; sourceTree = "<group>"; };
 		54FF02C8C79208E0F79130BB /* RocketsListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListPresenter.swift; sourceTree = "<group>"; };
 		825CE811DED9B620037AAC90 /* RocketsListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListViewInput.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				4F712C2B270F1D7400E80077 /* UIFont.swift */,
+				4F712C2D270F1FF500E80077 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F712BEA27034A1A00E80077 /* ViewController.swift in Sources */,
+				4F712C2E270F1FF500E80077 /* UIColor.swift in Sources */,
 				4F712BE627034A1A00E80077 /* AppDelegate.swift in Sources */,
 				9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */,
 				4F712C1727035A1A00E80077 /* ModuleTrasitionable.swift in Sources */,
