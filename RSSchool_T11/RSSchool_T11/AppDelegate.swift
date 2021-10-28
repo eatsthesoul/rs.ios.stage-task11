@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         
-        let rocketListViewController = RocketsListViewController()
+        let rocketsListConfigurator = RocketsListModuleConfigurator()
+        let rocketListViewController = rocketsListConfigurator.configure()
         let navigationController = UINavigationController(rootViewController: rocketListViewController)
         
         let tabBarController = UITabBarController()

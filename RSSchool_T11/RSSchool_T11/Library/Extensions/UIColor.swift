@@ -17,4 +17,5 @@ extension UIColor {
     static let white = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1)
     static let glaucous = UIColor(red: 111/255, green: 138/255, blue: 183/255, alpha: 1)
     static let cyanProcess = UIColor(red: 0/255, green: 165/255, blue: 224/255, alpha: 1)
+    static let grayishBlue = UIColor(red: 174/255, green: 174/255, blue: 192/255, alpha: 1)
 }
