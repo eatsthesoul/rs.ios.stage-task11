@@ -13,7 +13,7 @@ final class RocketsListPresenterTest: XCTestCase {
 
     // MARK: - Properties
 
-    private var presenter: RocketsListPresenter?
+    private var presenter: RocketListPresenter?
     private var view: MockViewController?
     private var output: MockModuleOutput?
 
@@ -21,7 +21,7 @@ final class RocketsListPresenterTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        presenter = RocketsListPresenter()
+        presenter = RocketListPresenter()
         presenter?.router = MockRouter()
         view = MockViewController()
         presenter?.view = view
@@ -42,10 +42,10 @@ final class RocketsListPresenterTest: XCTestCase {
     private final class MockRouter: RocketsListRouterInput {
     }
 
-    private final class MockViewController: RocketsListViewInput {
+    private final class MockViewController: RocketListViewInput {
     }
 
-    private final class MockModuleOutput: RocketsListModuleOutput {
+    private final class MockModuleOutput: RocketListModuleOutput {
     }
 
 }

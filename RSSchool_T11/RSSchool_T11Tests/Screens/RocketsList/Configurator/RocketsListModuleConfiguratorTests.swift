@@ -14,7 +14,7 @@ final class RocketsListModuleConfiguratorTests: XCTestCase {
 	// MARK: - Main tests
 
     func testThatViewControllerLoadsCorrectly() {
-        if UIStoryboard(name: String(describing: RocketsListViewController.self),
+        if UIStoryboard(name: String(describing: RocketListViewController.self),
                         bundle: Bundle.main).instantiateInitialViewController() == nil {
             XCTFail("Can't load RocketsListViewController from storyboard, check that controller is initial view controller")
         }
@@ -26,9 +26,9 @@ final class RocketsListModuleConfiguratorTests: XCTestCase {
 
         // then
         XCTAssertNotNil(viewController.output, "RocketsListViewController is nil after configuration")
-        XCTAssertTrue(viewController.output is RocketsListPresenter, "output is not RocketsListPresenter")
+        XCTAssertTrue(viewController.output is RocketListPresenter, "output is not RocketsListPresenter")
 
-        guard let presenter: RocketsListPresenter = viewController.output as? RocketsListPresenter else {
+        guard let presenter: RocketListPresenter = viewController.output as? RocketListPresenter else {
             XCTFail("Cannot assign viewController.output as RocketsListPresenter")
             return
         }
@@ -42,7 +42,7 @@ final class RocketsListModuleConfiguratorTests: XCTestCase {
             return
         }
 
-        XCTAssertTrue(router.view is RocketsListViewController, "view in router is not RocketsListViewController")
+        XCTAssertTrue(router.view is RocketListViewController, "view in router is not RocketsListViewController")
     }
 
 }

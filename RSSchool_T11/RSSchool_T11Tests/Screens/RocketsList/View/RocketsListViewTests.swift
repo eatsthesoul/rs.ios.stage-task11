@@ -13,14 +13,14 @@ final class RocketsListViewTests: XCTestCase {
 
     // MARK: - Properties
 
-    private var view: RocketsListViewController?
+    private var view: RocketListViewController?
     private var output: RocketsListViewOutputMock?
 
     // MARK: - XCTestCase
 
     override func setUp() {
         super.setUp()
-        view = RocketsListViewController()
+        view = RocketListViewController()
         output = RocketsListViewOutputMock()
         view?.output = output
     }
@@ -35,7 +35,7 @@ final class RocketsListViewTests: XCTestCase {
 
     // MARK: - Mocks
 
-    private final class RocketsListViewOutputMock: RocketsListViewOutput {
+    private final class RocketsListViewOutputMock: RocketListViewOutput {
     }
 
 }
