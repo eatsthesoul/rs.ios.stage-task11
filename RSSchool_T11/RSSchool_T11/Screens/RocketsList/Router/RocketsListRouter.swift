@@ -15,5 +15,14 @@ final class RocketsListRouter: RocketsListRouterInput {
     weak var view: ModuleTransitionable?
 
 	// MARK: - RocketsListRouterInput
+    
+    func showRocketDetailModule(for rocket: Rocket) {
+        let rocketDetailConfigurator = RocketDetailModuleConfigurator()
+        let rocketDetailViewController = rocketDetailConfigurator.configure()
+        view?.push(module: rocketDetailViewController, animated: true)
+//        if let view = view as? RocketListViewController {
+//            view.push
+//        }
+    }
 
 }

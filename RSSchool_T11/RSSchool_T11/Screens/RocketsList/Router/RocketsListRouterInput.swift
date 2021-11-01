@@ -9,4 +9,5 @@
 import Foundation
 
 protocol RocketsListRouterInput {
+    func showRocketDetailModule(for rocket: Rocket)
 }

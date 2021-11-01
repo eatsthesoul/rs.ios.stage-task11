@@ -36,7 +36,7 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     }
     
     func didSelectRocket(with index: Int) {
-        
+        router?.showRocketDetailModule(for: rockets[index])
     }
     
     func didEndDisplayingRocket(_ index: Int) {

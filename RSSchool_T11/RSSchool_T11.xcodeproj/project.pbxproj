@@ -31,17 +31,26 @@
 		4F712C2E270F1FF500E80077 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C2D270F1FF500E80077 /* UIColor.swift */; };
 		4F712C362710520E00E80077 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C352710520E00E80077 /* Rocket.swift */; };
 		70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29877C5A14525B9B800811A6 /* RocketListViewController.swift */; };
+		72F5315AAFD32CE6AA456335 /* RocketDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED9C5DE9FD24E604F78BBB /* RocketDetailModuleInput.swift */; };
+		7DB88B39337FDCEA14FADEF5 /* RocketDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */; };
 		7F75BC947FEFA56D80D7D69C /* RocketsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */; };
 		927BF85AA092E444100FD2B6 /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF02C8C79208E0F79130BB /* RocketListPresenter.swift */; };
+		940D29ADD142E7914589C539 /* RocketDetailModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8DF894B65EB9F76542B78 /* RocketDetailModuleOutput.swift */; };
 		9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0DBC7B08C8286C1B21A981 /* RocketsListModuleConfigurator.swift */; };
 		A004031974AB3C3134C5D11C /* RocketsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345DFD50989D1F465BF373A /* RocketsListRouter.swift */; };
+		A0C1E7FE178A89BFB7FB0D67 /* RocketDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BF304E7E681E123829C99 /* RocketDetailViewOutput.swift */; };
 		A200569F0EA3214DBA4CAA00 /* RocketListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C677C3B75E2CB7353DFD3E /* RocketListViewOutput.swift */; };
+		A5D57433A121F0EC8D847ECD /* RocketDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB107241E124D5843135BFD /* RocketDetailViewInput.swift */; };
 		A9EB7E5D9E17FA22EBAF9BAB /* RocketsListModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1A4AB347DCAA2FDC610CE /* RocketsListModuleConfiguratorTests.swift */; };
+		B2C8BE64E9BAAD722C2B721C /* RocketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC312867C96B915CFEAC1AFA /* RocketDetailViewController.swift */; };
+		B4B68FA613C71028B6F87139 /* RocketDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */; };
 		B6083F25899A97EC4C7D444D /* RocketsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9674A8199796D252BB6D70E /* RocketsListPresenterTests.swift */; };
 		BC536AFB9C432C5F0982EA14 /* RocketsListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C35449A24093A1DDE7896C /* RocketsListViewTests.swift */; };
 		C00B0C4488DE5FFBA8037FB1 /* RocketsListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520735A20F621F456A8D6CBB /* RocketsListRouterInput.swift */; };
+		F11FFF92566D4E6F727693FB /* RocketDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953F51CEAA2268E5C92C6A8 /* RocketDetailPresenter.swift */; };
 		F29419DA48BCF6B4122DF5E1 /* RocketListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE811DED9B620037AAC90 /* RocketListViewInput.swift */; };
 		F764FF70883C33CA247E8B40 /* RocketListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D848C6B427F1A41BDEBF130 /* RocketListModuleOutput.swift */; };
+		FCFB66B3F8E9014D2E1938A7 /* RocketDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailModuleConfigurator.swift; sourceTree = "<group>"; };
+		0EED9C5DE9FD24E604F78BBB /* RocketDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailModuleInput.swift; sourceTree = "<group>"; };
+		254BF304E7E681E123829C99 /* RocketDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewOutput.swift; sourceTree = "<group>"; };
 		29877C5A14525B9B800811A6 /* RocketListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
 		3D848C6B427F1A41BDEBF130 /* RocketListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListModuleOutput.swift; sourceTree = "<group>"; };
 		3DF1A4AB347DCAA2FDC610CE /* RocketsListModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListModuleConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -97,11 +109,17 @@
 		4F712C352710520E00E80077 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		520735A20F621F456A8D6CBB /* RocketsListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouterInput.swift; sourceTree = "<group>"; };
 		54FF02C8C79208E0F79130BB /* RocketListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListPresenter.swift; sourceTree = "<group>"; };
+		70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailRouterInput.swift; sourceTree = "<group>"; };
 		825CE811DED9B620037AAC90 /* RocketListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListViewInput.swift; sourceTree = "<group>"; };
 		8345DFD50989D1F465BF373A /* RocketsListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouter.swift; sourceTree = "<group>"; };
 		9E0DBC7B08C8286C1B21A981 /* RocketsListModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListModuleConfigurator.swift; sourceTree = "<group>"; };
+		A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailRouter.swift; sourceTree = "<group>"; };
+		A953F51CEAA2268E5C92C6A8 /* RocketDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailPresenter.swift; sourceTree = "<group>"; };
 		B9674A8199796D252BB6D70E /* RocketsListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListPresenterTests.swift; sourceTree = "<group>"; };
 		BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouterTests.swift; sourceTree = "<group>"; };
+		CFB107241E124D5843135BFD /* RocketDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewInput.swift; sourceTree = "<group>"; };
+		E7B8DF894B65EB9F76542B78 /* RocketDetailModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailModuleOutput.swift; sourceTree = "<group>"; };
+		EC312867C96B915CFEAC1AFA /* RocketDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewController.swift; sourceTree = "<group>"; };
 		F9C35449A24093A1DDE7896C /* RocketsListViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +152,15 @@
 			isa = PBXGroup;
 			children = (
 				BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		078F533CBE2E4145136D42D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */,
+				70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -355,10 +382,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4FFD1BA9273014A700A5E347 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0EED9C5DE9FD24E604F78BBB /* RocketDetailModuleInput.swift */,
+				E7B8DF894B65EB9F76542B78 /* RocketDetailModuleOutput.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4FFD1BAA273014BB00A5E347 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CFB107241E124D5843135BFD /* RocketDetailViewInput.swift */,
+				254BF304E7E681E123829C99 /* RocketDetailViewOutput.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		53AB295CB96F5D8C43AB7EE3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				305B542082A89ECB4CBC090F /* RocketsList */,
+				8B6DB3D1E6C6D2D3010C8432 /* RocketDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -382,12 +428,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8475FB477F2F5FF0151EA9CA /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		8B6DB3D1E6C6D2D3010C8432 /* RocketDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8475FB477F2F5FF0151EA9CA /* Configurator */,
+				078F533CBE2E4145136D42D9 /* Router */,
+				9C329A6E31B1BF6C9982DFDB /* Presenter */,
+				F2F971B5287E6BF4CCE3B3FF /* View */,
+			);
+			path = RocketDetail;
+			sourceTree = "<group>";
+		};
+		9C329A6E31B1BF6C9982DFDB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD1BA9273014A700A5E347 /* Protocols */,
+				A953F51CEAA2268E5C92C6A8 /* RocketDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		9FB365B53DACBA251AB0D667 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				F9889940BC1A24B776A2EB49 /* RocketsList */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		F2F971B5287E6BF4CCE3B3FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD1BAA273014BB00A5E347 /* Protocols */,
+				EC312867C96B915CFEAC1AFA /* RocketDetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F4015398DA38644A2C84F259 /* Configurator */ = {
@@ -573,6 +656,15 @@
 				70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */,
 				F29419DA48BCF6B4122DF5E1 /* RocketListViewInput.swift in Sources */,
 				A200569F0EA3214DBA4CAA00 /* RocketListViewOutput.swift in Sources */,
+				FCFB66B3F8E9014D2E1938A7 /* RocketDetailModuleConfigurator.swift in Sources */,
+				7DB88B39337FDCEA14FADEF5 /* RocketDetailRouter.swift in Sources */,
+				B4B68FA613C71028B6F87139 /* RocketDetailRouterInput.swift in Sources */,
+				F11FFF92566D4E6F727693FB /* RocketDetailPresenter.swift in Sources */,
+				72F5315AAFD32CE6AA456335 /* RocketDetailModuleInput.swift in Sources */,
+				940D29ADD142E7914589C539 /* RocketDetailModuleOutput.swift in Sources */,
+				B2C8BE64E9BAAD722C2B721C /* RocketDetailViewController.swift in Sources */,
+				A5D57433A121F0EC8D847ECD /* RocketDetailViewInput.swift in Sources */,
+				A0C1E7FE178A89BFB7FB0D67 /* RocketDetailViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
