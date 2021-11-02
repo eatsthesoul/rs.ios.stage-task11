@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +32,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc4-ol-CzT">
                         <rect key="frame" x="20" y="295.5" width="141.5" height="28.5"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
-                        <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" name="Smoky Black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Hb-bM-04M">
@@ -43,13 +44,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQq-Jw-Ajd">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Smoky Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 1, 1990" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dg-cn-6QK">
                                         <rect key="frame" x="0.0" y="16.5" width="101.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.41960784313725491" green="0.44313725490196076" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Slate Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -60,13 +61,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU9-zL-W8Y">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Smoky Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-uo-noR">
                                         <rect key="frame" x="0.0" y="16.5" width="77" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.41960784309999999" green="0.4431372549" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Slate Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -77,13 +78,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF8-5g-c63">
                                         <rect key="frame" x="0.0" y="0.0" width="53.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Smoky Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKt-vw-MdA">
                                         <rect key="frame" x="0.0" y="16.5" width="53.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.41960784309999999" green="0.4431372549" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="Slate Gray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -117,5 +118,11 @@
     </objects>
     <resources>
         <image name="spaceXTemplate" width="1024" height="1024"/>
+        <namedColor name="Slate Gray">
+            <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Smoky Black">
+            <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
