@@ -588,6 +588,7 @@
                     <color key="backgroundColor" name="Queen Blue"/>
                     <constraints>
                         <constraint firstItem="cSu-uh-0ol" firstAttribute="top" secondItem="WMu-Me-YrA" secondAttribute="top" id="3Cs-um-ECe"/>
+                        <constraint firstItem="cSu-uh-0ol" firstAttribute="width" secondItem="WMu-Me-YrA" secondAttribute="width" id="GWT-Uj-hj8"/>
                         <constraint firstAttribute="trailing" secondItem="cSu-uh-0ol" secondAttribute="trailing" id="fEx-xF-tSU"/>
                         <constraint firstItem="cSu-uh-0ol" firstAttribute="leading" secondItem="WMu-Me-YrA" secondAttribute="leading" id="lDc-tl-0ar"/>
                         <constraint firstAttribute="bottom" secondItem="cSu-uh-0ol" secondAttribute="bottom" id="sMx-ZX-QGx"/>
