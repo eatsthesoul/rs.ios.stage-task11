@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RocketListCell: UICollectionViewCell {
+class RocketListCell: UICollectionViewCell, RocketDataDisplayable {
     
     static let reuseIdentifier = "RocketCell"
 
@@ -34,41 +34,8 @@ class RocketListCell: UICollectionViewCell {
     
     func configure(with rocket: Rocket) {
         rocketNameLabel.text = rocket.name
-        firstLaunchLabel.text = buildLaunchString(for: rocket.firstLaunch)
-        launchCostLabel.text = buildCostString(for: rocket.launchCost)
-        successLabel.text = buildSuccessString(for: rocket.success)
-    }
-}
-
-
-//MARK: - Private methods
-
-private extension RocketListCell {
-    
-    func buildCostString(for initial: Double?) -> String? {
-        let formatter = NumberFormatter()
-        formatter.currencySymbol = ""
-        formatter.currencyDecimalSeparator = ""
-        formatter.maximumFractionDigits = 0
-        formatter.minimumFractionDigits = 0
-        formatter.currencyGroupingSeparator = ""
-        
-        return "\(formatter.string(from: NSNumber(value: initial ?? .zero)) ?? "")$"
-    }
-    
-    func buildSuccessString(for initial: Double?) -> String? {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .percent
-        let value = NSNumber(value: Double(initial ?? 0) / 100)
-        return formatter.string(from: value)
-    }
-    
-    func buildLaunchString(for initial: Date?) -> String? {
-        guard let date = initial else {
-            return nil
-        }
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
-        return formatter.string(from: date)
+        firstLaunchLabel.text = buildLaunchString(for: rocket)
+        launchCostLabel.text = buildCostString(for: rocket)
+        successLabel.text = buildSuccessString(for: rocket)
     }
 }

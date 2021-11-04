@@ -31,6 +31,7 @@
 		4F712C2E270F1FF500E80077 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C2D270F1FF500E80077 /* UIColor.swift */; };
 		4F712C362710520E00E80077 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C352710520E00E80077 /* Rocket.swift */; };
 		4FD08B152731890E00991150 /* RocketDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD08B142731890E00991150 /* RocketDetailViewController.xib */; };
+		4FD08B172733EB8C00991150 /* RocketDataDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD08B162733EB8C00991150 /* RocketDataDisplayable.swift */; };
 		70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29877C5A14525B9B800811A6 /* RocketListViewController.swift */; };
 		72F5315AAFD32CE6AA456335 /* RocketDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED9C5DE9FD24E604F78BBB /* RocketDetailModuleInput.swift */; };
 		7DB88B39337FDCEA14FADEF5 /* RocketDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */; };
@@ -109,6 +110,7 @@
 		4F712C2D270F1FF500E80077 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4F712C352710520E00E80077 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		4FD08B142731890E00991150 /* RocketDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketDetailViewController.xib; sourceTree = "<group>"; };
+		4FD08B162733EB8C00991150 /* RocketDataDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDataDisplayable.swift; sourceTree = "<group>"; };
 		520735A20F621F456A8D6CBB /* RocketsListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouterInput.swift; sourceTree = "<group>"; };
 		54FF02C8C79208E0F79130BB /* RocketListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListPresenter.swift; sourceTree = "<group>"; };
 		70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailRouterInput.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				4F0BC9AB27149D8000FB0FA0 /* LoaderDisplayable.swift */,
+				4FD08B162733EB8C00991150 /* RocketDataDisplayable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				4F0BC9A92710ADA700FB0FA0 /* Layout.swift in Sources */,
 				4F712C2C270F1D7500E80077 /* UIFont.swift in Sources */,
 				70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */,
+				4FD08B172733EB8C00991150 /* RocketDataDisplayable.swift in Sources */,
 				F29419DA48BCF6B4122DF5E1 /* RocketListViewInput.swift in Sources */,
 				A200569F0EA3214DBA4CAA00 /* RocketListViewOutput.swift in Sources */,
 				FCFB66B3F8E9014D2E1938A7 /* RocketDetailModuleConfigurator.swift in Sources */,
