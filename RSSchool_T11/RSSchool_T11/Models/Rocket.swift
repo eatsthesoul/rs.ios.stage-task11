@@ -18,9 +18,9 @@ struct Rocket: Codable {
     let diameter: RocketSize?
     let images: [String]?
     let engines: RocketEngines?
-    let firstStage: FirstRocketStage
-    let secondStage: SecondRocketStage
-    let landingLegs: LandingLegs
+    let firstStage: FirstRocketStage?
+    let secondStage: SecondRocketStage?
+    let landingLegs: LandingLegs?
     let wikipedia: String?
     
     enum CodingKeys: String, CodingKey {

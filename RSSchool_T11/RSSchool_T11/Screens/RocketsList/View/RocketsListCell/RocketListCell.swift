@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RocketListCell: UICollectionViewCell, RocketDataDisplayable {
+class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
     
     static let reuseIdentifier = "RocketCell"
 
@@ -33,9 +33,14 @@ class RocketListCell: UICollectionViewCell, RocketDataDisplayable {
     }
     
     func configure(with rocket: Rocket) {
-        rocketNameLabel.text = rocket.name
-        firstLaunchLabel.text = buildLaunchString(for: rocket)
-        launchCostLabel.text = buildCostString(for: rocket)
-        successLabel.text = buildSuccessString(for: rocket)
+        
+        let launchDateString = buildDateString(for: rocket.firstLaunch)
+        setupLabelStackData([firstLaunchLabel], with: launchDateString)
+        
+        let launchCostString = buildCostString(for: rocket.launchCost)
+        setupLabelStackData([launchCostLabel], with: launchCostString)
+        
+        let successString = buildSuccessString(for: rocket.success)
+        setupLabelStackData([successLabel], with: successString)
     }
 }
