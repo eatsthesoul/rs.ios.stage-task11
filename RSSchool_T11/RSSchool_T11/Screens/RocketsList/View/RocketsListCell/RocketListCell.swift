@@ -34,6 +34,8 @@ class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
     
     func configure(with rocket: Rocket) {
         
+        setupLabelStackData([rocketNameLabel], with: rocket.name)
+        
         let launchDateString = buildDateString(for: rocket.firstLaunch)
         setupLabelStackData([firstLaunchLabel], with: launchDateString)
         
