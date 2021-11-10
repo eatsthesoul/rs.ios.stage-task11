@@ -45,22 +45,31 @@ extension ModelDataStringConvertable {
     }
     
     func buildMassString(for initial: Mass?) -> String? {
-        initial?.kg != nil ? "\(initial!.kg!) kg" : nil
+        initial?.kg != nil ? "\(initial!.kg!.clean) kg" : nil
     }
     
     func buildSizeString(for initial: RocketSize?) -> String? {
-        initial?.meters != nil ? "\(initial!.meters!) meters" : nil
+        initial?.meters != nil ? "\(initial!.meters!.clean) meters" : nil
     }
     
     func buildThrustLevelString(for initial: Thrust?) -> String? {
-        initial?.kN != nil ? "\(initial!.kN!) kN" : nil
+        initial?.kN != nil ? "\(initial!.kN!.clean) kN" : nil
     }
     
     func buildFuelAmountString(for initial: Double?) -> String? {
-        initial != nil ? "\(initial!) tons" : nil
+        initial != nil ? "\(initial!.clean) tons" : nil
     }
     
     func buildBurningTimeString(for initial: Double?) -> String? {
-        initial != nil ? "\(initial!) seconds" : nil
+        initial != nil ? "\(initial!.clean) seconds" : nil
+    }
+    
+    func buildAmountString(for initial: Int?) -> String? {
+        initial != nil ? "\(initial!)" : nil
+    }
+    
+    func buildBoolString(for initial: Bool?) -> String? {
+        guard let initial = initial else { return nil }
+        return initial ? "Yes" : "No"
     }
 }
