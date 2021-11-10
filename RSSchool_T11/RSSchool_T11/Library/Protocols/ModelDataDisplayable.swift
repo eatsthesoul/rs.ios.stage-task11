@@ -17,7 +17,7 @@ extension ModelDataDisplayable {
     
     func setupLabelStackData(_ labels: [UILabel], with string: String?) {
         
-        guard let string = string else {
+        guard let string = string, !string.isEmpty else {
             //check if label stack is stack view
             if let superview = labels[0].superview as? UIStackView {
                 if superview.tag == 345 {
