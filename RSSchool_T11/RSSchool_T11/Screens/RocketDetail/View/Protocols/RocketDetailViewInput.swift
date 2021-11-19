@@ -6,6 +6,9 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol RocketDetailViewInput: AnyObject {
+import UIKit
 
+protocol RocketDetailViewInput: AnyObject {
+    func setup(with rocket: Rocket)
+    func setupRocketCoverImage(_ image: UIImage)
 }

@@ -6,6 +6,10 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol RocketDetailViewOutput {
+import UIKit
 
+protocol RocketDetailViewOutput: UICollectionViewDataSource {
+    func viewDidLoad()
+    func didSelectRocketImage(with index: Int)
+    func didEndDisplayingRocketImage(_ index: Int)
 }

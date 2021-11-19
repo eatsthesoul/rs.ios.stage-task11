@@ -12,7 +12,7 @@ final class RocketDetailModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure(output: RocketDetailModuleOutput? = nil) -> RocketDetailViewController {
+    func configure(with rocket: Rocket, output: RocketDetailModuleOutput? = nil) -> RocketDetailViewController {
         let view = RocketDetailViewController(nibName: "RocketDetailViewController", bundle: nil)
         let presenter = RocketDetailPresenter()
         let router = RocketDetailRouter()
@@ -21,6 +21,8 @@ final class RocketDetailModuleConfigurator {
         presenter.router = router
         presenter.output = output
         router.view = view
+        
+        presenter.rocket = rocket
         view.output = presenter
 
         return view

@@ -13,7 +13,6 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
     // MARK: - Properties
 
     var output: RocketListViewOutput?
-//    var collectionViewAdapter: RocketListCollectionViewAdapter?
     
     //MARK: - Private Properties
     

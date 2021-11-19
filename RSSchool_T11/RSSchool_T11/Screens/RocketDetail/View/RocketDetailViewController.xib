@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,48 +19,77 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RocketDetailViewController" customModule="RSSchool_T11" customModuleProvider="target">
             <connections>
+                <outlet property="coverImage" destination="lpU-uL-RM2" id="kaY-UY-2i3"/>
                 <outlet property="descriptionLabel" destination="9Cs-II-SOg" id="izh-qe-0zM"/>
+                <outlet property="descriptionTitleLabel" destination="TDZ-1K-jyw" id="Q5h-k0-K6N"/>
                 <outlet property="diameterLabel" destination="FRU-V8-3oC" id="a4G-DE-XMK"/>
+                <outlet property="diameterTitleLabel" destination="l85-Kf-IgI" id="gOl-Dd-5vd"/>
                 <outlet property="enginesAmountLabel" destination="Aw1-yg-7rd" id="btF-uy-Qmg"/>
+                <outlet property="enginesAmountTitleLabel" destination="qSX-VA-4p6" id="cwc-cV-4C4"/>
                 <outlet property="enginesLayoutLabel" destination="w7G-c4-UPk" id="bLt-YE-ygK"/>
+                <outlet property="enginesLayoutTitleLabel" destination="AcT-xE-x7d" id="3P4-4J-nK8"/>
                 <outlet property="enginesPropellant1Label" destination="vuG-fp-j83" id="YLk-iX-eO5"/>
+                <outlet property="enginesPropellant1TitleLabel" destination="lnT-y4-JWC" id="aTE-Qx-bzk"/>
                 <outlet property="enginesPropellant2Label" destination="GHh-Ke-SGd" id="Stw-ME-oXv"/>
+                <outlet property="enginesPropellant2TitleLabel" destination="1aY-74-nZs" id="FKH-e2-xtt"/>
                 <outlet property="enginesTypeLabel" destination="hFc-w3-mzz" id="3nM-by-nEa"/>
+                <outlet property="enginesTypeTitleLabel" destination="gYN-6J-xcZ" id="jtW-yV-TBs"/>
                 <outlet property="enginesVersionLabel" destination="5Yi-0k-Ycm" id="fq5-hz-blO"/>
+                <outlet property="enginesVersionTitleLabel" destination="cFR-d4-OZ4" id="FeE-et-RA9"/>
                 <outlet property="firstLaunchLabel" destination="6eC-vm-95x" id="n1H-Q1-hqV"/>
+                <outlet property="firstLaunchTitleLabel" destination="ZmG-z7-SjI" id="F5L-x4-8zz"/>
                 <outlet property="firstStageBurningTimeLabel" destination="aeB-e2-dj4" id="gNC-IX-CwR"/>
+                <outlet property="firstStageBurningTimeTitleLabel" destination="jQw-Ou-DKh" id="kvx-27-rcc"/>
                 <outlet property="firstStageEnginesAmountLabel" destination="XSF-eZ-h1v" id="dM1-Zr-5fS"/>
+                <outlet property="firstStageEnginesAmountTitleLabel" destination="kgi-QP-PYt" id="KYh-LD-hhq"/>
                 <outlet property="firstStageFuelAmountLabel" destination="0qE-CH-Lb9" id="g2v-lQ-Fdo"/>
+                <outlet property="firstStageFuelAmountTitleLabel" destination="cJS-MI-eK1" id="Jlf-2W-oUe"/>
                 <outlet property="firstStageReusableLabel" destination="usC-8G-zJN" id="dDC-tX-TV0"/>
+                <outlet property="firstStageReusableTitleLabel" destination="GyE-c6-gaR" id="JfK-2w-HHS"/>
                 <outlet property="firstStageSeaLevelThrustLabel" destination="Gbi-mM-19X" id="VB3-ba-NxQ"/>
+                <outlet property="firstStageSeaLevelThrustTitleLabel" destination="nfo-Kd-9VJ" id="SBk-7P-tga"/>
                 <outlet property="firstStageVacuumThrustLabel" destination="TrO-iJ-Qq1" id="mMe-Bz-ox4"/>
+                <outlet property="firstStageVacuumThrustTitleLabel" destination="AvW-GK-paX" id="f0X-xe-iEF"/>
                 <outlet property="heightLabel" destination="CT0-ha-U92" id="bxa-cD-ogo"/>
+                <outlet property="heightTitleLabel" destination="L4l-I6-s1o" id="9jc-sO-odX"/>
                 <outlet property="landingLegsAmountLabel" destination="xsI-hP-trE" id="Vac-ca-6vP"/>
+                <outlet property="landingLegsAmountTitleLabel" destination="xpd-ms-DTy" id="M8d-c5-xuO"/>
                 <outlet property="landingLegsMaterialLabel" destination="ITt-5A-qAX" id="PrO-ku-EUy"/>
+                <outlet property="landingLegsMaterialTitleLabel" destination="dFo-z6-lAQ" id="J2h-Jk-dCL"/>
                 <outlet property="launchCostLabel" destination="mo3-DG-aSJ" id="6Cc-ev-RAU"/>
+                <outlet property="launchCostTitleLabel" destination="5fB-W7-geA" id="mIE-2C-n0M"/>
                 <outlet property="massLabel" destination="Kby-wm-AS4" id="9os-fC-eLV"/>
+                <outlet property="massTitleLabel" destination="Arn-tF-mbH" id="wrd-se-lxB"/>
                 <outlet property="rocketImagesCollectionView" destination="qsP-bu-WgS" id="5Kg-DS-MGW"/>
+                <outlet property="rocketImagesStackView" destination="liP-k6-70V" id="JT1-A9-Z9T"/>
+                <outlet property="rocketNameLabel" destination="GsM-aT-WnA" id="LjZ-j3-nyf"/>
                 <outlet property="secondStageBurningTimeLabel" destination="ECQ-3x-9qX" id="FRb-87-ZD5"/>
+                <outlet property="secondStageBurningTimeTitleLabel" destination="rWb-tP-dFw" id="rdG-XT-Lw6"/>
                 <outlet property="secondStageEnginesAmountLabel" destination="toM-MH-cjP" id="gm9-F3-7Qn"/>
+                <outlet property="secondStageEnginesAmountTitleLabel" destination="hll-YW-UDk" id="3V5-6U-oZe"/>
                 <outlet property="secondStageFuelAmountLabel" destination="IpA-54-Uhb" id="wJ9-sU-RHV"/>
+                <outlet property="secondStageFuelAmountTitleLabel" destination="WDv-gr-1Jc" id="Vpu-3R-zVn"/>
                 <outlet property="secondStageReusableStageLabel" destination="kml-zy-PsS" id="xQ1-Zw-NPM"/>
+                <outlet property="secondStageReusableStageTitleLabel" destination="XM3-QD-O2f" id="J7b-8b-aew"/>
                 <outlet property="secondStageThrustLabel" destination="h8f-eE-fTW" id="vfc-G9-V7k"/>
+                <outlet property="secondStageThrustTitleLabel" destination="TIf-KW-U93" id="U6g-NA-iVC"/>
                 <outlet property="successLabel" destination="5nm-D9-vzX" id="lG2-iE-NFF"/>
+                <outlet property="successTitleLabel" destination="0ml-iR-fzT" id="LhM-59-Ybb"/>
                 <outlet property="view" destination="DPm-wS-kss" id="w87-L4-66w"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="DPm-wS-kss">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="2036"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="2123"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMu-Me-YrA">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="2036"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="2123"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-uh-0ol" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2026"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2034"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lpU-uL-RM2">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceXTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="lpU-uL-RM2">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="383"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="lpU-uL-RM2" secondAttribute="height" multiplier="414:383" id="C5c-Zh-Ap6"/>
@@ -74,9 +102,9 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PjP-bW-wxY">
-                                    <rect key="frame" x="0.0" y="423" width="414" height="1573"/>
+                                    <rect key="frame" x="0.0" y="423" width="414" height="1581"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-h8-au2">
+                                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-h8-au2">
                                             <rect key="frame" x="20" y="0.0" width="374" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-1K-jyw">
@@ -194,7 +222,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="liP-k6-70V">
-                                            <rect key="frame" x="20" y="367.5" width="374" height="244.5"/>
+                                            <rect key="frame" x="20" y="367.5" width="374" height="252.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pw-4f-9Xg">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -203,13 +231,13 @@
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qsP-bu-WgS">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="196"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qsP-bu-WgS">
+                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="204"/>
+                                                    <color key="backgroundColor" name="Super White"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="196" id="joe-g9-Xxb"/>
+                                                        <constraint firstAttribute="height" constant="204" id="joe-g9-Xxb"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="HnD-rV-pev">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="HnD-rV-pev">
                                                         <size key="itemSize" width="145" height="196"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -219,7 +247,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-sF-LwW">
-                                            <rect key="frame" x="20" y="652" width="374" height="222.5"/>
+                                            <rect key="frame" x="20" y="660" width="374" height="222.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG5-jM-Gxs">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -318,7 +346,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JZT-Ci-ab7">
-                                            <rect key="frame" x="20" y="914.5" width="374" height="222.5"/>
+                                            <rect key="frame" x="20" y="922.5" width="374" height="222.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-yc-ydH">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -417,7 +445,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-6K-xRF">
-                                            <rect key="frame" x="20" y="1177" width="374" height="191"/>
+                                            <rect key="frame" x="20" y="1185" width="374" height="191"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84B-hX-2CG">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -504,7 +532,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jj1-e5-h26">
-                                            <rect key="frame" x="20" y="1408" width="374" height="96.5"/>
+                                            <rect key="frame" x="20" y="1416" width="374" height="96.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landing legs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhL-wH-cSb">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -555,7 +583,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-2j-ssV">
-                                            <rect key="frame" x="20" y="1544.5" width="374" height="28.5"/>
+                                            <rect key="frame" x="20" y="1552.5" width="374" height="28.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSJ-W7-anZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
@@ -570,7 +598,7 @@
                                     <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" name="Queen Blue"/>
+                            <color key="backgroundColor" name="Super White"/>
                             <constraints>
                                 <constraint firstItem="GsM-aT-WnA" firstAttribute="leading" secondItem="lpU-uL-RM2" secondAttribute="leading" constant="20" id="8V3-Tw-Ws1"/>
                                 <constraint firstItem="GsM-aT-WnA" firstAttribute="bottom" secondItem="lpU-uL-RM2" secondAttribute="bottom" constant="-30" id="CtX-w5-DV2"/>
@@ -585,7 +613,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" name="Queen Blue"/>
+                    <color key="backgroundColor" name="Super White"/>
                     <constraints>
                         <constraint firstItem="cSu-uh-0ol" firstAttribute="top" secondItem="WMu-Me-YrA" secondAttribute="top" id="3Cs-um-ECe"/>
                         <constraint firstItem="cSu-uh-0ol" firstAttribute="width" secondItem="WMu-Me-YrA" secondAttribute="width" id="GWT-Uj-hj8"/>
@@ -598,7 +626,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Pbm-Oe-khQ"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="Super White"/>
             <constraints>
                 <constraint firstItem="WMu-Me-YrA" firstAttribute="leading" secondItem="DPm-wS-kss" secondAttribute="leading" id="KDS-gT-Oyn"/>
                 <constraint firstAttribute="trailing" secondItem="WMu-Me-YrA" secondAttribute="trailing" id="Sed-Xm-GDZ"/>
@@ -606,24 +634,19 @@
                 <constraint firstItem="WMu-Me-YrA" firstAttribute="bottom" secondItem="DPm-wS-kss" secondAttribute="bottom" id="qQy-MQ-Bms"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-37.681159420289859" y="20.089285714285712"/>
+            <point key="canvasLocation" x="-37.681159420289859" y="49.21875"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Queen Blue">
-            <color red="0.29699987173080444" green="0.37799996137619019" blue="0.5209999680519104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="spaceXTemplate" width="1024" height="1024"/>
         <namedColor name="Slate Gray">
             <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Smoky Black">
-            <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.075000002980232239" green="0.075000002980232239" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Super White">
-            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

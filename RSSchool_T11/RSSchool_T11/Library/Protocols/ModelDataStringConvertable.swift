@@ -16,7 +16,9 @@ protocol ModelDataStringConvertable {
     func buildSizeString(for initial: RocketSize?) -> String?
     func buildThrustLevelString(for initial: Thrust?) -> String?
     func buildFuelAmountString(for initial: Double?) -> String?
-    
+    func buildBurningTimeString(for initial: Double?) -> String?
+    func buildAmountString(for initial: Int?) -> String?
+    func buildBoolString(for initial: Bool?) -> String?
 }
 
 extension ModelDataStringConvertable {

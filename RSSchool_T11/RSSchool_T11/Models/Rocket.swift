@@ -109,7 +109,12 @@ struct Thrust: Codable {
 }
 
 struct LandingLegs: Codable {
-    let amount: Double?
+    let amount: Int?
     let material: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case amount = "number"
+        case material
+    }
 }
 
