@@ -94,7 +94,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" name="Smoky White"/>
             <constraints>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yFj-2e-aOL" secondAttribute="trailing" id="0NI-3M-IJD"/>
                 <constraint firstItem="yFj-2e-aOL" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="0Uy-Fh-9Im" userLabel="Image View.leading = Safe Area.leading"/>
@@ -123,6 +123,9 @@
         </namedColor>
         <namedColor name="Smoky Black">
             <color red="0.075000002980232239" green="0.075000002980232239" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Smoky White">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

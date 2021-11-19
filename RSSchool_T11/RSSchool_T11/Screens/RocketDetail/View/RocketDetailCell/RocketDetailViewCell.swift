@@ -50,7 +50,7 @@ class RocketDetailViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
         layer.shadowColor = UIColor.shadow.cgColor
-        layer.borderColor = UIColor.superWhite.cgColor
+        layer.borderColor = UIColor.smokyWhite.cgColor
         layer.borderWidth = 3
         
         shadowLayer.shadowColor = UIColor.white.cgColor

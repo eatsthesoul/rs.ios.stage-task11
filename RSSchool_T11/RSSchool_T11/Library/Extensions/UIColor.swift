@@ -29,8 +29,8 @@ extension UIColor {
         UIColor(named: "Champagne")!
     }
     
-    static var superWhite: UIColor {
-        UIColor(named: "Super White")!
+    static var smokyWhite: UIColor {
+        UIColor(named: "Smoky White")!
     }
     
     static var glaucous: UIColor {
