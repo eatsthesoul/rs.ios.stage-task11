@@ -15,5 +15,8 @@ final class RocketDetailRouter: RocketDetailRouterInput {
     weak var view: ModuleTransitionable?
 
 	// MARK: - RocketDetailRouterInput
-
+    
+    func showRocketWikiWith(_ url: URL) {
+        //TODO: Transition to Rocket WIKI 
+    }
 }
