@@ -61,7 +61,7 @@
                 <outlet property="massLabel" destination="Kby-wm-AS4" id="9os-fC-eLV"/>
                 <outlet property="massTitleLabel" destination="Arn-tF-mbH" id="wrd-se-lxB"/>
                 <outlet property="rocketImagesCollectionView" destination="qsP-bu-WgS" id="5Kg-DS-MGW"/>
-                <outlet property="rocketImagesStackView" destination="liP-k6-70V" id="JT1-A9-Z9T"/>
+                <outlet property="rocketImagesStackView" destination="liP-k6-70V" id="nSc-Qg-TPV"/>
                 <outlet property="rocketNameLabel" destination="GsM-aT-WnA" id="LjZ-j3-nyf"/>
                 <outlet property="secondStageBurningTimeLabel" destination="ECQ-3x-9qX" id="FRb-87-ZD5"/>
                 <outlet property="secondStageBurningTimeTitleLabel" destination="rWb-tP-dFw" id="rdG-XT-Lw6"/>
@@ -106,35 +106,36 @@
                                     <rect key="frame" x="0.0" y="423" width="414" height="1623"/>
                                     <subviews>
                                         <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-h8-au2">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-1K-jyw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cs-II-SOg">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="16.5"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-MU-xjE">
-                                            <rect key="frame" x="20" y="105" width="374" height="222.5"/>
+                                            <rect key="frame" x="0.0" y="105" width="414" height="222.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrO-XI-SuA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f1V-Fp-RRb">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="174"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="174"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-ir-Pjt">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="174"/>
@@ -221,19 +222,21 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="liP-k6-70V">
-                                            <rect key="frame" x="20" y="367.5" width="374" height="252.5"/>
+                                            <rect key="frame" x="0.0" y="367.5" width="414" height="252.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pw-4f-9Xg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pw-4f-9Xg" customClass="MarginLabel" customModule="RSSchool_T11" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="28.5"/>
+                                                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qsP-bu-WgS">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="204"/>
+                                                    <rect key="frame" x="0.0" y="48.5" width="414" height="204"/>
                                                     <color key="backgroundColor" name="Super White"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="204" id="joe-g9-Xxb"/>
@@ -248,17 +251,17 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-sF-LwW">
-                                            <rect key="frame" x="20" y="660" width="374" height="222.5"/>
+                                            <rect key="frame" x="0.0" y="660" width="414" height="222.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG5-jM-Gxs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j1I-st-Hwv">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="174"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="174"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-eJ-HO5">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="174"/>
@@ -345,19 +348,20 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JZT-Ci-ab7">
-                                            <rect key="frame" x="20" y="922.5" width="374" height="222.5"/>
+                                            <rect key="frame" x="0.0" y="922.5" width="414" height="222.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-yc-ydH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cI5-8G-a1M">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="174"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="174"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-AO-JF9">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="174"/>
@@ -444,19 +448,20 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-6K-xRF">
-                                            <rect key="frame" x="20" y="1185" width="374" height="191"/>
+                                            <rect key="frame" x="0.0" y="1185" width="414" height="191"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84B-hX-2CG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ASt-Om-x02">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="142.5"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="142.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-7r-zPJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="142.5"/>
@@ -531,19 +536,20 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jj1-e5-h26">
-                                            <rect key="frame" x="20" y="1416" width="374" height="96.5"/>
+                                            <rect key="frame" x="0.0" y="1416" width="414" height="96.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landing legs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhL-wH-cSb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CFd-rP-IuP">
-                                                    <rect key="frame" x="0.0" y="48.5" width="374" height="48"/>
+                                                    <rect key="frame" x="20" y="48.5" width="374" height="48"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="viR-IB-zM7">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="48"/>
@@ -582,19 +588,20 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-2j-ssV">
-                                            <rect key="frame" x="20" y="1552.5" width="374" height="70.5"/>
+                                            <rect key="frame" x="0.0" y="1552.5" width="414" height="70.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSJ-W7-anZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="28.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="102" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                     <color key="textColor" name="Smoky Black"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-GP-Rm4" customClass="MaterialButton" customModule="RSSchool_T11" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="48.5" width="95" height="22"/>
+                                                    <rect key="frame" x="20" y="48.5" width="95" height="22"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Wikipedia" image="link">
@@ -602,9 +609,10 @@
                                                     </state>
                                                 </button>
                                             </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                                         </stackView>
                                     </subviews>
-                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" name="Smoky White"/>
