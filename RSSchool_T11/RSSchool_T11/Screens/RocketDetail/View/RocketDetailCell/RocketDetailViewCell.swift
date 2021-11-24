@@ -15,6 +15,8 @@ class RocketDetailViewCell: UICollectionViewCell {
     
     private enum LayoutConstants {
         static let imageViewPadding: CGFloat = 3
+        static let cornerRadius: CGFloat = 10
+        static let imageCornerRadius: CGFloat = 7
     }
     
     let imageView: UIImageView = {
@@ -39,31 +41,13 @@ class RocketDetailViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        shadowLayer.frame = layer.bounds
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
-        shadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+        updateShadowPath(with: LayoutConstants.cornerRadius)
     }
     
     private func setupUI() {
-        layer.cornerRadius = 10
-        layer.shadowRadius = 1.5
-        layer.shadowOpacity = 1
-        layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowColor = UIColor.shadow.cgColor
-        layer.borderColor = UIColor.smokyWhite.cgColor
-        layer.borderWidth = 3
-        
-        shadowLayer.shadowColor = UIColor.white.cgColor
-        shadowLayer.cornerRadius = 10
-        shadowLayer.opacity = 1.0
-        shadowLayer.shadowRadius = 1.5
-        shadowLayer.masksToBounds = false
-        shadowLayer.needsDisplayOnBoundsChange = true
-        shadowLayer.shadowOffset = CGSize(width: -1, height: -1)
-        layer.insertSublayer(shadowLayer, at: 1)
-        
-        contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true
+        addShadow(with: LayoutConstants.cornerRadius)
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = LayoutConstants.imageCornerRadius
     }
     
     private func setupImageView() {

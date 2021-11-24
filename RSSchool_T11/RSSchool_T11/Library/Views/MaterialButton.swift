@@ -9,16 +9,6 @@ import UIKit
 
 class MaterialButton: UIButton {
     
-    private lazy var whiteShadowLayer: CALayer = {
-        let layer = CALayer()
-        layer.shadowColor = UIColor.white.cgColor
-        layer.shadowOffset = CGSize(width: -2, height: -2)
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 1.5
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 16).cgPath
-        return layer
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -42,23 +32,15 @@ class MaterialButton: UIButton {
         semanticContentAttribute = .forceRightToLeft
         sizeToFit()
         
-        layer.shadowColor = UIColor.shadow.cgColor
-        layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 1.5
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 16).cgPath
-        
-        layer.insertSublayer(whiteShadowLayer, at: 0)
-        
         contentEdgeInsets = .init(top: 5, left: 10, bottom: 5, right: 12.5)
         imageEdgeInsets = .init(top: 0, left: 7.5, bottom: 0, right: 0)
+        
+        addShadow(with: bounds.height / 2)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.height / 2).cgPath
-        whiteShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.height / 2).cgPath
-        layer.cornerRadius = frame.height / 2
+        updateShadowPath(with: bounds.height / 2)
     }
     
     
@@ -67,11 +49,11 @@ class MaterialButton: UIButton {
             if newValue {
                 tintColor = .champagne
                 imageView?.tintColor = .champagne
-                layer.shadowOpacity = 0.0
+                hideShadow()
             } else {
                 tintColor = .coral
                 imageView?.tintColor = .coral
-                layer.shadowOpacity = 1.0
+                appearShadow()
             }
         }
     }
