@@ -19,4 +19,11 @@ final class RocketDetailRouter: RocketDetailRouterInput {
     func showRocketWikiWith(_ url: URL) {
         //TODO: Transition to Rocket WIKI 
     }
+    
+    func showPictureInDetail(for url: String) {
+        let imageDetailConfigurator = ImageDetailModuleConfigurator()
+        let imageDetailViewController = imageDetailConfigurator.configure(with: url)
+        imageDetailViewController.modalPresentationStyle = .fullScreen
+        view?.presentModule(imageDetailViewController, animated: true, completion: nil)
+    }
 }

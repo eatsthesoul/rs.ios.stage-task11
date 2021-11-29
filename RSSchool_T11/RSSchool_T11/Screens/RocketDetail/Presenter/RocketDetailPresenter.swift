@@ -29,7 +29,8 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
     }
     
     func didSelectRocketImage(with index: Int) {
-        
+        guard let url = rocket?.images?[index] else { return }
+        router?.showPictureInDetail(for: url)
     }
     
     func didEndDisplayingRocketImage(_ index: Int) {
@@ -39,6 +40,7 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
     func showRocketWikiWith(_ url: URL) {
         router?.showRocketWikiWith(url)
     }
+    
     
     // MARK: - RocketDetailModuleInput
 

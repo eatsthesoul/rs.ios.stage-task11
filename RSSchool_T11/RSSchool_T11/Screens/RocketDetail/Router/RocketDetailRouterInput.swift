@@ -10,4 +10,5 @@ import Foundation
 
 protocol RocketDetailRouterInput {
     func showRocketWikiWith(_ url: URL)
+    func showPictureInDetail(for url: String)
 }
