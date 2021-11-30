@@ -30,6 +30,10 @@ class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
 
         layer.cornerRadius = 15
         layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        layer.shadowRadius = 3
+        layer.shadowOpacity = 1
     }
     
     func configure(with rocket: Rocket) {

@@ -16,6 +16,10 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
     
     //MARK: - Private Properties
     
+    private enum LayoutConstants {
+        static let sidePadding: CGFloat = 12
+    }
+    
     private lazy var rocketsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 30
@@ -61,9 +65,9 @@ private extension RocketListViewController {
         NSLayoutConstraint.activate([
             
             rocketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            rocketsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Layout.collectionViewSidePadding),
+            rocketsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.sidePadding),
             rocketsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            rocketsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Layout.collectionViewSidePadding)
+            rocketsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.sidePadding)
         ])
     }
 }

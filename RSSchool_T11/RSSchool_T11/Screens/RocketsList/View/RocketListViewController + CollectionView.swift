@@ -25,7 +25,7 @@ extension RocketListViewController: UICollectionViewDelegate {
 
 extension RocketListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width - (Layout.collectionViewSidePadding * 2)
+        let width = UIScreen.main.bounds.width - (18 * 2)
         let height = width * 0.953
         return CGSize(width: width, height: height)
     }

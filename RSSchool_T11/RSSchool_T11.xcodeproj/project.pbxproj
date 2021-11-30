@@ -15,7 +15,6 @@
 		4F075FE2271EC15000417D69 /* RocketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F075FE1271EC15000417D69 /* RocketsCollectionViewCell.xib */; };
 		4F093E5D27356CA30089F5E5 /* ModelDataStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F093E5C27356CA30089F5E5 /* ModelDataStringConvertable.swift */; };
 		4F0BC9A52710A08900FB0FA0 /* RocketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9A32710A08900FB0FA0 /* RocketListCell.swift */; };
-		4F0BC9A92710ADA700FB0FA0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9A82710ADA700FB0FA0 /* Layout.swift */; };
 		4F0BC9AC27149D8000FB0FA0 /* LoaderDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9AB27149D8000FB0FA0 /* LoaderDisplayable.swift */; };
 		4F0BC9B02715BB5800FB0FA0 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9AF2715BB5800FB0FA0 /* DownloadManager.swift */; };
 		4F0BC9B22715C57300FB0FA0 /* RocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9B12715C57300FB0FA0 /* RocketService.swift */; };
@@ -105,7 +104,6 @@
 		4F075FE1271EC15000417D69 /* RocketsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RocketsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F093E5C27356CA30089F5E5 /* ModelDataStringConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataStringConvertable.swift; sourceTree = "<group>"; };
 		4F0BC9A32710A08900FB0FA0 /* RocketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListCell.swift; sourceTree = "<group>"; };
-		4F0BC9A82710ADA700FB0FA0 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		4F0BC9AB27149D8000FB0FA0 /* LoaderDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDisplayable.swift; sourceTree = "<group>"; };
 		4F0BC9AF2715BB5800FB0FA0 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		4F0BC9B12715C57300FB0FA0 /* RocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketService.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		4F0BC9A72710AD9400FB0FA0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				4F0BC9A82710ADA700FB0FA0 /* Layout.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -783,7 +780,6 @@
 				0B48189FC3293DD93DF3D1E2 /* RocketListModuleInput.swift in Sources */,
 				4F0BC9B02715BB5800FB0FA0 /* DownloadManager.swift in Sources */,
 				F764FF70883C33CA247E8B40 /* RocketListModuleOutput.swift in Sources */,
-				4F0BC9A92710ADA700FB0FA0 /* Layout.swift in Sources */,
 				4F712C2C270F1D7500E80077 /* UIFont.swift in Sources */,
 				4F9C2689274FB8B800AB3886 /* CloseButton.swift in Sources */,
 				70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */,
