@@ -36,7 +36,7 @@
 		4F712C362710520E00E80077 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F712C352710520E00E80077 /* Rocket.swift */; };
 		4F9C2680274BD6BC00AB3886 /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C267F274BD6BC00AB3886 /* MarginLabel.swift */; };
 		4F9C2683274D2B7800AB3886 /* UIView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2682274D2B7800AB3886 /* UIView + Shadow.swift */; };
-		4F9C2685274FABA200AB3886 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2684274FABA200AB3886 /* UIImage.swift */; };
+		4F9C2685274FABA200AB3886 /* UIImage + Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */; };
 		4F9C2689274FB8B800AB3886 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2688274FB8B800AB3886 /* CloseButton.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
@@ -131,7 +131,7 @@
 		4F712C352710520E00E80077 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		4F9C267F274BD6BC00AB3886 /* MarginLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginLabel.swift; sourceTree = "<group>"; };
 		4F9C2682274D2B7800AB3886 /* UIView + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Shadow.swift"; sourceTree = "<group>"; };
-		4F9C2684274FABA200AB3886 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Assets.swift"; sourceTree = "<group>"; };
 		4F9C2688274FB8B800AB3886 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 				4F712C2D270F1FF500E80077 /* UIColor.swift */,
 				4FA28E46273C08F2001410CD /* Double.swift */,
 				4F9C2682274D2B7800AB3886 /* UIView + Shadow.swift */,
-				4F9C2684274FABA200AB3886 /* UIImage.swift */,
+				4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -794,7 +794,7 @@
 				4F093E5D27356CA30089F5E5 /* ModelDataStringConvertable.swift in Sources */,
 				4FF578CD2747C31500228273 /* MaterialButton.swift in Sources */,
 				4F9C2683274D2B7800AB3886 /* UIView + Shadow.swift in Sources */,
-				4F9C2685274FABA200AB3886 /* UIImage.swift in Sources */,
+				4F9C2685274FABA200AB3886 /* UIImage + Assets.swift in Sources */,
 				940D29ADD142E7914589C539 /* RocketDetailModuleOutput.swift in Sources */,
 				B2C8BE64E9BAAD722C2B721C /* RocketDetailViewController.swift in Sources */,
 				A5D57433A121F0EC8D847ECD /* RocketDetailViewInput.swift in Sources */,

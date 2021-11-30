@@ -21,5 +21,15 @@ extension UIImage {
         UIImage(named: "xmark.circle")!
     }
     
+    static var rocket: UIImage {
+        UIImage(named: "rocket")!
+    }
     
+    static var adjustment: UIImage {
+        UIImage(named: "adjustment")!
+    }
+    
+    static var lego: UIImage {
+        UIImage(named: "lego")!
+    }
 }

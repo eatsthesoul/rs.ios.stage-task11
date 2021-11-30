@@ -19,10 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let rocketsListConfigurator = RocketsListModuleConfigurator()
         let rocketListViewController = rocketsListConfigurator.configure()
-        let navigationController = UINavigationController(rootViewController: rocketListViewController)
+        let rocketNavigationController = UINavigationController(rootViewController: rocketListViewController)
+        rocketNavigationController.tabBarItem.image = .rocket
+        rocketNavigationController.tabBarItem.selectedImage = .rocket
+        rocketNavigationController.tabBarItem.title = "Rockets"
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [navigationController]
+        tabBarController.viewControllers = [rocketNavigationController]
         
         window!.rootViewController = tabBarController
         window!.makeKeyAndVisible()
