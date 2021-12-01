@@ -32,4 +32,12 @@ extension UIImage {
     static var lego: UIImage {
         UIImage(named: "lego")!
     }
+    
+    static var checkmark: UIImage {
+        UIImage(named: "checkmark.circle")!
+    }
+    
+    static var clock: UIImage {
+        UIImage(named: "clock")!
+    }
 }
