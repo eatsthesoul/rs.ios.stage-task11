@@ -40,6 +40,7 @@
 		4F9C2685274FABA200AB3886 /* UIImage + Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */; };
 		4F9C2689274FB8B800AB3886 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2688274FB8B800AB3886 /* CloseButton.swift */; };
 		4F9C26952757AADF00AB3886 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26942757AADE00AB3886 /* Launch.swift */; };
+		4F9C26972757D7B300AB3886 /* UIIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -149,6 +150,7 @@
 		4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Assets.swift"; sourceTree = "<group>"; };
 		4F9C2688274FB8B800AB3886 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		4F9C26942757AADE00AB3886 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIndicatorView.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				4FF578CC2747C31500228273 /* MaterialButton.swift */,
 				4F9C267F274BD6BC00AB3886 /* MarginLabel.swift */,
 				4F9C2688274FB8B800AB3886 /* CloseButton.swift */,
+				4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				4F0BC9AC27149D8000FB0FA0 /* LoaderDisplayable.swift in Sources */,
 				4F4E203427285A5E00ADB1D4 /* ImageDownloadOperation.swift in Sources */,
 				C00B0C4488DE5FFBA8037FB1 /* RocketsListRouterInput.swift in Sources */,
+				4F9C26972757D7B300AB3886 /* UIIndicatorView.swift in Sources */,
 				927BF85AA092E444100FD2B6 /* RocketListPresenter.swift in Sources */,
 				4F712C362710520E00E80077 /* Rocket.swift in Sources */,
 				4F0BC9A52710A08900FB0FA0 /* RocketListCell.swift in Sources */,
