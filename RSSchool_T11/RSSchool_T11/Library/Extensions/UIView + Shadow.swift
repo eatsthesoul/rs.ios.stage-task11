@@ -73,6 +73,7 @@ extension UIView {
         layer.insertSublayer(foregroundLayer, at: 0)
         layer.insertSublayer(whiteShadowLayer, at: 0)
         layer.insertSublayer(greyShadowLayer, at: 0)
+        layer.cornerRadius = cornerRadius
     }
     
     func updateShadowPath(with cornerRadius: CGFloat) {
@@ -80,6 +81,7 @@ extension UIView {
         foregroundLayer.cornerRadius = cornerRadius
         whiteShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
         greyShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+        layer.cornerRadius = cornerRadius
     }
     
     func hideShadow() {

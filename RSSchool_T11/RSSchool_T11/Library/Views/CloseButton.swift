@@ -26,7 +26,6 @@ class CloseButton: UIButton {
     private func setupUI(){
         tintColor = .coral
         backgroundColor = .smokyWhite
-        layer.cornerRadius = bounds.height / 2
         
         setImage(.xmark, for: .normal)
         bringSubviewToFront(imageView!)
@@ -39,7 +38,6 @@ class CloseButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         updateShadowPath(with: bounds.height / 2)
-        layer.cornerRadius = bounds.height / 2
     }
     
     override var isHighlighted: Bool {
