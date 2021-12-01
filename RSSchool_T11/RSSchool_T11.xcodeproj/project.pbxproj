@@ -39,6 +39,7 @@
 		4F9C2683274D2B7800AB3886 /* UIView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2682274D2B7800AB3886 /* UIView + Shadow.swift */; };
 		4F9C2685274FABA200AB3886 /* UIImage + Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */; };
 		4F9C2689274FB8B800AB3886 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2688274FB8B800AB3886 /* CloseButton.swift */; };
+		4F9C26952757AADF00AB3886 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26942757AADE00AB3886 /* Launch.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -147,6 +148,7 @@
 		4F9C2682274D2B7800AB3886 /* UIView + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Shadow.swift"; sourceTree = "<group>"; };
 		4F9C2684274FABA200AB3886 /* UIImage + Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Assets.swift"; sourceTree = "<group>"; };
 		4F9C2688274FB8B800AB3886 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		4F9C26942757AADE00AB3886 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				4F712C352710520E00E80077 /* Rocket.swift */,
+				4F9C26942757AADE00AB3886 /* Launch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				B066539C2277373C2453A9F5 /* LaunchListPresenter.swift in Sources */,
 				9F81028F654AA0DE9D742D35 /* LaunchListModuleInput.swift in Sources */,
 				D9356AB75A9AC5B1C2F9493E /* LaunchListModuleOutput.swift in Sources */,
+				4F9C26952757AADF00AB3886 /* Launch.swift in Sources */,
 				90152DB9E744480FC6C5F302 /* LaunchListViewController.swift in Sources */,
 				707D7C4169E7EC207227918B /* LaunchListViewInput.swift in Sources */,
 				D69FE8DDA708CD8208490A8C /* LaunchListViewOutput.swift in Sources */,
