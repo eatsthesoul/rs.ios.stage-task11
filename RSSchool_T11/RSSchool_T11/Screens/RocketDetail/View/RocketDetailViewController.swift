@@ -91,7 +91,7 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var landingLegsMaterialLabel: UILabel!
     
     //materials
-    @IBOutlet weak var wikiButton: MaterialButton!
+    @IBOutlet weak var wikiButton: UIShadowButton!
 
     // MARK: - UIViewController
 

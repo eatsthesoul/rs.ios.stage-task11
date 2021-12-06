@@ -41,8 +41,9 @@ final class ImageDetailViewController: UIViewController, ImageDetailViewInput, M
         return imageView
     }()
     
-    private lazy var closeButton: CloseButton = {
-        let button = CloseButton()
+    private lazy var closeButton: UIShadowButton = {
+        let button = UIShadowButton()
+        button.setImage(.xmark, for: .normal)
         button.addTarget(self, action: #selector(closeScreen), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

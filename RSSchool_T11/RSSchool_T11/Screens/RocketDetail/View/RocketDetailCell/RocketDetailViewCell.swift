@@ -26,6 +26,35 @@ class RocketDetailViewCell: UICollectionViewCell {
         return view
     }()
     
+    private lazy var foregroundLayer: CALayer = {
+        let layer = CALayer()
+        layer.frame = bounds
+        layer.cornerRadius = LayoutConstants.cornerRadius
+        layer.backgroundColor = UIColor.smokyWhite.cgColor
+        layer.masksToBounds = true
+        return layer
+    }()
+    
+    private lazy var whiteShadowLayer: CALayer = {
+        let layer = CALayer()
+        layer.shadowColor = UIColor.white.cgColor
+        layer.shadowOffset = CGSize(width: -2, height: -2)
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 1.5
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: LayoutConstants.cornerRadius).cgPath
+        return layer
+    }()
+    
+    private lazy var greyShadowLayer: CALayer = {
+        let layer = CALayer()
+        layer.shadowColor = UIColor.shadow.cgColor
+        layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 1.5
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: LayoutConstants.cornerRadius).cgPath
+        return layer
+    }()
+    
     private let shadowLayer = CALayer()
     
     override init(frame: CGRect) {
@@ -41,11 +70,11 @@ class RocketDetailViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        updateShadowPath(with: LayoutConstants.cornerRadius)
+        updateShadowPath()
     }
     
     private func setupUI() {
-        addShadow(with: LayoutConstants.cornerRadius)
+        addShadow()
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = LayoutConstants.imageCornerRadius
     }
@@ -59,4 +88,23 @@ class RocketDetailViewCell: UICollectionViewCell {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.imageViewPadding)
         ])
     }
+}
+
+// MARK: - Shadow methods
+private extension RocketDetailViewCell {
+    
+    func addShadow() {
+         layer.insertSublayer(foregroundLayer, at: 0)
+         layer.insertSublayer(whiteShadowLayer, at: 0)
+         layer.insertSublayer(greyShadowLayer, at: 0)
+         layer.cornerRadius = LayoutConstants.cornerRadius
+     }
+     
+    func updateShadowPath() {
+         foregroundLayer.frame = bounds
+        foregroundLayer.cornerRadius = LayoutConstants.cornerRadius
+         whiteShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: LayoutConstants.cornerRadius).cgPath
+         greyShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: LayoutConstants.cornerRadius).cgPath
+         layer.cornerRadius = bounds.height / 2
+     }
 }

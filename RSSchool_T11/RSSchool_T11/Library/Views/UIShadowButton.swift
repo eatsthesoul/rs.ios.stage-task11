@@ -1,28 +1,13 @@
 //
-//  UICheckMarkView.swift
+//  UIShadowButton.swift
 //  RSSchool_T11
 //
-//  Created by Evgeniy Petlitskiy on 1.12.21.
+//  Created by Evgeniy Petlitskiy on 2.12.21.
 //
 
 import UIKit
 
-class UIIndicatorView: UIView {
-    
-    enum Style {
-        case complited
-        case expected
-    }
-    
-    private enum LayoutConstants {
-        static let offset: CGFloat = 3
-    }
-    
-    private lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
+class UIShadowButton: UIButton {
     
     private lazy var foregroundLayer: CALayer = {
         let layer = CALayer()
@@ -52,8 +37,6 @@ class UIIndicatorView: UIView {
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2).cgPath
         return layer
     }()
-    
-    private(set) var style: Style?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,7 +49,21 @@ class UIIndicatorView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+    }
+    
+    override var isHighlighted: Bool {
+        willSet {
+            if newValue {
+                tintColor = .champagne
+                imageView?.tintColor = .champagne
+                hideShadow()
+            } else {
+                tintColor = .coral
+                imageView?.tintColor = .coral
+                appearShadow()
+            }
+        }
     }
     
     override func layoutSubviews() {
@@ -74,37 +71,41 @@ class UIIndicatorView: UIView {
         updateShadow()
     }
     
-    private func setupUI() {
+    override func setImage(_ image: UIImage?, for state: UIControl.State) {
+        super.setImage(image, for: state)
+        bringSubviewToFront(imageView!)
+    }
+}
+
+// MARK: - Setup methods
+private extension UIShadowButton {
+    
+    func setupUI() {
+        tintColor = .coral
         backgroundColor = .smokyWhite
-        tintColor = .cyanProcess
-        setupImage()
+        setTitleColor(.coral, for: .normal)
+        setTitleColor(.champagne, for: .highlighted)
+        titleLabel?.font = UIFont(name: "Roboto-Medium", size: 17)
+        semanticContentAttribute = .forceRightToLeft
+        sizeToFit()
         
+        setInsets()
         addShadow()
     }
     
-    private func setupImage() {
-        addSubview(imageView)
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.offset),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.offset),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.offset),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.offset)
-        ])
-    }
-    
-    func setupStyle(_ style: Style) {
-        switch style {
-        case .complited:
-            imageView.image = .checkmark
-        case .expected:
-            imageView.image = .clock
+    func setInsets() {
+        let title = title(for: .normal)
+        if title == nil || title == "" {
+            contentEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        } else {
+            contentEdgeInsets = .init(top: 5, left: 10, bottom: 5, right: 10)
+            imageEdgeInsets = .init(top: 0, left: 7.5, bottom: 0, right: 0)
         }
     }
-
 }
 
 // MARK: - Shadow methods
-private extension UIIndicatorView {
+private extension UIShadowButton {
     
     func addShadow() {
         layer.insertSublayer(foregroundLayer, at: 0)
@@ -120,4 +121,15 @@ private extension UIIndicatorView {
         greyShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2).cgPath
         layer.cornerRadius = bounds.height / 2
     }
+    
+    func hideShadow() {
+        greyShadowLayer.shadowOpacity = 0.0
+        whiteShadowLayer.shadowOpacity = 0.0
+    }
+    
+    func appearShadow() {
+        greyShadowLayer.shadowOpacity = 1.0
+        whiteShadowLayer.shadowOpacity = 1.0
+    }
 }
+
