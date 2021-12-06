@@ -40,7 +40,7 @@
 		4F9C26952757AADF00AB3886 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26942757AADE00AB3886 /* Launch.swift */; };
 		4F9C26972757D7B300AB3886 /* UIIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */; };
 		4F9C269B2758EEA000AB3886 /* UIShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */; };
-		4F9C269D275D2EB600AB3886 /* UIShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269C275D2EB600AB3886 /* UIShadowLabel.swift */; };
+		4F9C269F275E828E00AB3886 /* UIShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269E275E828E00AB3886 /* UIShadowView.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -149,7 +149,7 @@
 		4F9C26942757AADE00AB3886 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIndicatorView.swift; sourceTree = "<group>"; };
 		4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowButton.swift; sourceTree = "<group>"; };
-		4F9C269C275D2EB600AB3886 /* UIShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowLabel.swift; sourceTree = "<group>"; };
+		4F9C269E275E828E00AB3886 /* UIShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowView.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -510,7 +510,7 @@
 				4F9C267F274BD6BC00AB3886 /* MarginLabel.swift */,
 				4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */,
 				4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */,
-				4F9C269C275D2EB600AB3886 /* UIShadowLabel.swift */,
+				4F9C269E275E828E00AB3886 /* UIShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -837,9 +837,9 @@
 				9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */,
 				4F712C1727035A1A00E80077 /* ModuleTrasitionable.swift in Sources */,
 				4F4E202E27284D7A00ADB1D4 /* RocketListPresenter + CollectionView.swift in Sources */,
+				4F9C269F275E828E00AB3886 /* UIShadowView.swift in Sources */,
 				4F9C2680274BD6BC00AB3886 /* MarginLabel.swift in Sources */,
 				4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */,
-				4F9C269D275D2EB600AB3886 /* UIShadowLabel.swift in Sources */,
 				4FA28E4E2743F691001410CD /* RocketDetailViewCell.swift in Sources */,
 				A004031974AB3C3134C5D11C /* RocketsListRouter.swift in Sources */,
 				4F0BC9AC27149D8000FB0FA0 /* LoaderDisplayable.swift in Sources */,
