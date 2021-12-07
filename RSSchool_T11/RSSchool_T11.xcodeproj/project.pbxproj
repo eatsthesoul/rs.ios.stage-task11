@@ -40,7 +40,9 @@
 		4F9C26952757AADF00AB3886 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26942757AADE00AB3886 /* Launch.swift */; };
 		4F9C26972757D7B300AB3886 /* UIIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */; };
 		4F9C269B2758EEA000AB3886 /* UIShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */; };
-		4F9C269F275E828E00AB3886 /* UIShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269E275E828E00AB3886 /* UIShadowView.swift */; };
+		4F9C269F275E828E00AB3886 /* UIShadowLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269E275E828E00AB3886 /* UIShadowLabelView.swift */; };
+		4F9C26A3275E8A9800AB3886 /* UILaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26A2275E8A9800AB3886 /* UILaunchView.swift */; };
+		4F9C26A9275E954C00AB3886 /* UIShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26A8275E954C00AB3886 /* UIShadowImageView.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -149,7 +151,9 @@
 		4F9C26942757AADE00AB3886 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIndicatorView.swift; sourceTree = "<group>"; };
 		4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowButton.swift; sourceTree = "<group>"; };
-		4F9C269E275E828E00AB3886 /* UIShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowView.swift; sourceTree = "<group>"; };
+		4F9C269E275E828E00AB3886 /* UIShadowLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowLabelView.swift; sourceTree = "<group>"; };
+		4F9C26A2275E8A9800AB3886 /* UILaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILaunchView.swift; sourceTree = "<group>"; };
+		4F9C26A8275E954C00AB3886 /* UIShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowImageView.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -510,7 +514,9 @@
 				4F9C267F274BD6BC00AB3886 /* MarginLabel.swift */,
 				4F9C26962757D7B300AB3886 /* UIIndicatorView.swift */,
 				4F9C269A2758EEA000AB3886 /* UIShadowButton.swift */,
-				4F9C269E275E828E00AB3886 /* UIShadowView.swift */,
+				4F9C269E275E828E00AB3886 /* UIShadowLabelView.swift */,
+				4F9C26A8275E954C00AB3886 /* UIShadowImageView.swift */,
+				4F9C26A2275E8A9800AB3886 /* UILaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -837,7 +843,7 @@
 				9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */,
 				4F712C1727035A1A00E80077 /* ModuleTrasitionable.swift in Sources */,
 				4F4E202E27284D7A00ADB1D4 /* RocketListPresenter + CollectionView.swift in Sources */,
-				4F9C269F275E828E00AB3886 /* UIShadowView.swift in Sources */,
+				4F9C269F275E828E00AB3886 /* UIShadowLabelView.swift in Sources */,
 				4F9C2680274BD6BC00AB3886 /* MarginLabel.swift in Sources */,
 				4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */,
 				4FA28E4E2743F691001410CD /* RocketDetailViewCell.swift in Sources */,
@@ -849,6 +855,7 @@
 				927BF85AA092E444100FD2B6 /* RocketListPresenter.swift in Sources */,
 				4F712C362710520E00E80077 /* Rocket.swift in Sources */,
 				4F0BC9A52710A08900FB0FA0 /* RocketListCell.swift in Sources */,
+				4F9C26A3275E8A9800AB3886 /* UILaunchView.swift in Sources */,
 				0B48189FC3293DD93DF3D1E2 /* RocketListModuleInput.swift in Sources */,
 				4F0BC9B02715BB5800FB0FA0 /* DownloadManager.swift in Sources */,
 				F764FF70883C33CA247E8B40 /* RocketListModuleOutput.swift in Sources */,
@@ -878,6 +885,7 @@
 				E3227C3649D18032373938EB /* ImageDetailViewController.swift in Sources */,
 				2580CFBFBBB86470184840C3 /* ImageDetailViewInput.swift in Sources */,
 				80D56369FB47F888C7A0E8BE /* ImageDetailViewOutput.swift in Sources */,
+				4F9C26A9275E954C00AB3886 /* UIShadowImageView.swift in Sources */,
 				2E38681FE09074C4BCCDBBE4 /* LaunchListModuleConfigurator.swift in Sources */,
 				D9680489704E29AE9AD4CF34 /* LaunchListRouter.swift in Sources */,
 				5D62738CDB193319D324E03C /* LaunchListRouterInput.swift in Sources */,

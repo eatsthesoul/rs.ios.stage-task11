@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UIShadowView: UIView {
+class UIShadowLabelView: UIView {
     
     private enum LayoutConstants {
         static let horizontalInset: CGFloat = 10
@@ -17,7 +17,7 @@ class UIShadowView: UIView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.textColor = .cyanProcess
-        label.font = UIFont(name: "Roboto-Medium", size: 17)
+        label.font = UIFont.roboto(17, .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -67,7 +67,6 @@ class UIShadowView: UIView {
     
     private func setupUI() {
         backgroundColor = .smokyWhite
-        setupLabel()
         addShadow()
     }
     
@@ -89,14 +88,15 @@ class UIShadowView: UIView {
 }
 
 //MARK: - API
-extension UIShadowView {
+extension UIShadowLabelView {
     func setText(_ text: String) {
+        setupLabel()
         self.label.text = text
     }
 }
 
 // MARK: - Shadow methods
-private extension UIShadowView {
+private extension UIShadowLabelView {
     
     func addShadow() {
         layer.insertSublayer(foregroundLayer, at: 0)

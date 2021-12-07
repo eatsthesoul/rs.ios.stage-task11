@@ -77,8 +77,6 @@ class UIIndicatorView: UIView {
     private func setupUI() {
         backgroundColor = .smokyWhite
         tintColor = .cyanProcess
-        setupImage()
-        
         addShadow()
     }
     
@@ -93,6 +91,7 @@ class UIIndicatorView: UIView {
     }
     
     func setupStyle(_ style: Style) {
+        setupImage()
         switch style {
         case .complited:
             imageView.image = .checkmark

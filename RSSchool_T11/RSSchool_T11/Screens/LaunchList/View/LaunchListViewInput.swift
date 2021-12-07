@@ -6,6 +6,6 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol LaunchListViewInput: class {
+protocol LaunchListViewInput: AnyObject {
 
 }

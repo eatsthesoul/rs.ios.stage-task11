@@ -74,4 +74,9 @@ extension ModelDataStringConvertable {
         guard let initial = initial else { return nil }
         return initial ? "Yes" : "No"
     }
+    
+    func buildFlightNumber(for initial: Int?) -> String? {
+        guard let initial = initial else { return nil }
+        return "#\(initial)"
+    }
 }

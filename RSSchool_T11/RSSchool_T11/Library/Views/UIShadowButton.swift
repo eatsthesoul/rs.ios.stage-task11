@@ -85,7 +85,7 @@ private extension UIShadowButton {
         backgroundColor = .smokyWhite
         setTitleColor(.coral, for: .normal)
         setTitleColor(.champagne, for: .highlighted)
-        titleLabel?.font = UIFont(name: "Roboto-Medium", size: 17)
+        titleLabel?.font = UIFont.roboto(17, .medium)
         semanticContentAttribute = .forceRightToLeft
         sizeToFit()
         

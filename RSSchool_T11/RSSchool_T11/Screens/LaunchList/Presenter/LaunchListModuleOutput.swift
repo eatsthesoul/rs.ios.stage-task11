@@ -6,6 +6,6 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol LaunchListModuleOutput: class {
+protocol LaunchListModuleOutput: AnyObject {
 
 }
