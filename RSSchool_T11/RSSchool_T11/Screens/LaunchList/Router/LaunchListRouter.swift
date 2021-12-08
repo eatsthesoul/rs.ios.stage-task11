@@ -16,4 +16,9 @@ final class LaunchListRouter: LaunchListRouterInput {
 
 	// MARK: - LaunchListRouterInput
 
+    func showLaunchDetailModule(for launch: Launch) {
+        let launchDetailConfigurator = LaunchDetailModuleConfigurator()
+        let launchDetailViewController = launchDetailConfigurator.configure(with: launch)
+        view?.push(module: launchDetailViewController, animated: true)
+    }
 }

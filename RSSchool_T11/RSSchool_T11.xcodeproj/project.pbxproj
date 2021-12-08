@@ -10,9 +10,12 @@
 		058714AE26F9C937DEE36566 /* ImageDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81B9C6F6D36E97615EE74B /* ImageDetailPresenter.swift */; };
 		0B48189FC3293DD93DF3D1E2 /* RocketListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487246DB2BF40FD4B80F66D4 /* RocketListModuleInput.swift */; };
 		2580CFBFBBB86470184840C3 /* ImageDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0640C4FE9724E44FE815C4 /* ImageDetailViewInput.swift */; };
+		2CC87F5E420259CB102CC14B /* LaunchDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528A8074CBA72BB02216E0E /* LaunchDetailModuleConfigurator.swift */; };
 		2E38681FE09074C4BCCDBBE4 /* LaunchListModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CB123FBE0A5428F4098993 /* LaunchListModuleConfigurator.swift */; };
 		31EDD6287CA670360D9ABB61 /* ImageDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E224EF8A1DBC22DADDA5223 /* ImageDetailModuleInput.swift */; };
+		436A4EAB7BE9B7BAF2B49487 /* LaunchDetailModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A94278BE3C3FECC55A902 /* LaunchDetailModuleOutput.swift */; };
 		49B114DEFAD803F9577AB398 /* ImageDetailModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A399DAB1DEC20FB7899079E /* ImageDetailModuleOutput.swift */; };
+		4C2DBA2B5AAEB71E90E1B8C6 /* LaunchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2F27958CA5A36C8278B46 /* LaunchDetailPresenter.swift */; };
 		4F075FE2271EC15000417D69 /* RocketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F075FE1271EC15000417D69 /* RocketsCollectionViewCell.xib */; };
 		4F093E5D27356CA30089F5E5 /* ModelDataStringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F093E5C27356CA30089F5E5 /* ModelDataStringConvertable.swift */; };
 		4F0BC9A52710A08900FB0FA0 /* RocketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BC9A32710A08900FB0FA0 /* RocketListCell.swift */; };
@@ -55,6 +58,7 @@
 		4FD08B172733EB8C00991150 /* ModelDataDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD08B162733EB8C00991150 /* ModelDataDisplayable.swift */; };
 		540C34C8ADA105EE0E3F1222 /* ImageDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596624BFFB0AECC5BE3DF326 /* ImageDetailRouter.swift */; };
 		5D62738CDB193319D324E03C /* LaunchListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016E72582B6432C3A1398CF /* LaunchListRouterInput.swift */; };
+		6F099DB0AA59F4770D9F5960 /* LaunchDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B734B36B1E90831E248D8 /* LaunchDetailViewInput.swift */; };
 		7056E245FD05DF96C9DF407B /* ImageDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AF7328324F13A7A1BCF62 /* ImageDetailModuleConfigurator.swift */; };
 		707D7C4169E7EC207227918B /* LaunchListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5105C2609844A8CFE10503 /* LaunchListViewInput.swift */; };
 		70DA521294D16FB8ED8E7AFD /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29877C5A14525B9B800811A6 /* RocketListViewController.swift */; };
@@ -62,9 +66,11 @@
 		7DB88B39337FDCEA14FADEF5 /* RocketDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */; };
 		7F75BC947FEFA56D80D7D69C /* RocketsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */; };
 		80D56369FB47F888C7A0E8BE /* ImageDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5791D1F606A451F2CD746E /* ImageDetailViewOutput.swift */; };
+		884B15F25B5CBA64D9A712ED /* LaunchDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA842D85EF0DAFC949B2122 /* LaunchDetailViewOutput.swift */; };
 		90152DB9E744480FC6C5F302 /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FA87C9EF192BF154B635A /* LaunchListViewController.swift */; };
 		927BF85AA092E444100FD2B6 /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF02C8C79208E0F79130BB /* RocketListPresenter.swift */; };
 		940D29ADD142E7914589C539 /* RocketDetailModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8DF894B65EB9F76542B78 /* RocketDetailModuleOutput.swift */; };
+		977DC42BD747E28F2570FF98 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB11D882B2BA277BBAE55CE /* LaunchDetailViewController.swift */; };
 		9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0DBC7B08C8286C1B21A981 /* RocketsListModuleConfigurator.swift */; };
 		9C8EC7CB36EDE8FE8628A97D /* ImageDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CC0FD8A71AA2EA4A30912 /* ImageDetailRouterInput.swift */; };
 		9F81028F654AA0DE9D742D35 /* LaunchListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACC6203E88D9B0403C54EE /* LaunchListModuleInput.swift */; };
@@ -73,10 +79,13 @@
 		A200569F0EA3214DBA4CAA00 /* RocketListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C677C3B75E2CB7353DFD3E /* RocketListViewOutput.swift */; };
 		A5D57433A121F0EC8D847ECD /* RocketDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB107241E124D5843135BFD /* RocketDetailViewInput.swift */; };
 		A9EB7E5D9E17FA22EBAF9BAB /* RocketsListModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1A4AB347DCAA2FDC610CE /* RocketsListModuleConfiguratorTests.swift */; };
+		AB862AC16DB711ACE5820266 /* LaunchDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E0BD359E5BC792B7CC94F8 /* LaunchDetailModuleInput.swift */; };
+		ABD90D4BBB90ECFF78ED66CE /* LaunchDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F5A00B4630C6AC4A35065 /* LaunchDetailRouterInput.swift */; };
 		B066539C2277373C2453A9F5 /* LaunchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9253B0EF15CE0DB9FA9D8AF /* LaunchListPresenter.swift */; };
 		B2C8BE64E9BAAD722C2B721C /* RocketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC312867C96B915CFEAC1AFA /* RocketDetailViewController.swift */; };
 		B4B68FA613C71028B6F87139 /* RocketDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */; };
 		B6083F25899A97EC4C7D444D /* RocketsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9674A8199796D252BB6D70E /* RocketsListPresenterTests.swift */; };
+		B83442D488E3258070577B47 /* LaunchDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE641150F02130D7A7BC6A4 /* LaunchDetailViewController.storyboard */; };
 		BC536AFB9C432C5F0982EA14 /* RocketsListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C35449A24093A1DDE7896C /* RocketsListViewTests.swift */; };
 		C00B0C4488DE5FFBA8037FB1 /* RocketsListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520735A20F621F456A8D6CBB /* RocketsListRouterInput.swift */; };
 		D69FE8DDA708CD8208490A8C /* LaunchListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FD5899FF33C16A5B87D89 /* LaunchListViewOutput.swift */; };
@@ -86,6 +95,7 @@
 		F11FFF92566D4E6F727693FB /* RocketDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953F51CEAA2268E5C92C6A8 /* RocketDetailPresenter.swift */; };
 		F29419DA48BCF6B4122DF5E1 /* RocketListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE811DED9B620037AAC90 /* RocketListViewInput.swift */; };
 		F764FF70883C33CA247E8B40 /* RocketListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D848C6B427F1A41BDEBF130 /* RocketListModuleOutput.swift */; };
+		F852DE25C6FBD53661167731 /* LaunchDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231A979710DB2BA8D44FB38 /* LaunchDetailRouter.swift */; };
 		FCFB66B3F8E9014D2E1938A7 /* RocketDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0231A979710DB2BA8D44FB38 /* LaunchDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailRouter.swift; sourceTree = "<group>"; };
 		0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		07AE546E4B157A1CB3A8F334 /* LaunchListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListModuleOutput.swift; sourceTree = "<group>"; };
 		0CEA673C669DAD28ED85ACEE /* ImageDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +126,7 @@
 		1CE04B0B4A5CE19A72769B7D /* LaunchListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListRouter.swift; sourceTree = "<group>"; };
 		254BF304E7E681E123829C99 /* RocketDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewOutput.swift; sourceTree = "<group>"; };
 		29877C5A14525B9B800811A6 /* RocketListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
+		2D8F5A00B4630C6AC4A35065 /* LaunchDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailRouterInput.swift; sourceTree = "<group>"; };
 		3D848C6B427F1A41BDEBF130 /* RocketListModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListModuleOutput.swift; sourceTree = "<group>"; };
 		3DF1A4AB347DCAA2FDC610CE /* RocketsListModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		4016E72582B6432C3A1398CF /* LaunchListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListRouterInput.swift; sourceTree = "<group>"; };
@@ -122,6 +134,7 @@
 		41CB123FBE0A5428F4098993 /* LaunchListModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListModuleConfigurator.swift; sourceTree = "<group>"; };
 		487246DB2BF40FD4B80F66D4 /* RocketListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketListModuleInput.swift; sourceTree = "<group>"; };
 		4CACC6203E88D9B0403C54EE /* LaunchListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListModuleInput.swift; sourceTree = "<group>"; };
+		4EE641150F02130D7A7BC6A4 /* LaunchDetailViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LaunchDetailViewController.storyboard; sourceTree = "<group>"; };
 		4F075FE1271EC15000417D69 /* RocketsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RocketsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4F093E5C27356CA30089F5E5 /* ModelDataStringConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataStringConvertable.swift; sourceTree = "<group>"; };
 		4F0BC9A32710A08900FB0FA0 /* RocketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListCell.swift; sourceTree = "<group>"; };
@@ -173,6 +186,7 @@
 		593AF7328324F13A7A1BCF62 /* ImageDetailModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		596624BFFB0AECC5BE3DF326 /* ImageDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailRouter.swift; sourceTree = "<group>"; };
 		6A399DAB1DEC20FB7899079E /* ImageDetailModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailModuleOutput.swift; sourceTree = "<group>"; };
+		6AA842D85EF0DAFC949B2122 /* LaunchDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewOutput.swift; sourceTree = "<group>"; };
 		6D5105C2609844A8CFE10503 /* LaunchListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListViewInput.swift; sourceTree = "<group>"; };
 		70E6B8D68CE892BFB1C13213 /* RocketDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailRouterInput.swift; sourceTree = "<group>"; };
 		818FD5899FF33C16A5B87D89 /* LaunchListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListViewOutput.swift; sourceTree = "<group>"; };
@@ -182,17 +196,23 @@
 		9E0DBC7B08C8286C1B21A981 /* RocketsListModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListModuleConfigurator.swift; sourceTree = "<group>"; };
 		9E224EF8A1DBC22DADDA5223 /* ImageDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailModuleInput.swift; sourceTree = "<group>"; };
 		A2B839DF5582B5E0555C9CA1 /* RocketDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailRouter.swift; sourceTree = "<group>"; };
+		A8E0BD359E5BC792B7CC94F8 /* LaunchDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailModuleInput.swift; sourceTree = "<group>"; };
 		A9253B0EF15CE0DB9FA9D8AF /* LaunchListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListPresenter.swift; sourceTree = "<group>"; };
 		A953F51CEAA2268E5C92C6A8 /* RocketDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailPresenter.swift; sourceTree = "<group>"; };
 		B9674A8199796D252BB6D70E /* RocketsListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListPresenterTests.swift; sourceTree = "<group>"; };
 		BB5E9BEACA43838DA55D7F19 /* RocketsListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListRouterTests.swift; sourceTree = "<group>"; };
 		BD81B9C6F6D36E97615EE74B /* ImageDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailPresenter.swift; sourceTree = "<group>"; };
+		C528A8074CBA72BB02216E0E /* LaunchDetailModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		CFB107241E124D5843135BFD /* RocketDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewInput.swift; sourceTree = "<group>"; };
+		DBB2F27958CA5A36C8278B46 /* LaunchDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailPresenter.swift; sourceTree = "<group>"; };
+		E07A94278BE3C3FECC55A902 /* LaunchDetailModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailModuleOutput.swift; sourceTree = "<group>"; };
 		E7B8DF894B65EB9F76542B78 /* RocketDetailModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailModuleOutput.swift; sourceTree = "<group>"; };
 		E89CC0FD8A71AA2EA4A30912 /* ImageDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageDetailRouterInput.swift; sourceTree = "<group>"; };
 		EC312867C96B915CFEAC1AFA /* RocketDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketDetailViewController.swift; sourceTree = "<group>"; };
 		F63FA87C9EF192BF154B635A /* LaunchListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
 		F9C35449A24093A1DDE7896C /* RocketsListViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RocketsListViewTests.swift; sourceTree = "<group>"; };
+		FB2B734B36B1E90831E248D8 /* LaunchDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewInput.swift; sourceTree = "<group>"; };
+		FFB11D882B2BA277BBAE55CE /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +303,16 @@
 				4F9C26AC275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift */,
 				4CACC6203E88D9B0403C54EE /* LaunchListModuleInput.swift */,
 				07AE546E4B157A1CB3A8F334 /* LaunchListModuleOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2BE07EF5DAE92E1F07E97378 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2F27958CA5A36C8278B46 /* LaunchDetailPresenter.swift */,
+				A8E0BD359E5BC792B7CC94F8 /* LaunchDetailModuleInput.swift */,
+				E07A94278BE3C3FECC55A902 /* LaunchDetailModuleOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -556,6 +586,7 @@
 				8B6DB3D1E6C6D2D3010C8432 /* RocketDetail */,
 				1E38EF3F4F554185C04C13DF /* ImageDetail */,
 				038E36DBEE0543BCF51E6D07 /* LaunchList */,
+				7B547C939E5F7FE90CDB9F06 /* LaunchDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -591,6 +622,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7B547C939E5F7FE90CDB9F06 /* LaunchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				882C3C852A987833E26E1508 /* Configurator */,
+				83BB5AF29EDC50CD66F4465E /* Router */,
+				2BE07EF5DAE92E1F07E97378 /* Presenter */,
+				F751A1F9A68DBAE1178144A8 /* View */,
+			);
+			path = LaunchDetail;
+			sourceTree = "<group>";
+		};
 		7EE5ECAE1C1CFCF5AB2286A9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,10 +642,27 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		83BB5AF29EDC50CD66F4465E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0231A979710DB2BA8D44FB38 /* LaunchDetailRouter.swift */,
+				2D8F5A00B4630C6AC4A35065 /* LaunchDetailRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		8475FB477F2F5FF0151EA9CA /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
 				0546201A9CD3F71D139A0AB5 /* RocketDetailModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		882C3C852A987833E26E1508 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C528A8074CBA72BB02216E0E /* LaunchDetailModuleConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -690,6 +749,17 @@
 				9E0DBC7B08C8286C1B21A981 /* RocketsListModuleConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		F751A1F9A68DBAE1178144A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFB11D882B2BA277BBAE55CE /* LaunchDetailViewController.swift */,
+				4EE641150F02130D7A7BC6A4 /* LaunchDetailViewController.storyboard */,
+				FB2B734B36B1E90831E248D8 /* LaunchDetailViewInput.swift */,
+				6AA842D85EF0DAFC949B2122 /* LaunchDetailViewOutput.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F875AA1A3EDCB06E49DB70FD /* Router */ = {
@@ -821,6 +891,7 @@
 				4F712C21270F1AE800E80077 /* Roboto-Bold.ttf in Resources */,
 				4F075FE2271EC15000417D69 /* RocketsCollectionViewCell.xib in Resources */,
 				4F712C1F270F1AD200E80077 /* Roboto-Medium.ttf in Resources */,
+				B83442D488E3258070577B47 /* LaunchDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,6 +984,15 @@
 				4F9C269B2758EEA000AB3886 /* UIShadowButton.swift in Sources */,
 				707D7C4169E7EC207227918B /* LaunchListViewInput.swift in Sources */,
 				D69FE8DDA708CD8208490A8C /* LaunchListViewOutput.swift in Sources */,
+				2CC87F5E420259CB102CC14B /* LaunchDetailModuleConfigurator.swift in Sources */,
+				F852DE25C6FBD53661167731 /* LaunchDetailRouter.swift in Sources */,
+				ABD90D4BBB90ECFF78ED66CE /* LaunchDetailRouterInput.swift in Sources */,
+				4C2DBA2B5AAEB71E90E1B8C6 /* LaunchDetailPresenter.swift in Sources */,
+				AB862AC16DB711ACE5820266 /* LaunchDetailModuleInput.swift in Sources */,
+				436A4EAB7BE9B7BAF2B49487 /* LaunchDetailModuleOutput.swift in Sources */,
+				977DC42BD747E28F2570FF98 /* LaunchDetailViewController.swift in Sources */,
+				6F099DB0AA59F4770D9F5960 /* LaunchDetailViewInput.swift in Sources */,
+				884B15F25B5CBA64D9A712ED /* LaunchDetailViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
