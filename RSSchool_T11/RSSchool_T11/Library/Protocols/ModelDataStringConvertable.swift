@@ -12,6 +12,7 @@ protocol ModelDataStringConvertable {
     func buildCostString(for initial: Double?) -> String?
     func buildSuccessString(for initial: Double?) -> String?
     func buildDateString(for initial: Date?) -> String?
+    func buildDateString(for initial: String?) -> String?
     func buildMassString(for initial: Mass?) -> String?
     func buildSizeString(for initial: RocketSize?) -> String?
     func buildThrustLevelString(for initial: Thrust?) -> String?
@@ -44,6 +45,18 @@ extension ModelDataStringConvertable {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM d, yyyy"
         return formatter.string(from: date)
+    }
+    
+    func buildDateString(for initial: String?) -> String? {
+        guard let dateString = initial else { return nil }
+        //get date from string
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let date = formatter.date(from: dateString)
+        //get new format date string
+        let newFormatter = DateFormatter()
+        newFormatter.dateFormat = "MMMM d, yyyy"
+        return newFormatter.string(for: date)
     }
     
     func buildMassString(for initial: Mass?) -> String? {

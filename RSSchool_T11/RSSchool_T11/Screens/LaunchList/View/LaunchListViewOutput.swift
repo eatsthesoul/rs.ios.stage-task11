@@ -6,6 +6,10 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol LaunchListViewOutput {
+import UIKit
 
+protocol LaunchListViewOutput: UICollectionViewDataSource {
+    func viewDidLoad()
+    func didSelectLaunch(with index: Int)
+    func didEndDisplayingLaunch(_ index: Int)
 }

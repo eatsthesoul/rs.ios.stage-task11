@@ -43,6 +43,10 @@
 		4F9C269F275E828E00AB3886 /* UIShadowLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C269E275E828E00AB3886 /* UIShadowLabelView.swift */; };
 		4F9C26A3275E8A9800AB3886 /* UILaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26A2275E8A9800AB3886 /* UILaunchView.swift */; };
 		4F9C26A9275E954C00AB3886 /* UIShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26A8275E954C00AB3886 /* UIShadowImageView.swift */; };
+		4F9C26AB275FB91400AB3886 /* LaunchListViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26AA275FB91400AB3886 /* LaunchListViewController + CollectionView.swift */; };
+		4F9C26AD275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26AC275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift */; };
+		4F9C26B1275FBE4C00AB3886 /* LaunchListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26B0275FBE4C00AB3886 /* LaunchListCollectionViewCell.swift */; };
+		4F9C26B32760BA3600AB3886 /* LaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C26B22760BA3600AB3886 /* LaunchService.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -154,6 +158,10 @@
 		4F9C269E275E828E00AB3886 /* UIShadowLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowLabelView.swift; sourceTree = "<group>"; };
 		4F9C26A2275E8A9800AB3886 /* UILaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILaunchView.swift; sourceTree = "<group>"; };
 		4F9C26A8275E954C00AB3886 /* UIShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadowImageView.swift; sourceTree = "<group>"; };
+		4F9C26AA275FB91400AB3886 /* LaunchListViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchListViewController + CollectionView.swift"; sourceTree = "<group>"; };
+		4F9C26AC275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchListPresenter + CollectionView.swift"; sourceTree = "<group>"; };
+		4F9C26B0275FBE4C00AB3886 /* LaunchListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F9C26B22760BA3600AB3886 /* LaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchService.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -272,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				A9253B0EF15CE0DB9FA9D8AF /* LaunchListPresenter.swift */,
+				4F9C26AC275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift */,
 				4CACC6203E88D9B0403C54EE /* LaunchListModuleInput.swift */,
 				07AE546E4B157A1CB3A8F334 /* LaunchListModuleOutput.swift */,
 			);
@@ -337,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				4F0BC9B12715C57300FB0FA0 /* RocketService.swift */,
+				4F9C26B22760BA3600AB3886 /* LaunchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -562,8 +572,10 @@
 			isa = PBXGroup;
 			children = (
 				F63FA87C9EF192BF154B635A /* LaunchListViewController.swift */,
+				4F9C26AA275FB91400AB3886 /* LaunchListViewController + CollectionView.swift */,
 				6D5105C2609844A8CFE10503 /* LaunchListViewInput.swift */,
 				818FD5899FF33C16A5B87D89 /* LaunchListViewOutput.swift */,
+				4F9C26B0275FBE4C00AB3886 /* LaunchListCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -839,7 +851,9 @@
 				4F4E203027284E8800ADB1D4 /* RocketListViewController + CollectionView.swift in Sources */,
 				4F0BC9B72715D1BD00FB0FA0 /* JSONParser.swift in Sources */,
 				4F712C2E270F1FF500E80077 /* UIColor.swift in Sources */,
+				4F9C26AD275FB9C200AB3886 /* LaunchListPresenter + CollectionView.swift in Sources */,
 				4F712BE627034A1A00E80077 /* AppDelegate.swift in Sources */,
+				4F9C26AB275FB91400AB3886 /* LaunchListViewController + CollectionView.swift in Sources */,
 				9AF1DFC6200E34BE79E1439C /* RocketsListModuleConfigurator.swift in Sources */,
 				4F712C1727035A1A00E80077 /* ModuleTrasitionable.swift in Sources */,
 				4F4E202E27284D7A00ADB1D4 /* RocketListPresenter + CollectionView.swift in Sources */,
@@ -869,6 +883,7 @@
 				B4B68FA613C71028B6F87139 /* RocketDetailRouterInput.swift in Sources */,
 				F11FFF92566D4E6F727693FB /* RocketDetailPresenter.swift in Sources */,
 				72F5315AAFD32CE6AA456335 /* RocketDetailModuleInput.swift in Sources */,
+				4F9C26B32760BA3600AB3886 /* LaunchService.swift in Sources */,
 				4F093E5D27356CA30089F5E5 /* ModelDataStringConvertable.swift in Sources */,
 				4F9C2685274FABA200AB3886 /* UIImage + Assets.swift in Sources */,
 				940D29ADD142E7914589C539 /* RocketDetailModuleOutput.swift in Sources */,
@@ -881,6 +896,7 @@
 				9C8EC7CB36EDE8FE8628A97D /* ImageDetailRouterInput.swift in Sources */,
 				058714AE26F9C937DEE36566 /* ImageDetailPresenter.swift in Sources */,
 				31EDD6287CA670360D9ABB61 /* ImageDetailModuleInput.swift in Sources */,
+				4F9C26B1275FBE4C00AB3886 /* LaunchListCollectionViewCell.swift in Sources */,
 				49B114DEFAD803F9577AB398 /* ImageDetailModuleOutput.swift in Sources */,
 				E3227C3649D18032373938EB /* ImageDetailViewController.swift in Sources */,
 				2580CFBFBBB86470184840C3 /* ImageDetailViewInput.swift in Sources */,

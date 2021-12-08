@@ -14,8 +14,8 @@ struct Launch: Codable {
     let upcoming: Bool?
     let flightNumber: Int?
     let details: String?
-    let launchDate: Date?
-    let staticFireDate: Date?
+    let launchDate: String?
+    let staticFireDate: String?
     let rocket: String?
     let id: String?
     let links: Links?
