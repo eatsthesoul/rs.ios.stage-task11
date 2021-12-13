@@ -65,12 +65,22 @@ class UIShadowLabelView: UIView {
         super.init(coder: aDecoder)
     }
     
-    private func setupUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateShadow()
+    }
+
+}
+
+// MARK: - Private methods
+private extension UIShadowLabelView {
+    
+    func setupUI() {
         backgroundColor = .smokyWhite
         addShadow()
     }
     
-    private func setupLabel() {
+    func setupLabel() {
         addSubview(label)
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.horizontalInset),
@@ -79,15 +89,9 @@ class UIShadowLabelView: UIView {
             label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.verticalInset),
         ])
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateShadow()
-    }
-
 }
 
-//MARK: - API
+// MARK: - API
 extension UIShadowLabelView {
     func setText(_ text: String) {
         setupLabel()

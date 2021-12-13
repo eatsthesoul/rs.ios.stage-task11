@@ -40,10 +40,6 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
         router?.showPictureInDetail(for: url)
     }
     
-    func didEndDisplayingRocketImage(_ index: Int) {
-        
-    }
-    
     func showRocketWikiWith(_ url: URL) {
         router?.showRocketWikiWith(url)
     }

@@ -10,12 +10,6 @@ import UIKit
 class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
     
     static let reuseIdentifier = "RocketCell"
-
-//    @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet weak var rocketNameLabel: UILabel!
-//    @IBOutlet weak var firstLaunchLabel: UILabel!
-//    @IBOutlet weak var launchCostLabel: UILabel!
-//    @IBOutlet weak var successLabel: UILabel!
     
     private lazy var rocketView: UIRocketView = {
         let rocketView = UIRocketView()
@@ -38,8 +32,11 @@ class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
         setupSubviews()
         setupUI()
     }
+}
+
+private extension RocketListCell {
     
-    private func setupSubviews() {
+    func setupSubviews() {
         addSubview(rocketView)
         NSLayoutConstraint.activate([
             rocketView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -50,20 +47,14 @@ class RocketListCell: UICollectionViewCell, ModelDataDisplayable {
         bringSubviewToFront(rocketView)
     }
     
-    private func setupUI() {
+    func setupUI() {
         backgroundColor = .clear
-        
-//        contentView.layer.cornerRadius = 15
-//        contentView.layer.masksToBounds = true
-//
-//        layer.cornerRadius = 15
-//        layer.masksToBounds = false
-//        layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
-//        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-//        layer.shadowRadius = 3
-//        layer.shadowOpacity = 1
     }
-    
+}
+
+//MARK: - API
+
+extension RocketListCell {
     func configure(with rocket: Rocket) {
         rocketView.configure(with: rocket)
     }

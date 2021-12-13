@@ -66,12 +66,16 @@ class UILaunchView: UIView, ModelDataDisplayable {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+}
+
+// MARK: - Private methods
+private extension UILaunchView {
     
-    private func setupUI() {
+    func setupUI() {
         backgroundColor = .smokyWhite
     }
     
-    private func setupSubviews() {
+    func setupSubviews() {
         addSubview(launchTitleLabel)
         addSubview(dateLabel)
         addSubview(stackView)
@@ -101,7 +105,7 @@ class UILaunchView: UIView, ModelDataDisplayable {
     }
 }
 
-//MARK: - API
+// MARK: - API
 extension UILaunchView {
     
     func setData(for launch: Launch) {

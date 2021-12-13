@@ -33,8 +33,12 @@ class UIRocketView: UIView {
         super.init(coder: aDecoder)
         setupNibView()
     }
+}
+
+// MARK: - Private methods
+private extension UIRocketView {
     
-    private func setupNibView() {
+    func setupNibView() {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         contentView = view
@@ -48,14 +52,13 @@ class UIRocketView: UIView {
         ])
     }
     
-    private func loadViewFromNib() -> UIView? {
+    func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    private func setupUI() {
-        
+    func setupUI() {
         layer.backgroundColor = UIColor.smokyWhite.cgColor
         layer.cornerRadius = 15
         layer.masksToBounds = false
@@ -71,7 +74,6 @@ class UIRocketView: UIView {
 }
 
 // MARK: - API
-
 extension UIRocketView: ModelDataDisplayable {
     
     func configure(with rocket: Rocket) {

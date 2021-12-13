@@ -73,14 +73,17 @@ class UIIndicatorView: UIView {
         super.layoutSubviews()
         updateShadow()
     }
-    
-    private func setupUI() {
+}
+
+// MARK: - Private methods
+private extension UIIndicatorView {
+    func setupUI() {
         backgroundColor = .smokyWhite
         tintColor = .cyanProcess
         addShadow()
     }
     
-    private func setupImage() {
+    func setupImage() {
         addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.offset),
@@ -89,17 +92,6 @@ class UIIndicatorView: UIView {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.offset)
         ])
     }
-    
-    func setupStyle(_ style: Style) {
-        setupImage()
-        switch style {
-        case .complited:
-            imageView.image = .checkmark
-        case .expected:
-            imageView.image = .clock
-        }
-    }
-
 }
 
 // MARK: - Shadow methods
@@ -118,5 +110,19 @@ private extension UIIndicatorView {
         whiteShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2).cgPath
         greyShadowLayer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2).cgPath
         layer.cornerRadius = bounds.height / 2
+    }
+}
+
+// MARK: - API
+extension UIIndicatorView {
+    
+    func setupStyle(_ style: Style) {
+        setupImage()
+        switch style {
+        case .complited:
+            imageView.image = .checkmark
+        case .expected:
+            imageView.image = .clock
+        }
     }
 }

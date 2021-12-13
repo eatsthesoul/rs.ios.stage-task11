@@ -11,6 +11,5 @@ import UIKit
 protocol RocketDetailViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectRocketImage(with index: Int)
-    func didEndDisplayingRocketImage(_ index: Int)
     func showRocketWikiWith(_ url: URL)
 }

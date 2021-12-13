@@ -32,8 +32,6 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
         
         collectionView.delegate = self
         collectionView.dataSource = output
-//        collectionView.register(UINib(nibName: "RocketsCollectionViewCell", bundle: nil),
-//                                 forCellWithReuseIdentifier: "RocketCell")
         collectionView.register(RocketListCell.self, forCellWithReuseIdentifier: RocketListCell.reuseIdentifier)
         return collectionView
     }()

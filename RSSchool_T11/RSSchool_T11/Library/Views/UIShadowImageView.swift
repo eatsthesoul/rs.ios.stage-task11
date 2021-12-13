@@ -73,13 +73,22 @@ class UIShadowImageView: UIView {
         super.init(coder: aDecoder)
     }
     
-    private func setupUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateShadow()
+    }
+}
+
+// MARK: - Private methods
+
+private extension UIShadowImageView {
+    func setupUI() {
         backgroundColor = .smokyWhite
         setupSubviews()
         addShadow()
     }
     
-    private func setupSubviews() {
+    func setupSubviews() {
         addSubview(imageView)
         addSubview(activityIndicator)
         
@@ -95,14 +104,10 @@ class UIShadowImageView: UIView {
             activityIndicator.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
         ])
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateShadow()
-    }
 }
 
-//MARK: - API
+
+// MARK: - API
 extension UIShadowImageView {
     
     func setImage(_ image: UIImage) {
