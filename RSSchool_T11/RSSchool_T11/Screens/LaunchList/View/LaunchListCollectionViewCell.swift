@@ -10,7 +10,7 @@ import UIKit
 class LaunchListCollectionViewCell: UICollectionViewCell {
     
     enum Constants {
-        static let reuseIdentifier = "RocketCell"
+        static let reuseIdentifier = "LaunchCell"
     }
     
     private lazy var launchView: UILaunchView = {

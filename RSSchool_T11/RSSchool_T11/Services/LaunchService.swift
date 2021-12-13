@@ -9,8 +9,6 @@ import UIKit
 
 protocol LaunchServiceProtocol {
     func loadLaunches(completion: @escaping ([Launch]?, Error?) -> ())
-    func loadImage(for url: String, completion: @escaping (UIImage?, Error?) -> ())
-    func cancelLoadingImage(for url: String)
 }
 
 class LaunchService: LaunchServiceProtocol {
@@ -32,15 +30,5 @@ class LaunchService: LaunchServiceProtocol {
                 else { completion(rockets, nil) }
             }
         }
-    }
-    
-    func loadImage(for url: String, completion: @escaping (UIImage?, Error?) -> ()) {
-        downloadManager.loadImage(for: url) { image, error in
-            completion(image, error)
-        }
-    }
-    
-    func cancelLoadingImage(for url: String) {
-        downloadManager.cancelDownloadingOperation(for: url)
     }
 }

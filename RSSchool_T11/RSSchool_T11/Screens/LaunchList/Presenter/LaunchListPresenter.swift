@@ -17,12 +17,14 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     var output: LaunchListModuleOutput?
     
     let launchService: LaunchServiceProtocol
+    let downloadManager: DownloadManagerProtocol
     var launches: [Launch]
     
     //MARK: - Initializers
     
     override init() {
         launchService = LaunchService()
+        downloadManager = DownloadManager()
         launches = [Launch]()
         super.init()
     }
@@ -34,12 +36,7 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     }
     
     func didSelectLaunch(with index: Int) {
-        
-    }
-    
-    func didEndDisplayingLaunch(_ index: Int) {
-        guard let launchImageLink = launches[index].links?.patch?.small else { return }
-        launchService.cancelLoadingImage(for: launchImageLink)
+        router?.showLaunchDetailModule(for: launches[index])
     }
 
     // MARK: - LaunchListModuleInput

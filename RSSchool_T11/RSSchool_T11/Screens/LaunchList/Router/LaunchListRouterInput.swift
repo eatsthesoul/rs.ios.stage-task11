@@ -9,4 +9,5 @@
 import Foundation
 
 protocol LaunchListRouterInput {
+    func showLaunchDetailModule(for launch: Launch)
 }

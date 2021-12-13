@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RocketDetailViewCell: UICollectionViewCell {
+class RocketImageCell: UICollectionViewCell {
     
     enum Constants {
         static let reuseIdentifier = "RocketImageCell"
@@ -91,7 +91,7 @@ class RocketDetailViewCell: UICollectionViewCell {
 }
 
 // MARK: - Shadow methods
-private extension RocketDetailViewCell {
+private extension RocketImageCell {
     
     func addShadow() {
          layer.insertSublayer(foregroundLayer, at: 0)

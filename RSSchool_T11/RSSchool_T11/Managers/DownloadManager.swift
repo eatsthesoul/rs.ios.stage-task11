@@ -8,12 +8,14 @@
 import Foundation
 import UIKit
 
-class DownloadManager {
+protocol DownloadManagerProtocol {
+    func fetchData(from url: String, completion: @escaping (Data?, Error?) -> ())
+    func loadImage(for url: String, completion: @escaping (UIImage?, Error?) -> ())
+}
+
+class DownloadManager: DownloadManagerProtocol {
     
     private let session = URLSession.shared
-    
-    private let queue = OperationQueue()
-    private var operations = [String : Operation]()
     
     func fetchData(from url: String, completion: @escaping (Data?, Error?) -> ()) {
         
@@ -33,19 +35,18 @@ class DownloadManager {
     
     func loadImage(for url: String, completion: @escaping (UIImage?, Error?) -> ()) {
         
-        cancelDownloadingOperation(for: url)
-        let operation = ImageDownloadOperation(with: url)
-        operations[url] = operation
-        operation.completion = { image, error in
+        guard let url = URL(string: url) else { return }
+        
+        let dataTask = session.dataTask(with: url) { data, _, error in
             DispatchQueue.main.async {
-                completion(image, error)
+                if let error = error { completion(nil, error) }
+                
+                guard let data = data else { return }
+                if let image = UIImage(data: data) {
+                    completion(image, error)
+                }
             }
         }
-        queue.addOperation(operation)
-    }
-    
-    func cancelDownloadingOperation(for url: String) {
-        let operation = self.operations[url]
-        operation?.cancel()
+        dataTask.resume()
     }
 }

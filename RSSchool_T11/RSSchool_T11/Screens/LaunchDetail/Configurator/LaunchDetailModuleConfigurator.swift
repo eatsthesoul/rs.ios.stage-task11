@@ -13,7 +13,7 @@ final class LaunchDetailModuleConfigurator {
     // MARK: - Internal methods
 
     func configure(with launch: Launch, output: LaunchDetailModuleOutput? = nil) -> LaunchDetailViewController {
-        let view = LaunchDetailViewController()
+        let view = LaunchDetailViewController(nibName: "LaunchDetailViewController", bundle: nil)
         let presenter = LaunchDetailPresenter()
         let router = LaunchDetailRouter()
 

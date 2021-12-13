@@ -18,12 +18,14 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     var output: RocketListModuleOutput?
     
     let rocketService: RocketServiceProtocol
+    let downloadManager: DownloadManagerProtocol
     var rockets: [Rocket]
     
     //MARK: - Initializers
     
     override init() {
         rocketService = RocketService()
+        downloadManager = DownloadManager()
         rockets = [Rocket]()
         super.init()
     }
@@ -37,11 +39,6 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     
     func didSelectRocket(with index: Int) {
         router?.showRocketDetailModule(for: rockets[index])
-    }
-    
-    func didEndDisplayingRocket(_ index: Int) {
-        guard let imageURL = rockets[index].images?.first else { return }
-        rocketService.cancelLoadingImage(for: imageURL)
     }
 
     // MARK: - RocketsListModuleInput

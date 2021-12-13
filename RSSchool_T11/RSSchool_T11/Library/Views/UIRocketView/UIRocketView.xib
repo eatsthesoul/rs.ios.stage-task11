@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIRocketView" customModule="RSSchool_T11" customModuleProvider="target">
+            <connections>
+                <outlet property="firstLaunchLabel" destination="cKm-0R-XJg" id="4vP-aO-Uvl"/>
+                <outlet property="imageView" destination="kVc-m7-6MN" id="bF0-8O-Q4K"/>
+                <outlet property="launchCostLabel" destination="HVO-3w-7ek" id="3eX-Mg-w16"/>
+                <outlet property="rocketNameLabel" destination="MRc-CD-Xnj" id="eUf-UQ-xIl"/>
+                <outlet property="successLabel" destination="ZFW-Mg-Nhj" id="Mm1-z0-qwL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="R2e-pz-Vqk">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="432"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRc-CD-Xnj">
+                    <rect key="frame" x="20" y="318.5" width="141.5" height="28.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                    <color key="textColor" name="Smoky Black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-I9-U1l">
+                    <rect key="frame" x="20" y="378" width="292" height="33"/>
+                    <subviews>
+                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-Bx-vGG">
+                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-qb-Mnh">
+                                    <rect key="frame" x="0.0" y="0.0" width="101.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Smoky Black"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 1, 1990" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKm-0R-XJg">
+                                    <rect key="frame" x="0.0" y="16.5" width="101.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Slate Gray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-x9-dAb">
+                            <rect key="frame" x="131.5" y="0.0" width="77" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-aH-JLr">
+                                    <rect key="frame" x="0.0" y="0.0" width="77" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Smoky Black"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVO-3w-7ek">
+                                    <rect key="frame" x="0.0" y="16.5" width="77" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Slate Gray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-PS-T65">
+                            <rect key="frame" x="238.5" y="0.0" width="53.5" height="33"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUU-Bq-2So">
+                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Smoky Black"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-Mg-Nhj">
+                                    <rect key="frame" x="0.0" y="16.5" width="53.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="Slate Gray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceXTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="kVc-m7-6MN" userLabel="imageView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="264.5"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pbt-L4-P9I"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MRc-CD-Xnj" firstAttribute="leading" secondItem="pbt-L4-P9I" secondAttribute="leading" constant="20" id="55G-bR-HTE"/>
+                <constraint firstItem="DYr-I9-U1l" firstAttribute="leading" secondItem="pbt-L4-P9I" secondAttribute="leading" constant="20" id="EO5-So-Vc4"/>
+                <constraint firstItem="pbt-L4-P9I" firstAttribute="bottom" secondItem="DYr-I9-U1l" secondAttribute="bottom" constant="21" id="Iel-oK-WgX"/>
+                <constraint firstItem="kVc-m7-6MN" firstAttribute="top" secondItem="pbt-L4-P9I" secondAttribute="top" id="JXa-23-kMQ"/>
+                <constraint firstItem="kVc-m7-6MN" firstAttribute="leading" secondItem="pbt-L4-P9I" secondAttribute="leading" id="T5C-bV-2IA"/>
+                <constraint firstItem="pbt-L4-P9I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DYr-I9-U1l" secondAttribute="trailing" constant="20" id="UUa-RQ-9Qk"/>
+                <constraint firstItem="MRc-CD-Xnj" firstAttribute="top" secondItem="kVc-m7-6MN" secondAttribute="bottom" constant="10" id="X8A-wL-Obi"/>
+                <constraint firstItem="pbt-L4-P9I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MRc-CD-Xnj" secondAttribute="trailing" constant="20" id="Zpd-Ia-ihe"/>
+                <constraint firstAttribute="trailing" secondItem="kVc-m7-6MN" secondAttribute="trailing" id="pDq-CW-n0R"/>
+                <constraint firstItem="kVc-m7-6MN" firstAttribute="width" secondItem="kVc-m7-6MN" secondAttribute="height" multiplier="47:30" id="scU-up-xNH"/>
+                <constraint firstItem="DYr-I9-U1l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MRc-CD-Xnj" secondAttribute="bottom" constant="27" id="yDL-zv-MJe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-194.20289855072465" y="-333.48214285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="spaceXTemplate" width="1024" height="1024"/>
+        <namedColor name="Slate Gray">
+            <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Smoky Black">
+            <color red="0.075000002980232239" green="0.075000002980232239" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

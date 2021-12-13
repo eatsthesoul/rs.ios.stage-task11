@@ -1,15 +1,15 @@
 //
-//  RocketDetailPresenter + CollectionView.swift
+//  LaunchDetailPresenter + CollectionViewDataSource.swift
 //  RSSchool_T11
 //
-//  Created by Evgeniy Petlitskiy on 16.11.21.
+//  Created by Evgeniy Petlitskiy on 13.12.21.
 //
 
 import UIKit
 
-extension RocketDetailPresenter: UICollectionViewDataSource {
+extension LaunchDetailPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rocket?.images?.count ?? 0
+        rocketImagesURLs?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -17,7 +17,7 @@ extension RocketDetailPresenter: UICollectionViewDataSource {
                                                       for: indexPath)
 
         if let cell = cell as? RocketImageCell {
-            if let imageURL = rocket?.images?[indexPath.row] {
+            if let imageURL = rocketImagesURLs?[indexPath.row] {
                 downloadManager.loadImage(for: imageURL) { image, error in
                     if let error = error {
                         print(error)
@@ -30,6 +30,4 @@ extension RocketDetailPresenter: UICollectionViewDataSource {
         }
         return cell
     }
-    
-    
 }

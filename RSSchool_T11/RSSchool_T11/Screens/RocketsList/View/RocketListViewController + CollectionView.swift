@@ -15,10 +15,6 @@ extension RocketListViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         output?.didSelectRocket(with: indexPath.row)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        output?.didEndDisplayingRocket(indexPath.row)
-    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

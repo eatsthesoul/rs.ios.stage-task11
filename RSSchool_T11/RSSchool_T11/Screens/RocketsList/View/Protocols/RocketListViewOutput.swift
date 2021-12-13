@@ -10,5 +10,4 @@ import UIKit
 protocol RocketListViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectRocket(with index: Int)
-    func didEndDisplayingRocket(_ index: Int)
 }

@@ -26,7 +26,7 @@ extension LaunchListPresenter: UICollectionViewDataSource {
             
             //launch image
             if let imageURL = launch.links?.patch?.small {
-                launchService.loadImage(for: imageURL) { image, error in
+                downloadManager.loadImage(for: imageURL) { image, error in
                     if let err = error {
                         print(err)
                         return

@@ -15,10 +15,6 @@ extension LaunchListViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         output?.didSelectLaunch(with: indexPath.row)
     }
-
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        output?.didEndDisplayingLaunch(indexPath.row)
-    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

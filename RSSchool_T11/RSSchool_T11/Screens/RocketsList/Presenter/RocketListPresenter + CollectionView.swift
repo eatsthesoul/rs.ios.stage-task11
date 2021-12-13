@@ -24,13 +24,13 @@ extension RocketListPresenter: UICollectionViewDataSource {
             
             //rocket image
             if let imageURL = rocket.images?.first {
-                rocketService.loadImage(for: imageURL) { image, error in
+                downloadManager.loadImage(for: imageURL) { image, error in
                     if let err = error {
                         print(err)
                         return
                     }
                     guard let img = image else { return }
-                    cell.imageView.image = img
+                    cell.setImage(img)
                 }
             }
         }

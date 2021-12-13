@@ -16,8 +16,15 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
     var router: RocketDetailRouterInput?
     var output: RocketDetailModuleOutput?
     
-    let rocketService: RocketServiceProtocol = RocketService()
+    let rocketService: RocketServiceProtocol
+    let downloadManager: DownloadManagerProtocol
     var rocket: Rocket?
+    
+    override init() {
+        rocketService = RocketService()
+        downloadManager = DownloadManager()
+        super.init()
+    }
     
 
     // MARK: - RocketDetailViewOutput
@@ -58,7 +65,7 @@ private extension RocketDetailPresenter {
     
     func setupCoverImage() {
         guard let imgURL = rocket?.images?.first else { return }
-        rocketService.loadImage(for: imgURL) { [weak self] image, error in
+        downloadManager.loadImage(for: imgURL) { [weak self] image, error in
             if let error = error {
                 print(error)
                 return

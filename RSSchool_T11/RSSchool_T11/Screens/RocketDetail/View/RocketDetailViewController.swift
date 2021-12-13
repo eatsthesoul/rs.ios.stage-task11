@@ -105,8 +105,8 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     private func setupRocketImagesCollectionView() {
         if isImageURLsExist {
             rocketImagesStackView.isHidden = false
-            rocketImagesCollectionView.register(RocketDetailViewCell.self,
-                                                forCellWithReuseIdentifier: RocketDetailViewCell.Constants.reuseIdentifier)
+            rocketImagesCollectionView.register(RocketImageCell.self,
+                                                forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
             rocketImagesCollectionView.delegate = self
             rocketImagesCollectionView.dataSource = output
         } else {

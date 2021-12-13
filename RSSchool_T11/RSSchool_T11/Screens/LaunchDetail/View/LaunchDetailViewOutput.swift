@@ -6,6 +6,8 @@
 //  Copyright © 2021 Evgeniy Petlitkiy. All rights reserved.
 //
 
-protocol LaunchDetailViewOutput {
+import UIKit
 
+protocol LaunchDetailViewOutput: UICollectionViewDataSource {
+    func viewDidLoad()
 }
