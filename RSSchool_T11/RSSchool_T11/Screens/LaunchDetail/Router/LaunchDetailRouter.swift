@@ -15,5 +15,12 @@ final class LaunchDetailRouter: LaunchDetailRouterInput {
     weak var view: ModuleTransitionable?
 
 	// MARK: - LaunchDetailRouterInput
+    
+    func showPictureInDetail(for url: String) {
+        let imageDetailConfigurator = ImageDetailModuleConfigurator()
+        let imageDetailViewController = imageDetailConfigurator.configure(with: url)
+        imageDetailViewController.modalPresentationStyle = .fullScreen
+        view?.presentModule(imageDetailViewController, animated: true, completion: nil)
+    }
 
 }

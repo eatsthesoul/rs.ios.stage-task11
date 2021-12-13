@@ -35,6 +35,11 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
         setupViewsData()
         setupCoverImage()
     }
+    
+    func didSelectRocketImage(with index: Int) {
+        guard let url = rocketImagesURLs?[index] else { return }
+        router?.showPictureInDetail(for: url)
+    }
 
     // MARK: - LaunchDetailModuleInput
 
