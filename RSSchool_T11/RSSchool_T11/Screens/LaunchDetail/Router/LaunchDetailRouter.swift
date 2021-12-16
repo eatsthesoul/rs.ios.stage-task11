@@ -28,5 +28,11 @@ final class LaunchDetailRouter: LaunchDetailRouterInput {
         let webViewController = webViewConfigurator.configure(with: url)
         view?.push(module: webViewController, animated: true, hideTabBar: false)
     }
+    
+    func showRocketDetailModule(for rocket: Rocket) {
+        let rocketDetailConfigurator = RocketDetailModuleConfigurator()
+        let rocketDetailViewController = rocketDetailConfigurator.configure(with: rocket)
+        view?.push(module: rocketDetailViewController, animated: true)
+    }
 
 }

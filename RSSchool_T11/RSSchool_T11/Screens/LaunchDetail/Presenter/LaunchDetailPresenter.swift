@@ -28,19 +28,25 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
     var output: LaunchDetailModuleOutput?
     
     var launch: Launch?
+    var rocket: Rocket?
+    
     let launchService: LaunchServiceProtocol
     let rocketService: RocketServiceProtocol
     var downloadManager: DownloadManagerProtocol
-    
-    var rocketImagesURLs: [String]?
     
     override init() {
         launchService = LaunchService()
         rocketService = RocketService()
         downloadManager = DownloadManager()
     }
+    
+    // MARK: - LaunchDetailModuleInput
 
-    // MARK: - LaunchDetailViewOutput
+}
+
+// MARK: - LaunchDetailViewOutput
+
+extension LaunchDetailPresenter {
     
     func viewDidLoad() {
         setupViewsData()
@@ -48,7 +54,7 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
     }
     
     func didSelectRocketImage(with index: Int) {
-        guard let url = rocketImagesURLs?[index] else { return }
+        guard let url = rocket?.images?[index] else { return }
         router?.showPictureInDetail(for: url)
     }
     
@@ -75,9 +81,11 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
             router?.showWebPage(for: launchURL)
         }
     }
-
-    // MARK: - LaunchDetailModuleInput
-
+    
+    func showRocketDetailModule() {
+        guard let rocket = rocket else { return }
+        router?.showRocketDetailModule(for: rocket)
+    }
 }
 
 // MARK: - Private methods
@@ -97,6 +105,7 @@ private extension LaunchDetailPresenter {
         guard let rocketID = launch.rocket else { return }
         rocketService.loadRocket(with: rocketID) { [weak self] rocket, error in
             self?.view?.stopLoader()
+            self?.rocket = rocket
             
             //rocket view data
             self?.view?.setupRocketView(with: rocket)
@@ -107,7 +116,6 @@ private extension LaunchDetailPresenter {
                 self?.view?.hideRocketImages()
                 return
             }
-            self?.rocketImagesURLs = urls
             self?.view?.reloadRocketImages()
             
             //rocket view cover image
@@ -116,7 +124,7 @@ private extension LaunchDetailPresenter {
     }
     
     func setupRocketViewCoverImage() {
-        guard let url = rocketImagesURLs?.first else { return }
+        guard let url = rocket?.images?.first else { return }
         downloadManager.loadImage(for: url, completion: { [weak self] image, error in
             guard let image = image else { return }
             self?.view?.setRocketViewCoverImage(image)

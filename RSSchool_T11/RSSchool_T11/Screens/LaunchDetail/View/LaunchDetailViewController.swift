@@ -57,6 +57,7 @@ final class LaunchDetailViewController: UIViewController, LaunchDetailViewInput,
         super.viewDidLoad()
         setupRocketImagesCollectionView()
         setupButtons()
+        setupRocketView()
         output?.viewDidLoad()
     }
     
@@ -78,11 +79,6 @@ private extension LaunchDetailViewController {
         rocketImagesCollectionView.register(RocketImageCell.self,
                                             forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
     }
-}
-
-//MARK: - Link Buttons methods
-
-private extension LaunchDetailViewController {
     
     func setupButtons() {
         wikipediaButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
@@ -92,6 +88,16 @@ private extension LaunchDetailViewController {
         campaignButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
         launchButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
     }
+    
+    func setupRocketView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showRocketDetailModule))
+        rocketView.addGestureRecognizer(tapGesture)
+    }
+}
+
+//MARK: - Handlers
+
+private extension LaunchDetailViewController {
     
     @objc func showLaunchMaterial(_ sender: UIButton) {
         
@@ -111,6 +117,10 @@ private extension LaunchDetailViewController {
         default:
             break
         }
+    }
+    
+    @objc func showRocketDetailModule() {
+        output?.showRocketDetailModule()
     }
 }
 

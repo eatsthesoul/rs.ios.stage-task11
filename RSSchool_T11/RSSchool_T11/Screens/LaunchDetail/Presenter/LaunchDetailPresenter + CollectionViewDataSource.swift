@@ -9,7 +9,7 @@ import UIKit
 
 extension LaunchDetailPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        rocketImagesURLs?.count ?? 0
+        rocket?.images?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -17,7 +17,7 @@ extension LaunchDetailPresenter: UICollectionViewDataSource {
                                                       for: indexPath)
 
         if let cell = cell as? RocketImageCell {
-            if let imageURL = rocketImagesURLs?[indexPath.row] {
+            if let imageURL = rocket?.images?[indexPath.row] {
                 downloadManager.loadImage(for: imageURL) { image, error in
                     if let error = error {
                         print(error)
