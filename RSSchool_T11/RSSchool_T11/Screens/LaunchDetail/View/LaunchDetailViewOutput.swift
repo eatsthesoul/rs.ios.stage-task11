@@ -11,4 +11,5 @@ import UIKit
 protocol LaunchDetailViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectRocketImage(with index: Int)
+    func showLaunchMaterial(_ type: LaunchLinkType)
 }

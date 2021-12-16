@@ -60,6 +60,7 @@
                 <outlet property="launchCostTitleLabel" destination="5fB-W7-geA" id="mIE-2C-n0M"/>
                 <outlet property="massLabel" destination="Kby-wm-AS4" id="9os-fC-eLV"/>
                 <outlet property="massTitleLabel" destination="Arn-tF-mbH" id="wrd-se-lxB"/>
+                <outlet property="materialsStackView" destination="0NP-2j-ssV" id="tgw-RV-JIm"/>
                 <outlet property="rocketImagesCollectionView" destination="qsP-bu-WgS" id="5Kg-DS-MGW"/>
                 <outlet property="rocketImagesStackView" destination="liP-k6-70V" id="nSc-Qg-TPV"/>
                 <outlet property="rocketNameLabel" destination="GsM-aT-WnA" id="LjZ-j3-nyf"/>

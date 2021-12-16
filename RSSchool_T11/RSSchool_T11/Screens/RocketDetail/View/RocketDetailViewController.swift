@@ -13,7 +13,6 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     // MARK: - Properties
     
     private var isImageURLsExist = false
-    private var wikiURL: URL?
     
     var output: RocketDetailViewOutput?
     
@@ -91,38 +90,34 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var landingLegsMaterialLabel: UILabel!
     
     //materials
+    @IBOutlet weak var materialsStackView: UIStackView!
     @IBOutlet weak var wikiButton: UIShadowButton!
 
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         output?.viewDidLoad()
     }
-    
-    // MARK: - Private methods
-    
-    private func setupRocketImagesCollectionView() {
-        if isImageURLsExist {
-            rocketImagesStackView.isHidden = false
-            rocketImagesCollectionView.register(RocketImageCell.self,
-                                                forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
-            rocketImagesCollectionView.delegate = self
-            rocketImagesCollectionView.dataSource = output
-        } else {
-            rocketImagesStackView.isHidden = true
-        }
-    }
-    
-    private func checkIfImageURLsExist(for rocket: Rocket) {
-        guard let urlArray = rocket.images, !urlArray.isEmpty else {
-            isImageURLsExist = false
-            return
-        }
-        isImageURLsExist = true
-    }
+}
 
-    // MARK: - RocketDetailViewInput
+// MARK: - Private methods
+extension RocketDetailViewController {
+    
+    private func setupViews() {
+        
+        wikiButton.addTarget(self, action: #selector(showRocketMaterial(_:)), for: .touchUpInside)
+        
+        rocketImagesCollectionView.register(RocketImageCell.self,
+                                            forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
+        rocketImagesCollectionView.delegate = self
+        rocketImagesCollectionView.dataSource = output
+    }
+}
+
+// MARK: - RocketDetailViewInput
+extension RocketDetailViewController {
     
     func setup(with rocket: Rocket) {
         
@@ -192,19 +187,18 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
         setupLabelStackData([landingLegsAmountLabel, landingLegsAmountTitleLabel], with: landingLegsAmountString)
         setupLabelStackData([landingLegsMaterialLabel, landingLegsMaterialTitleLabel], with: rocket.landingLegs?.material)
         
-        
-        //rocket images
-        checkIfImageURLsExist(for: rocket)
-        setupRocketImagesCollectionView()
-        
-        
         //materials
-        if let wikiString = rocket.wikipedia, let wikiLink = URL(string: wikiString) {
-            wikiURL = wikiLink
-            wikiButton.addTarget(self, action: #selector(showRocketWiki), for: .touchUpInside)
-        } else {
-            wikiButton.superview?.isHidden = true
-        }
+        wikiButton.isHidden = !checkIfDataExist(rocket.wikipedia)
+        checkIfStackViewIsVisible(materialsStackView, with: [wikiButton])
+    }
+    
+    func reloadRocketImages() {
+        rocketImagesCollectionView.reloadData()
+        rocketImagesStackView.isHidden = false
+    }
+    
+    func hideRocketImages() {
+        rocketImagesStackView.isHidden = true
     }
     
     func setupRocketCoverImage(_ image: UIImage) {
@@ -214,12 +208,17 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     }
 }
 
-//MARK: - Buttons Handlers
+// MARK: - Link Buttons methods
 
 private extension RocketDetailViewController {
     
-    @objc func showRocketWiki() {
-        guard let wikiURL = self.wikiURL else { return }
-        output?.showRocketWikiWith(wikiURL)
+    @objc func showRocketMaterial(_ sender: UIButton) {
+        
+        switch sender {
+        case wikiButton:
+            output?.showRocketMaterial(.wikipedia)
+        default:
+            break
+        }
     }
 }

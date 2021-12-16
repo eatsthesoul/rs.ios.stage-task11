@@ -16,8 +16,10 @@ final class RocketDetailRouter: RocketDetailRouterInput {
 
 	// MARK: - RocketDetailRouterInput
     
-    func showRocketWikiWith(_ url: URL) {
-        //TODO: Transition to Rocket WIKI 
+    func showRocketWikiWith(_ url: String) {
+        let webViewConfigurator = WebPageModuleConfigurator()
+        let webViewController = webViewConfigurator.configure(with: url)
+        view?.push(module: webViewController, animated: true, hideTabBar: false)
     }
     
     func showPictureInDetail(for url: String) {

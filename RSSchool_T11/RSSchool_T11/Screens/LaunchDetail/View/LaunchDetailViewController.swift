@@ -38,12 +38,25 @@ final class LaunchDetailViewController: UIViewController, LaunchDetailViewInput,
     @IBOutlet weak var rocketStackView: UIStackView!
     @IBOutlet weak var rocketView: UIRocketView!
     
+    //materials
+    @IBOutlet weak var materialsStackView: UIStackView!
+    @IBOutlet weak var wikipediaButton: UIShadowButton!
+    @IBOutlet weak var youtubeButton: UIShadowButton!
+    
+    //reddit
+    @IBOutlet weak var redditStackView: UIStackView!
+    @IBOutlet weak var recoveryButton: UIShadowButton!
+    @IBOutlet weak var mediaButton: UIShadowButton!
+    @IBOutlet weak var campaignButton: UIShadowButton!
+    @IBOutlet weak var launchButton: UIShadowButton!
+    
     
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRocketImagesCollectionView()
+        setupButtons()
         output?.viewDidLoad()
     }
 }
@@ -57,6 +70,40 @@ private extension LaunchDetailViewController {
         rocketImagesCollectionView.dataSource = output
         rocketImagesCollectionView.register(RocketImageCell.self,
                                             forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
+    }
+}
+
+//MARK: - Link Buttons methods
+
+private extension LaunchDetailViewController {
+    
+    func setupButtons() {
+        wikipediaButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+        youtubeButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+        recoveryButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+        mediaButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+        campaignButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+        launchButton.addTarget(self, action: #selector(showLaunchMaterial(_:)), for: .touchUpInside)
+    }
+    
+    @objc func showLaunchMaterial(_ sender: UIButton) {
+        
+        switch sender {
+        case wikipediaButton:
+            output?.showLaunchMaterial(.wikipedia)
+        case youtubeButton:
+            output?.showLaunchMaterial(.youtube)
+        case recoveryButton:
+            output?.showLaunchMaterial(.redditRecovery)
+        case mediaButton:
+            output?.showLaunchMaterial(.redditMedia)
+        case campaignButton:
+            output?.showLaunchMaterial(.redditCampaign)
+        case launchButton:
+            output?.showLaunchMaterial(.redditLaunch)
+        default:
+            break
+        }
     }
 }
 
@@ -80,6 +127,18 @@ extension LaunchDetailViewController {
         setupLabelStackData([staticFireDateLabel, staticFireDateTitleLabel], with: staticFireDateString)
         setupLabelStackData([launchDateLabel, launchDateTitleLabel], with: launchDateString)
         setupLabelStackData([successLabel, successTitleLabel], with: successString)
+        
+        //materials
+        wikipediaButton.isHidden = !checkIfDataExist(launch.links?.wikipedia)
+        youtubeButton.isHidden = !checkIfDataExist(launch.links?.youtube)
+        checkIfStackViewIsVisible(materialsStackView, with: [wikipediaButton, youtubeButton])
+        
+        //reddit
+        recoveryButton.isHidden = !checkIfDataExist(launch.links?.reddit?.recovery)
+        mediaButton.isHidden = !checkIfDataExist(launch.links?.reddit?.media)
+        campaignButton.isHidden = !checkIfDataExist(launch.links?.reddit?.campaign)
+        launchButton.isHidden = !checkIfDataExist(launch.links?.reddit?.launch)
+        checkIfStackViewIsVisible(redditStackView, with: [recoveryButton, mediaButton, campaignButton, launchButton])
     }
     
     func setCoverImage(_ image: UIImage) {

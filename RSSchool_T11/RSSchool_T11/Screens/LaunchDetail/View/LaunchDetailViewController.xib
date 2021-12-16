@@ -20,11 +20,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LaunchDetailViewController" customModule="RSSchool_T11" customModuleProvider="target">
             <connections>
+                <outlet property="campaignButton" destination="3sq-5M-SXT" id="O1c-ew-CFh"/>
                 <outlet property="descriptionLabel" destination="fYd-52-l0o" id="IYo-tF-Sv4"/>
                 <outlet property="descriptionTitleLabel" destination="zRQ-Sn-XR1" id="cbY-5O-vca"/>
+                <outlet property="launchButton" destination="CeL-hT-eik" id="x5L-Pl-7iG"/>
                 <outlet property="launchDateLabel" destination="wdk-4Q-FrG" id="lae-rm-lLR"/>
                 <outlet property="launchDateTitleLabel" destination="4xX-Yb-eW4" id="BXx-oL-wGR"/>
                 <outlet property="launchView" destination="yKW-OB-6SR" id="iIv-iy-cto"/>
+                <outlet property="materialsStackView" destination="aH9-sK-alQ" id="Pek-fJ-gw3"/>
+                <outlet property="mediaButton" destination="i0k-Yr-LYs" id="QzW-1H-MqQ"/>
+                <outlet property="recoveryButton" destination="jCb-T1-Cyw" id="E0Z-Gs-kbk"/>
+                <outlet property="redditStackView" destination="cH2-NG-Wwa" id="8a1-an-ccd"/>
                 <outlet property="rocketImagesCollectionView" destination="Mqn-mS-Vp6" id="uqZ-Og-9yW"/>
                 <outlet property="rocketImagesStackView" destination="Aug-bl-jA4" id="9nl-s5-B0Y"/>
                 <outlet property="rocketStackView" destination="mnT-uA-x5H" id="Ik4-wA-hEu"/>
@@ -34,6 +40,8 @@
                 <outlet property="successLabel" destination="Q8P-9m-YU5" id="wVB-RS-P1i"/>
                 <outlet property="successTitleLabel" destination="qfN-qb-xQS" id="526-6s-n3H"/>
                 <outlet property="view" destination="x9P-kl-ZtP" id="tyr-hf-YZw"/>
+                <outlet property="wikipediaButton" destination="lZ4-aA-Ypk" id="5ov-My-5kd"/>
+                <outlet property="youtubeButton" destination="oJj-gN-R5I" id="c98-j2-2ni"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

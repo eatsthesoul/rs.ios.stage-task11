@@ -16,9 +16,10 @@ protocol ModelDataDisplayable: ModelDataStringConvertable {
 extension ModelDataDisplayable {
     
     func setupLabelStackData(_ labels: [UILabel], with string: String?) {
-        
-        guard let string = string, !string.isEmpty else {
-            //check if label stack is stack view
+        if checkIfDataExist(string) {
+            labels[0].text = string
+        } else {
+            // check if label stack is stack view
             if let superview = labels[0].superview as? UIStackView {
                 if superview.tag == 345 {
                     superview.isHidden = true
@@ -28,7 +29,25 @@ extension ModelDataDisplayable {
             labels.forEach { $0.isHidden = true }
             return
         }
-        labels[0].text = string
+    }
+    
+    func checkIfDataExist(_ data: Any?) -> Bool {
+        
+        if data == nil { return false }
+        if let string = data as? String {
+            let result = string.isEmpty ? false : true
+            return result
+        }
+        return true
+    }
+    
+    func checkIfStackViewIsVisible(_ stackView: UIStackView, with views: [UIView]) {
+        
+        var hiddenViewsCounter = 0
+        views.forEach { view in
+            if view.isHidden { hiddenViewsCounter += 1 }
+        }
+        stackView.isHidden = hiddenViewsCounter == views.count
     }
 }
 

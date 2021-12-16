@@ -8,7 +8,18 @@
 
 import Foundation
 
+enum LaunchLinkType {
+    case wikipedia
+    case youtube
+    case redditRecovery
+    case redditMedia
+    case redditCampaign
+    case redditLaunch
+}
+
 final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetailModuleInput {
+
+    
 
     // MARK: - Properties
 
@@ -39,6 +50,30 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
     func didSelectRocketImage(with index: Int) {
         guard let url = rocketImagesURLs?[index] else { return }
         router?.showPictureInDetail(for: url)
+    }
+    
+    func showLaunchMaterial(_ type: LaunchLinkType) {
+        
+        switch type {
+        case .wikipedia:
+            guard let wikiURL = launch?.links?.wikipedia else { return }
+            router?.showWebPage(for: wikiURL)
+        case .youtube:
+            guard let youtubeURL = launch?.links?.youtube else { return }
+            router?.showWebPage(for: youtubeURL)
+        case .redditRecovery:
+            guard let recoveryURL = launch?.links?.reddit?.recovery else { return }
+            router?.showWebPage(for: recoveryURL)
+        case .redditMedia:
+            guard let mediaURL = launch?.links?.reddit?.media else { return }
+            router?.showWebPage(for: mediaURL)
+        case .redditCampaign:
+            guard let campaignURL = launch?.links?.reddit?.campaign else { return }
+            router?.showWebPage(for: campaignURL)
+        case .redditLaunch:
+            guard let launchURL = launch?.links?.reddit?.launch else { return }
+            router?.showWebPage(for: launchURL)
+        }
     }
 
     // MARK: - LaunchDetailModuleInput

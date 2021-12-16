@@ -10,4 +10,5 @@ import Foundation
 
 protocol LaunchDetailRouterInput {
     func showPictureInDetail(for url: String)
+    func showWebPage(for url: String)
 }

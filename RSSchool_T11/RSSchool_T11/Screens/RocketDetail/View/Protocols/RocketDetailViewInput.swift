@@ -11,4 +11,6 @@ import UIKit
 protocol RocketDetailViewInput: AnyObject {
     func setup(with rocket: Rocket)
     func setupRocketCoverImage(_ image: UIImage)
+    func hideRocketImages()
+    func reloadRocketImages()
 }

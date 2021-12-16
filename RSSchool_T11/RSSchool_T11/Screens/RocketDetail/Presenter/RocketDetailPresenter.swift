@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum RocketLinkType {
+    case wikipedia
+}
+
 final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetailModuleInput {
 
     // MARK: - Properties
@@ -32,7 +36,6 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
     func viewDidLoad() {
         setupRocketData()
         setupCoverImage()
-        
     }
     
     func didSelectRocketImage(with index: Int) {
@@ -40,8 +43,13 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
         router?.showPictureInDetail(for: url)
     }
     
-    func showRocketWikiWith(_ url: URL) {
-        router?.showRocketWikiWith(url)
+    func showRocketMaterial(_ type: RocketLinkType) {
+        
+        switch type {
+        case .wikipedia:
+            guard let wikiURL = rocket?.wikipedia else { return }
+            router?.showRocketWikiWith(wikiURL)
+        }
     }
     
     
@@ -57,6 +65,12 @@ private extension RocketDetailPresenter {
         guard let rocket = rocket else { return }
         self.rocket = rocket
         view?.setup(with: rocket)
+        
+        if let images = rocket.images, images.count > 0 {
+            view?.reloadRocketImages()
+        } else {
+            view?.hideRocketImages()
+        }
     }
     
     func setupCoverImage() {

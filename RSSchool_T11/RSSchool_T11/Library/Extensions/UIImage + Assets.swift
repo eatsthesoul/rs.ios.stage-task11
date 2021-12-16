@@ -17,7 +17,7 @@ extension UIImage {
         UIImage(named: "link")!
     }
     
-    static var xmark: UIImage {
+    static var xmarkCircle: UIImage {
         UIImage(named: "xmark.circle")!
     }
     
@@ -39,5 +39,29 @@ extension UIImage {
     
     static var clock: UIImage {
         UIImage(named: "clock")!
+    }
+    
+    static var left: UIImage {
+        UIImage(named: "left")!
+    }
+    
+    static var right: UIImage {
+        UIImage(named: "right")!
+    }
+    
+    static var share: UIImage {
+        UIImage(named: "share")!
+    }
+    
+    static var safari: UIImage {
+        UIImage(named: "safari")!
+    }
+    
+    static var arrow: UIImage {
+        UIImage(named: "arrow")!
+    }
+    
+    static var xmark: UIImage {
+        UIImage(named: "xmark")!
     }
 }

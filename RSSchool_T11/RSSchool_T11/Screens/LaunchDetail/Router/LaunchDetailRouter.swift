@@ -22,5 +22,11 @@ final class LaunchDetailRouter: LaunchDetailRouterInput {
         imageDetailViewController.modalPresentationStyle = .fullScreen
         view?.presentModule(imageDetailViewController, animated: true, completion: nil)
     }
+    
+    func showWebPage(for url: String) {
+        let webViewConfigurator = WebPageModuleConfigurator()
+        let webViewController = webViewConfigurator.configure(with: url)
+        view?.push(module: webViewController, animated: true, hideTabBar: false)
+    }
 
 }
