@@ -47,6 +47,13 @@ final class LaunchListViewController: UIViewController, LaunchListViewInput, Mod
         output?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     // MARK: - LaunchListViewInput
 
     func reloadCollectionView() {

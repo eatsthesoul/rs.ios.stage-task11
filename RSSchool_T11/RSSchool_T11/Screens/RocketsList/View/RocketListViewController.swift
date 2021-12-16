@@ -46,6 +46,13 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
         output?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     // MARK: - RocketsListViewInput
     
     func reloadCollectionView() {

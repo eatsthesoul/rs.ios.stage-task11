@@ -59,6 +59,13 @@ final class LaunchDetailViewController: UIViewController, LaunchDetailViewInput,
         setupButtons()
         output?.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 //MARK: - Private methods

@@ -100,6 +100,13 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
         setupViews()
         output?.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 // MARK: - Private methods
