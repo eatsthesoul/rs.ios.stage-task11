@@ -100,5 +100,6 @@ extension WebPageViewController: WKNavigationDelegate {
         reloadButton.image = .arrow
         backButton.isEnabled = webView.canGoBack
         forwardButton.isEnabled = webView.canGoForward
+        navigationItem.title = webView.title
     }
 }

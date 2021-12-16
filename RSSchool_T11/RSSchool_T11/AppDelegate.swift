@@ -37,7 +37,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = tabBarController
         window!.makeKeyAndVisible()
         
+        configureAppearance()
+        
         return true
     }
 }
+
+extension AppDelegate {
+    
+    func configureAppearance() {
+        
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.tintColor = .coral
+        tabBarAppearance.unselectedItemTintColor = .champagne
+        tabBarAppearance.barTintColor = .queenBlue
+        tabBarAppearance.backgroundImage = UIImage()
+        
+        let tabBarItemAppearance = UITabBarItem.appearance()
+        tabBarItemAppearance.setTitleTextAttributes([.font: UIFont.roboto(10, .medium),
+                                                     .foregroundColor: UIColor.champagne],
+                                                    for: .normal)
+        tabBarItemAppearance.setTitleTextAttributes([.font: UIFont.roboto(10, .medium),
+                                                     .foregroundColor: UIColor.coral],
+                                                    for: .selected)
+        
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.barTintColor = .queenBlue
+        navigationBarAppearance.isTranslucent = false
+        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearance.titleTextAttributes = [.font: UIFont.roboto(24, .bold), .foregroundColor : UIColor.smokyWhite]
+        
+        let barButtonItemAppearance = UIBarButtonItem.appearance()
+        barButtonItemAppearance.setTitleTextAttributes([.font: UIFont.roboto(17, .medium), .foregroundColor: UIColor.champagne], for: .highlighted)
+        barButtonItemAppearance.setTitleTextAttributes([.font: UIFont.roboto(17, .medium), .foregroundColor: UIColor.coral], for: .normal)
+        barButtonItemAppearance.tintColor = .coral
+    }
+}
+
 
