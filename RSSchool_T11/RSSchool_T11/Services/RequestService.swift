@@ -19,6 +19,7 @@ enum Link {
     
     static let rocketsLink = Link.link(scheme: "https", host: "api.spacexdata.com", path: "/v4/rockets")
     static let launchesLink = Link.link(scheme: "https", host: "api.spacexdata.com", path: "/v5/launches")
+    static let launchpadsLink = Link.link(scheme: "https", host: "api.spacexdata.com", path: "/v4/launchpads")
     
     static func rocketLink(with id: String) -> Link {
         .link(scheme: "https", host: "api.spacexdata.com", path: "/v4/rockets", id: id)
@@ -70,6 +71,10 @@ extension RequestService: RequestServiceProtocol {
     
     func loadRockets(completion: @escaping ([Rocket]?, Error?) -> ()) {
         fetchData(from: .rocketsLink) { data, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
             guard let data = data else { return }
             
             let jsonParser = JSONParser<[Rocket]>()
@@ -86,6 +91,10 @@ extension RequestService: RequestServiceProtocol {
     
     func loadLaunches(completion: @escaping ([Launch]?, Error?) -> ()) {
         fetchData(from: .launchesLink) { data, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
             guard let data = data else { return }
             
             let jsonParser = JSONParser<[Launch]>()
@@ -100,8 +109,32 @@ extension RequestService: RequestServiceProtocol {
         }
     }
     
+    func loadLaunchpads(completion: @escaping ([Launchpad]?, Error?) -> ()) {
+        fetchData(from: .launchpadsLink) { data, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            guard let data = data else { return }
+            
+            let jsonParser = JSONParser<[Launchpad]>()
+            jsonParser.parseData(data) { launchpads, error in
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                guard let launchpads = launchpads else { return }
+                completion(launchpads, nil)
+            }
+        }
+    }
+    
     func loadRocketWith(id: String, completion: @escaping (Rocket?, Error?) -> ()) {
         fetchData(from: .rocketLink(with: id)) { data, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
             guard let data = data else { return }
             
             let jsonParser = JSONParser<Rocket>()
