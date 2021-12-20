@@ -5,8 +5,8 @@
 //  Created by Evgeniy Petlitskiy on 21.12.21.
 //
 
-import Foundation
+import UIKit
 
-protocol LaunchpadListViewOutput {
-    
+protocol LaunchpadListViewOutput: UICollectionViewDataSource {
+    func viewDidLoad()
 }

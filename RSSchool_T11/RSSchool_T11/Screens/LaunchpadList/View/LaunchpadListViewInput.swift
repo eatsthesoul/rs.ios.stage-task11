@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LaunchpadListViewInput: AnyObject, LoaderDisplayable {
-    
+    func reloadCollectionView()
 }

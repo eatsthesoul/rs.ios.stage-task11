@@ -7,11 +7,51 @@
 
 import Foundation
 
-final class LaunchpadListPresenter: LaunchpadListViewOutput {
+final class LaunchpadListPresenter: NSObject {
+    
     
     // MARK: - Properties
 
     weak var view: LaunchpadListViewInput?
     var router: LaunchpadListRouterInput?
     
+    
+    let networkService: NetworkServiceProtocol
+    var launchpads: [Launchpad]
+    
+    //MARK: - Initializers
+    
+    override init() {
+        networkService = NetworkService()
+        launchpads = [Launchpad]()
+        super.init()
+    }
+}
+
+// MARK: - LaunchpadListViewOutput
+
+extension LaunchpadListPresenter: LaunchpadListViewOutput {
+    
+    func viewDidLoad() {
+        loadLaunchpads()
+    }
+}
+
+//MARK: - Private methods
+
+extension LaunchpadListPresenter {
+    
+    func loadLaunchpads() {
+        view?.startLoader()
+        networkService.requestService.loadLaunchpads { [weak self] launchpads, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            guard let launchpads = launchpads else { return }
+            self?.launchpads = launchpads
+            self?.view?.reloadCollectionView()
+            self?.view?.stopLoader()
+        }
+    }
 }

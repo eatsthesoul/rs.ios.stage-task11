@@ -11,6 +11,7 @@ protocol RequestServiceProtocol {
     func fetchData(from link: Link, completion: @escaping (Data?, Error?) -> ())
     func loadRockets(completion: @escaping ([Rocket]?, Error?) -> ())
     func loadLaunches(completion: @escaping ([Launch]?, Error?) -> ())
+    func loadLaunchpads(completion: @escaping ([Launchpad]?, Error?) -> ())
     func loadRocketWith(id: String, completion: @escaping (Rocket?, Error?) -> ())
 }
 

@@ -15,8 +15,8 @@ struct Launchpad: Codable {
     let timezone: String?
     let latitude: Double?
     let longitude: Double?
-    let launchAttempts: Int
-    let launchSuccesses: Int
+    let launchAttempts: Int?
+    let launchSuccesses: Int?
     let rockets: [String]
     let launches: [String]
     let status: String

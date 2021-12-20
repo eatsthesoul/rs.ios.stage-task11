@@ -66,6 +66,9 @@
 		4F9C2711277130BF00AB3886 /* LaunchpadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2710277130BF00AB3886 /* LaunchpadListViewController.swift */; };
 		4F9C2713277130D400AB3886 /* LaunchpadListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2712277130D400AB3886 /* LaunchpadListViewInput.swift */; };
 		4F9C2715277130E200AB3886 /* LaunchpadListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C2714277130E200AB3886 /* LaunchpadListViewOutput.swift */; };
+		4F9C27172771383E00AB3886 /* LaunchpadListViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C27162771383E00AB3886 /* LaunchpadListViewController + CollectionView.swift */; };
+		4F9C27192771387000AB3886 /* LaunchpadListPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C27182771387000AB3886 /* LaunchpadListPresenter + CollectionView.swift */; };
+		4F9C271B277138B900AB3886 /* LaunchpadListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C271A277138B900AB3886 /* LaunchpadListCollectionViewCell.swift */; };
 		4FA28E47273C08F2001410CD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E46273C08F2001410CD /* Double.swift */; };
 		4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */; };
 		4FA28E4B2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */; };
@@ -200,6 +203,9 @@
 		4F9C2710277130BF00AB3886 /* LaunchpadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListViewController.swift; sourceTree = "<group>"; };
 		4F9C2712277130D400AB3886 /* LaunchpadListViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListViewInput.swift; sourceTree = "<group>"; };
 		4F9C2714277130E200AB3886 /* LaunchpadListViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListViewOutput.swift; sourceTree = "<group>"; };
+		4F9C27162771383E00AB3886 /* LaunchpadListViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchpadListViewController + CollectionView.swift"; sourceTree = "<group>"; };
+		4F9C27182771387000AB3886 /* LaunchpadListPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchpadListPresenter + CollectionView.swift"; sourceTree = "<group>"; };
+		4F9C271A277138B900AB3886 /* LaunchpadListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4FA28E46273C08F2001410CD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4FA28E482743EA27001410CD /* RocketDetailViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailViewController + CollectionView.swift"; sourceTree = "<group>"; };
 		4FA28E4A2743EC15001410CD /* RocketDetailPresenter + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketDetailPresenter + CollectionView.swift"; sourceTree = "<group>"; };
@@ -605,8 +611,10 @@
 			isa = PBXGroup;
 			children = (
 				4F9C2710277130BF00AB3886 /* LaunchpadListViewController.swift */,
+				4F9C27162771383E00AB3886 /* LaunchpadListViewController + CollectionView.swift */,
 				4F9C2712277130D400AB3886 /* LaunchpadListViewInput.swift */,
 				4F9C2714277130E200AB3886 /* LaunchpadListViewOutput.swift */,
+				4F9C271A277138B900AB3886 /* LaunchpadListCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +623,7 @@
 			isa = PBXGroup;
 			children = (
 				4F9C270E2771309000AB3886 /* LaunchpadListPresenter.swift */,
+				4F9C27182771387000AB3886 /* LaunchpadListPresenter + CollectionView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -993,6 +1002,7 @@
 				4F4E202E27284D7A00ADB1D4 /* RocketListPresenter + CollectionView.swift in Sources */,
 				4F9C269F275E828E00AB3886 /* UIShadowLabelView.swift in Sources */,
 				4F9C27012770F47300AB3886 /* Launchpad.swift in Sources */,
+				4F9C27192771387000AB3886 /* LaunchpadListPresenter + CollectionView.swift in Sources */,
 				4F9C2680274BD6BC00AB3886 /* MarginLabel.swift in Sources */,
 				4FA28E492743EA27001410CD /* RocketDetailViewController + CollectionView.swift in Sources */,
 				4FA28E4E2743F691001410CD /* RocketImageCell.swift in Sources */,
@@ -1053,8 +1063,10 @@
 				4F9C26952757AADF00AB3886 /* Launch.swift in Sources */,
 				90152DB9E744480FC6C5F302 /* LaunchListViewController.swift in Sources */,
 				4F9C269B2758EEA000AB3886 /* UIShadowButton.swift in Sources */,
+				4F9C271B277138B900AB3886 /* LaunchpadListCollectionViewCell.swift in Sources */,
 				707D7C4169E7EC207227918B /* LaunchListViewInput.swift in Sources */,
 				D69FE8DDA708CD8208490A8C /* LaunchListViewOutput.swift in Sources */,
+				4F9C27172771383E00AB3886 /* LaunchpadListViewController + CollectionView.swift in Sources */,
 				2CC87F5E420259CB102CC14B /* LaunchDetailModuleConfigurator.swift in Sources */,
 				F852DE25C6FBD53661167731 /* LaunchDetailRouter.swift in Sources */,
 				ABD90D4BBB90ECFF78ED66CE /* LaunchDetailRouterInput.swift in Sources */,
