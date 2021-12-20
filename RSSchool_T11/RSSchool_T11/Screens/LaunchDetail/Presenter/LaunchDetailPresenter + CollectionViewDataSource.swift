@@ -18,7 +18,7 @@ extension LaunchDetailPresenter: UICollectionViewDataSource {
 
         if let cell = cell as? RocketImageCell {
             if let imageURL = rocket?.images?[indexPath.row] {
-                downloadManager.loadImage(for: imageURL) { image, error in
+                networkService.imageService.loadImage(for: imageURL) { image, error in
                     if let error = error {
                         print(error)
                         return

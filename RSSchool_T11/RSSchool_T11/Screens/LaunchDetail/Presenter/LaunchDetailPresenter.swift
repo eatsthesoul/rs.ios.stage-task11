@@ -30,14 +30,10 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
     var launch: Launch?
     var rocket: Rocket?
     
-    let launchService: LaunchServiceProtocol
-    let rocketService: RocketServiceProtocol
-    var downloadManager: DownloadManagerProtocol
+    let networkService: NetworkServiceProtocol
     
     override init() {
-        launchService = LaunchService()
-        rocketService = RocketService()
-        downloadManager = DownloadManager()
+        networkService = NetworkService()
     }
     
     // MARK: - LaunchDetailModuleInput
@@ -103,7 +99,7 @@ private extension LaunchDetailPresenter {
         
         //rocket data
         guard let rocketID = launch.rocket else { return }
-        rocketService.loadRocket(with: rocketID) { [weak self] rocket, error in
+        networkService.requestService.loadRocketWith(id: rocketID) { [weak self] rocket, error in
             self?.view?.stopLoader()
             self?.rocket = rocket
             
@@ -125,7 +121,7 @@ private extension LaunchDetailPresenter {
     
     func setupRocketViewCoverImage() {
         guard let url = rocket?.images?.first else { return }
-        downloadManager.loadImage(for: url, completion: { [weak self] image, error in
+        networkService.imageService.loadImage(for: url, completion: { [weak self] image, error in
             guard let image = image else { return }
             self?.view?.setRocketViewCoverImage(image)
         })
@@ -133,7 +129,7 @@ private extension LaunchDetailPresenter {
     
     func setupCoverImage() {
         guard let imageURL = launch?.links?.patch?.small else { return }
-        downloadManager.loadImage(for: imageURL) { [weak self] image, error in
+        networkService.imageService.loadImage(for: imageURL) { [weak self] image, error in
             if let err = error {
                 print(err)
                 return

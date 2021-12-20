@@ -24,7 +24,7 @@ extension RocketListPresenter: UICollectionViewDataSource {
             
             //rocket image
             if let imageURL = rocket.images?.first {
-                downloadManager.loadImage(for: imageURL) { image, error in
+                service.imageService.loadImage(for: imageURL) { image, error in
                     if let err = error {
                         print(err)
                         return

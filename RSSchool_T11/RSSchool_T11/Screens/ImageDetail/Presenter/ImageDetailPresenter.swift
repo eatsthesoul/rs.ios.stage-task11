@@ -18,24 +18,24 @@ final class ImageDetailPresenter: ImageDetailViewOutput, ImageDetailModuleInput 
     
     var url: String?
     
-    private let downloadManager = DownloadManager()
+    private let networkService: NetworkServiceProtocol
     private var image: UIImage?
+    
+    init() {
+        networkService = NetworkService()
+    }
     
     //MARK: - Private methods
     
     private func loadImage() {
         self.view?.startLoader()
         guard let url = self.url else { return }
-        downloadManager.loadImage(for: url) { [weak self] image, error in
+        networkService.imageService.loadImage(for: url) { [weak self] image, error in
             if let error = error {
                 print(error)
-                //TODO: Error handling with alert
                 return
             }
-            guard let image = image else {
-                //TODO: The same alert
-                return
-            }
+            guard let image = image else { return }
             self?.image = image
             self?.view?.setupImage(image)
             self?.view?.stopLoader()

@@ -16,15 +16,13 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     var router: LaunchListRouterInput?
     var output: LaunchListModuleOutput?
     
-    let launchService: LaunchServiceProtocol
-    let downloadManager: DownloadManagerProtocol
+    let networkService: NetworkServiceProtocol
     var launches: [Launch]
     
     //MARK: - Initializers
     
     override init() {
-        launchService = LaunchService()
-        downloadManager = DownloadManager()
+        networkService = NetworkService()
         launches = [Launch]()
         super.init()
     }
@@ -48,7 +46,7 @@ extension LaunchListPresenter {
     
     func loadLaunches() {
         view?.startLoader()
-        launchService.loadLaunches { [weak self] launches, error in
+        networkService.requestService.loadLaunches { [weak self] launches, error in
             if let error = error {
                 print(error)
                 return

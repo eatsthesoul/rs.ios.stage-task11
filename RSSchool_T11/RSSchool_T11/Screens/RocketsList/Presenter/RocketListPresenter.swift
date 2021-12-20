@@ -17,15 +17,13 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     var router: RocketsListRouterInput?
     var output: RocketListModuleOutput?
     
-    let rocketService: RocketServiceProtocol
-    let downloadManager: DownloadManagerProtocol
+    let service: NetworkServiceProtocol
     var rockets: [Rocket]
     
     //MARK: - Initializers
     
     override init() {
-        rocketService = RocketService()
-        downloadManager = DownloadManager()
+        service = NetworkService()
         rockets = [Rocket]()
         super.init()
     }
@@ -51,7 +49,7 @@ private extension RocketListPresenter {
     
     func loadRockets() {
         view?.startLoader()
-        rocketService.loadRockets { [weak self] rockets, error in
+        service.requestService.loadRockets { [weak self] rockets, error in
             if let error = error {
                 print(error)
                 return
@@ -62,5 +60,4 @@ private extension RocketListPresenter {
             self?.view?.stopLoader()
         }
     }
-    
 }

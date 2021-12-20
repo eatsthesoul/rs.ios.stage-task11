@@ -26,6 +26,4 @@ class JSONParser<T: Decodable> {
             completion(nil, error)
         }
     }
-    
-    
 }
