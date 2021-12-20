@@ -11,6 +11,8 @@ protocol ModelDataDisplayable: ModelDataStringConvertable {
     //the first object in labels array need to be a label which getting a string
     //if the label stack is a stack view, it needs to have a tag 345
     func setupLabelStackData(_ labels: [UILabel], with string: String?)
+    func checkIfDataExist(_ data: Any?) -> Bool
+    func checkIfStackViewIsVisible(_ stackView: UIStackView, with views: [UIView])
 }
 
 extension ModelDataDisplayable {

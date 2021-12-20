@@ -31,8 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchNavigationController.tabBarItem.selectedImage = .adjustment
         launchNavigationController.tabBarItem.title = "Launches"
         
+        let launchpadListConfigurator = LaunchpadListModuleConfigurator()
+        let launchpadListViewController = launchpadListConfigurator.configure()
+        let launchpadNavigationController = UINavigationController(rootViewController: launchpadListViewController)
+        launchpadNavigationController.tabBarItem.image = .lego
+        launchpadNavigationController.tabBarItem.selectedImage = .lego
+        launchpadNavigationController.tabBarItem.title = "Launchpads"
+        
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [rocketNavigationController, launchNavigationController]
+        tabBarController.viewControllers = [rocketNavigationController, launchNavigationController, launchpadNavigationController]
         
         window!.rootViewController = tabBarController
         window!.makeKeyAndVisible()
