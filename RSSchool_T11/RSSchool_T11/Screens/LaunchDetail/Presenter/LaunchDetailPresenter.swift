@@ -91,8 +91,6 @@ private extension LaunchDetailPresenter {
     
     func setupViewsData() {
         
-        view?.startLoader()
-        
         guard let launch = launch else { return }
         
         //launch data
@@ -100,13 +98,13 @@ private extension LaunchDetailPresenter {
         
         //rocket data
         guard let rocketID = launch.rocket else { return }
+        view?.startLoader()
         networkService.requestService.loadRocketWith(id: rocketID) { [weak self] rocket, error in
             self?.view?.stopLoader()
             self?.rocket = rocket
             
             //rocket view data
             self?.view?.setupRocketView(with: rocket)
-            
             
             //rockets images collection view
             guard let urls = rocket?.images, !urls.isEmpty else {

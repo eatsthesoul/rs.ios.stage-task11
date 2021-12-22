@@ -14,7 +14,10 @@ class UIRocketView: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rocketNameLabel: UILabel!
+    @IBOutlet weak var firstLaunchStackView: UIStackView!
     @IBOutlet weak var firstLaunchLabel: UILabel!
+    @IBOutlet weak var launchCostStackView: UIStackView!
+    @IBOutlet weak var successStackView: UIStackView!
     @IBOutlet weak var launchCostLabel: UILabel!
     @IBOutlet weak var successLabel: UILabel!
     
@@ -82,12 +85,15 @@ extension UIRocketView: ModelDataDisplayable {
         
         let launchDateString = buildDateString(for: rocket.firstLaunch)
         setupLabelStackData([firstLaunchLabel], with: launchDateString)
+        checkIfStackViewIsVisible(firstLaunchStackView, with: [firstLaunchLabel])
         
         let launchCostString = buildCostString(for: rocket.launchCost)
         setupLabelStackData([launchCostLabel], with: launchCostString)
+        checkIfStackViewIsVisible(launchCostStackView, with: [launchCostLabel])
         
         let successString = buildSuccessString(for: rocket.success)
         setupLabelStackData([successLabel], with: successString)
+        checkIfStackViewIsVisible(successStackView, with: [successLabel])
     }
     
     func setImage(_ image: UIImage) {

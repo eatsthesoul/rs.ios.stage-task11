@@ -72,6 +72,8 @@ extension LaunchpadDetailViewController: LaunchpadDetailViewInput, ModelDataDisp
     func setup(with launchpad: Launchpad) {
         nameLabel.text = launchpad.name
         fullNameLabel.text = launchpad.fullName
+        
+        statusLabelView.isHidden = !checkIfDataExist(launchpad.status)
         statusLabelView.setText(launchpad.status)
         
         //description

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,10 +18,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIRocketView" customModule="RSSchool_T11" customModuleProvider="target">
             <connections>
                 <outlet property="firstLaunchLabel" destination="cKm-0R-XJg" id="4vP-aO-Uvl"/>
+                <outlet property="firstLaunchStackView" destination="fMs-Bx-vGG" id="Mfv-Sd-jji"/>
                 <outlet property="imageView" destination="kVc-m7-6MN" id="bF0-8O-Q4K"/>
                 <outlet property="launchCostLabel" destination="HVO-3w-7ek" id="3eX-Mg-w16"/>
+                <outlet property="launchCostStackView" destination="ZK0-x9-dAb" id="da9-aM-mDB"/>
                 <outlet property="rocketNameLabel" destination="MRc-CD-Xnj" id="eUf-UQ-xIl"/>
                 <outlet property="successLabel" destination="ZFW-Mg-Nhj" id="Mm1-z0-qwL"/>
+                <outlet property="successStackView" destination="xf4-PS-T65" id="0pS-L0-3gw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,7 +41,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-I9-U1l">
                     <rect key="frame" x="20" y="378" width="292" height="33"/>
                     <subviews>
-                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-Bx-vGG">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-Bx-vGG">
                             <rect key="frame" x="0.0" y="0.0" width="101.5" height="33"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-qb-Mnh">
@@ -55,7 +58,7 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-x9-dAb">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-x9-dAb">
                             <rect key="frame" x="131.5" y="0.0" width="77" height="33"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-aH-JLr">
@@ -72,7 +75,7 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-PS-T65">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-PS-T65">
                             <rect key="frame" x="238.5" y="0.0" width="53.5" height="33"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUU-Bq-2So">

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,13 +22,14 @@
             <connections>
                 <outlet property="campaignButton" destination="3sq-5M-SXT" id="O1c-ew-CFh"/>
                 <outlet property="descriptionLabel" destination="fYd-52-l0o" id="IYo-tF-Sv4"/>
-                <outlet property="descriptionTitleLabel" destination="zRQ-Sn-XR1" id="cbY-5O-vca"/>
+                <outlet property="descriptionStackView" destination="7FA-g5-RD3" id="3ZY-mM-sed"/>
                 <outlet property="launchButton" destination="CeL-hT-eik" id="x5L-Pl-7iG"/>
                 <outlet property="launchDateLabel" destination="wdk-4Q-FrG" id="lae-rm-lLR"/>
                 <outlet property="launchDateTitleLabel" destination="4xX-Yb-eW4" id="BXx-oL-wGR"/>
                 <outlet property="launchView" destination="yKW-OB-6SR" id="iIv-iy-cto"/>
                 <outlet property="materialsStackView" destination="aH9-sK-alQ" id="Pek-fJ-gw3"/>
                 <outlet property="mediaButton" destination="i0k-Yr-LYs" id="QzW-1H-MqQ"/>
+                <outlet property="overviewStackView" destination="uIK-49-hnU" id="jFC-RE-erS"/>
                 <outlet property="recoveryButton" destination="jCb-T1-Cyw" id="E0Z-Gs-kbk"/>
                 <outlet property="redditStackView" destination="cH2-NG-Wwa" id="8a1-an-ccd"/>
                 <outlet property="rocketImagesCollectionView" destination="Mqn-mS-Vp6" id="uqZ-Og-9yW"/>
@@ -65,7 +66,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5i1-9C-7bs">
                                     <rect key="frame" x="0.0" y="168" width="414" height="1219"/>
                                     <subviews>
-                                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7FA-g5-RD3">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7FA-g5-RD3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-Sn-XR1">

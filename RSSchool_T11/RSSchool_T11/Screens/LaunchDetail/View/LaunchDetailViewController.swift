@@ -19,10 +19,11 @@ final class LaunchDetailViewController: UIViewController, LaunchDetailViewInput,
     @IBOutlet weak var launchView: UILaunchView!
     
     //description
-    @IBOutlet weak var descriptionTitleLabel: UILabel!
+    @IBOutlet weak var descriptionStackView: UIStackView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     //overview
+    @IBOutlet weak var overviewStackView: UIStackView!
     @IBOutlet weak var staticFireDateTitleLabel: UILabel!
     @IBOutlet weak var staticFireDateLabel: UILabel!
     @IBOutlet weak var launchDateTitleLabel: UILabel!
@@ -30,11 +31,11 @@ final class LaunchDetailViewController: UIViewController, LaunchDetailViewInput,
     @IBOutlet weak var successTitleLabel: UILabel!
     @IBOutlet weak var successLabel: UILabel!
     
-    
+    //images
     @IBOutlet weak var rocketImagesStackView: UIStackView!
     @IBOutlet weak var rocketImagesCollectionView: UICollectionView!
     
-    
+    //rocket
     @IBOutlet weak var rocketStackView: UIStackView!
     @IBOutlet weak var rocketView: UIRocketView!
     
@@ -134,7 +135,8 @@ extension LaunchDetailViewController {
         launchView.setData(for: launch)
         
         //description
-        setupLabelStackData([descriptionLabel, descriptionTitleLabel], with: launch.details)
+        setupLabelStackData([descriptionLabel], with: launch.details)
+        checkIfStackViewIsVisible(descriptionStackView, with: [descriptionLabel])
         
         //overview
         let staticFireDateString = buildDateString(for: launch.staticFireDate)
@@ -144,6 +146,7 @@ extension LaunchDetailViewController {
         setupLabelStackData([staticFireDateLabel, staticFireDateTitleLabel], with: staticFireDateString)
         setupLabelStackData([launchDateLabel, launchDateTitleLabel], with: launchDateString)
         setupLabelStackData([successLabel, successTitleLabel], with: successString)
+        checkIfStackViewIsVisible(overviewStackView, with: [staticFireDateLabel, launchDateLabel, successLabel])
         
         //materials
         wikipediaButton.isHidden = !checkIfDataExist(launch.links?.wikipedia)

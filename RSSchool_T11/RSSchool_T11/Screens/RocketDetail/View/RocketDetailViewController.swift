@@ -22,10 +22,11 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var rocketNameLabel: UILabel!
     
     //description
-    @IBOutlet weak var descriptionTitleLabel: UILabel!
+    @IBOutlet weak var descriptionStackView: UIStackView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     //overview
+    @IBOutlet weak var overviewStackView: UIStackView!
     @IBOutlet weak var firstLaunchTitleLabel: UILabel!
     @IBOutlet weak var firstLaunchLabel: UILabel!
     @IBOutlet weak var launchCostTitleLabel: UILabel!
@@ -44,6 +45,7 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var rocketImagesCollectionView: UICollectionView!
     
     //engines
+    @IBOutlet weak var enginesStackView: UIStackView!
     @IBOutlet weak var enginesTypeTitleLabel: UILabel!
     @IBOutlet weak var enginesTypeLabel: UILabel!
     @IBOutlet weak var enginesLayoutTitleLabel: UILabel!
@@ -58,6 +60,7 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var enginesPropellant2Label: UILabel!
     
     //first stage
+    @IBOutlet weak var firstStageStackView: UIStackView!
     @IBOutlet weak var firstStageReusableTitleLabel: UILabel!
     @IBOutlet weak var firstStageReusableLabel: UILabel!
     @IBOutlet weak var firstStageEnginesAmountTitleLabel: UILabel!
@@ -72,6 +75,7 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var firstStageVacuumThrustLabel: UILabel!
     
     //second stage
+    @IBOutlet weak var secondStageStackView: UIStackView!
     @IBOutlet weak var secondStageReusableStageTitleLabel: UILabel!
     @IBOutlet weak var secondStageReusableStageLabel: UILabel!
     @IBOutlet weak var secondStageEnginesAmountTitleLabel: UILabel!
@@ -84,6 +88,7 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     @IBOutlet weak var secondStageThrustLabel: UILabel!
     
     //landing legs
+    @IBOutlet weak var landingLegsStackView: UIStackView!
     @IBOutlet weak var landingLegsAmountTitleLabel: UILabel!
     @IBOutlet weak var landingLegsAmountLabel: UILabel!
     @IBOutlet weak var landingLegsMaterialTitleLabel: UILabel!
@@ -128,8 +133,12 @@ extension RocketDetailViewController {
     
     func setup(with rocket: Rocket) {
         
+        //rocket name
         setupLabelStackData([rocketNameLabel], with: rocket.name)
-        setupLabelStackData([descriptionLabel, descriptionTitleLabel], with: rocket.description)
+        
+        //description
+        setupLabelStackData([descriptionLabel], with: rocket.description)
+        checkIfStackViewIsVisible(descriptionStackView, with: [descriptionLabel])
         
         //overview
         let launchDateString = buildDateString(for: rocket.firstLaunch)
@@ -145,7 +154,11 @@ extension RocketDetailViewController {
         setupLabelStackData([massLabel, massTitleLabel], with: massString)
         setupLabelStackData([heightLabel, heightTitleLabel], with: heightString)
         setupLabelStackData([diameterLabel, diameterTitleLabel], with: diameterString)
-
+        checkIfStackViewIsVisible(overviewStackView, with: [firstLaunchLabel, launchCostLabel, successLabel, massLabel, heightLabel, diameterLabel])
+        
+        //images
+        rocketImagesCollectionView.isHidden = !checkIfDataExist(rocket.images)
+        checkIfStackViewIsVisible(rocketImagesStackView, with: [rocketImagesCollectionView])
         
         //engines
         let enginesAmountString = buildAmountString(for: rocket.engines?.number)
@@ -156,7 +169,7 @@ extension RocketDetailViewController {
         setupLabelStackData([enginesAmountLabel, enginesAmountTitleLabel], with: enginesAmountString)
         setupLabelStackData([enginesPropellant1Label, enginesPropellant1TitleLabel], with: rocket.engines?.propellant1)
         setupLabelStackData([enginesPropellant2Label, enginesPropellant2TitleLabel], with: rocket.engines?.propellant2)
-        
+        checkIfStackViewIsVisible(enginesStackView, with: [enginesTypeLabel, enginesLayoutLabel, enginesVersionLabel, enginesAmountLabel, enginesPropellant1Label, enginesPropellant2Label])
         
         //first stage
         let firstStageReusableString = buildBoolString(for: rocket.firstStage?.reusable)
@@ -172,6 +185,7 @@ extension RocketDetailViewController {
         setupLabelStackData([firstStageBurningTimeLabel, firstStageBurningTimeTitleLabel], with: firstStageBurningTimeString)
         setupLabelStackData([firstStageSeaLevelThrustLabel, firstStageSeaLevelThrustTitleLabel], with: firstStageSeaLevelThrustString)
         setupLabelStackData([firstStageVacuumThrustLabel, firstStageVacuumThrustTitleLabel], with: firstStageVacuumThrustString)
+        checkIfStackViewIsVisible(firstStageStackView, with: [firstStageReusableLabel, firstStageEnginesAmountLabel, firstStageFuelAmountLabel, firstStageBurningTimeLabel, firstStageSeaLevelThrustLabel, firstStageVacuumThrustLabel])
         
         
         //second stage
@@ -186,6 +200,7 @@ extension RocketDetailViewController {
         setupLabelStackData([secondStageFuelAmountLabel, secondStageFuelAmountTitleLabel], with: secondStageFuelAmountString)
         setupLabelStackData([secondStageBurningTimeLabel, secondStageBurningTimeTitleLabel], with: secondStageBurningTimeString)
         setupLabelStackData([secondStageThrustLabel, secondStageThrustTitleLabel], with: secondStageThrustString)
+        checkIfStackViewIsVisible(secondStageStackView, with: [secondStageReusableStageLabel, secondStageEnginesAmountLabel, secondStageFuelAmountLabel, secondStageBurningTimeLabel, secondStageThrustLabel])
         
         
         //landing legs
@@ -193,19 +208,11 @@ extension RocketDetailViewController {
         
         setupLabelStackData([landingLegsAmountLabel, landingLegsAmountTitleLabel], with: landingLegsAmountString)
         setupLabelStackData([landingLegsMaterialLabel, landingLegsMaterialTitleLabel], with: rocket.landingLegs?.material)
+        checkIfStackViewIsVisible(landingLegsStackView, with: [landingLegsAmountLabel, landingLegsMaterialLabel])
         
         //materials
         wikiButton.isHidden = !checkIfDataExist(rocket.wikipedia)
         checkIfStackViewIsVisible(materialsStackView, with: [wikiButton])
-    }
-    
-    func reloadRocketImages() {
-        rocketImagesCollectionView.reloadData()
-        rocketImagesStackView.isHidden = false
-    }
-    
-    func hideRocketImages() {
-        rocketImagesStackView.isHidden = true
     }
     
     func setupRocketCoverImage(_ image: UIImage) {

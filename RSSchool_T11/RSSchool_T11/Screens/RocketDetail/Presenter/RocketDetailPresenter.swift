@@ -27,12 +27,14 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
         networkService = NetworkService()
         super.init()
     }
-    
+}
 
-    // MARK: - RocketDetailViewOutput
+// MARK: - RocketDetailViewOutput
+extension RocketDetailPresenter {
     
     func viewDidLoad() {
-        setupRocketData()
+        guard let rocket = rocket else { return }
+        view?.setup(with: rocket)
         setupCoverImage()
     }
     
@@ -42,34 +44,17 @@ final class RocketDetailPresenter: NSObject, RocketDetailViewOutput, RocketDetai
     }
     
     func showRocketMaterial(_ type: RocketLinkType) {
-        
         switch type {
         case .wikipedia:
             guard let wikiURL = rocket?.wikipedia else { return }
             router?.showRocketWikiWith(wikiURL)
         }
     }
-    
-    
-    // MARK: - RocketDetailModuleInput
-
 }
 
 // MARK: - Private methods
 
 private extension RocketDetailPresenter {
-    
-    func setupRocketData() {
-        guard let rocket = rocket else { return }
-        self.rocket = rocket
-        view?.setup(with: rocket)
-        
-        if let images = rocket.images, images.count > 0 {
-            view?.reloadRocketImages()
-        } else {
-            view?.hideRocketImages()
-        }
-    }
     
     func setupCoverImage() {
         guard let imgURL = rocket?.images?.first else { return }

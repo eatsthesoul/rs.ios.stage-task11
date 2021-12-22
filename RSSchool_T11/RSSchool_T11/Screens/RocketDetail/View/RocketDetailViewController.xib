@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
             <connections>
                 <outlet property="coverImage" destination="lpU-uL-RM2" id="kaY-UY-2i3"/>
                 <outlet property="descriptionLabel" destination="9Cs-II-SOg" id="izh-qe-0zM"/>
-                <outlet property="descriptionTitleLabel" destination="TDZ-1K-jyw" id="Q5h-k0-K6N"/>
+                <outlet property="descriptionStackView" destination="xIM-h8-au2" id="Qfl-E9-7FB"/>
                 <outlet property="diameterLabel" destination="FRU-V8-3oC" id="a4G-DE-XMK"/>
                 <outlet property="diameterTitleLabel" destination="l85-Kf-IgI" id="gOl-Dd-5vd"/>
                 <outlet property="enginesAmountLabel" destination="Aw1-yg-7rd" id="btF-uy-Qmg"/>
@@ -32,6 +32,7 @@
                 <outlet property="enginesPropellant1TitleLabel" destination="lnT-y4-JWC" id="aTE-Qx-bzk"/>
                 <outlet property="enginesPropellant2Label" destination="GHh-Ke-SGd" id="Stw-ME-oXv"/>
                 <outlet property="enginesPropellant2TitleLabel" destination="1aY-74-nZs" id="FKH-e2-xtt"/>
+                <outlet property="enginesStackView" destination="jMF-sF-LwW" id="btE-kY-oKN"/>
                 <outlet property="enginesTypeLabel" destination="hFc-w3-mzz" id="3nM-by-nEa"/>
                 <outlet property="enginesTypeTitleLabel" destination="gYN-6J-xcZ" id="jtW-yV-TBs"/>
                 <outlet property="enginesVersionLabel" destination="5Yi-0k-Ycm" id="fq5-hz-blO"/>
@@ -48,6 +49,7 @@
                 <outlet property="firstStageReusableTitleLabel" destination="GyE-c6-gaR" id="JfK-2w-HHS"/>
                 <outlet property="firstStageSeaLevelThrustLabel" destination="Gbi-mM-19X" id="VB3-ba-NxQ"/>
                 <outlet property="firstStageSeaLevelThrustTitleLabel" destination="nfo-Kd-9VJ" id="SBk-7P-tga"/>
+                <outlet property="firstStageStackView" destination="JZT-Ci-ab7" id="ZW5-Vs-vJf"/>
                 <outlet property="firstStageVacuumThrustLabel" destination="TrO-iJ-Qq1" id="mMe-Bz-ox4"/>
                 <outlet property="firstStageVacuumThrustTitleLabel" destination="AvW-GK-paX" id="f0X-xe-iEF"/>
                 <outlet property="heightLabel" destination="CT0-ha-U92" id="bxa-cD-ogo"/>
@@ -56,11 +58,13 @@
                 <outlet property="landingLegsAmountTitleLabel" destination="xpd-ms-DTy" id="M8d-c5-xuO"/>
                 <outlet property="landingLegsMaterialLabel" destination="ITt-5A-qAX" id="PrO-ku-EUy"/>
                 <outlet property="landingLegsMaterialTitleLabel" destination="dFo-z6-lAQ" id="J2h-Jk-dCL"/>
+                <outlet property="landingLegsStackView" destination="jj1-e5-h26" id="gWW-oK-tGU"/>
                 <outlet property="launchCostLabel" destination="mo3-DG-aSJ" id="6Cc-ev-RAU"/>
                 <outlet property="launchCostTitleLabel" destination="5fB-W7-geA" id="mIE-2C-n0M"/>
                 <outlet property="massLabel" destination="Kby-wm-AS4" id="9os-fC-eLV"/>
                 <outlet property="massTitleLabel" destination="Arn-tF-mbH" id="wrd-se-lxB"/>
                 <outlet property="materialsStackView" destination="0NP-2j-ssV" id="tgw-RV-JIm"/>
+                <outlet property="overviewStackView" destination="NQZ-MU-xjE" id="72s-kM-fok"/>
                 <outlet property="rocketImagesCollectionView" destination="qsP-bu-WgS" id="5Kg-DS-MGW"/>
                 <outlet property="rocketImagesStackView" destination="liP-k6-70V" id="nSc-Qg-TPV"/>
                 <outlet property="rocketNameLabel" destination="GsM-aT-WnA" id="LjZ-j3-nyf"/>
@@ -72,6 +76,7 @@
                 <outlet property="secondStageFuelAmountTitleLabel" destination="WDv-gr-1Jc" id="Vpu-3R-zVn"/>
                 <outlet property="secondStageReusableStageLabel" destination="kml-zy-PsS" id="xQ1-Zw-NPM"/>
                 <outlet property="secondStageReusableStageTitleLabel" destination="XM3-QD-O2f" id="J7b-8b-aew"/>
+                <outlet property="secondStageStackView" destination="Qis-6K-xRF" id="JWc-6M-ODL"/>
                 <outlet property="secondStageThrustLabel" destination="h8f-eE-fTW" id="vfc-G9-V7k"/>
                 <outlet property="secondStageThrustTitleLabel" destination="TIf-KW-U93" id="U6g-NA-iVC"/>
                 <outlet property="successLabel" destination="5nm-D9-vzX" id="lG2-iE-NFF"/>
@@ -106,7 +111,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PjP-bW-wxY">
                                     <rect key="frame" x="0.0" y="423" width="414" height="1623"/>
                                     <subviews>
-                                        <stackView opaque="NO" tag="345" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-h8-au2">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-h8-au2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-1K-jyw">
@@ -644,7 +649,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Pbm-Oe-khQ"/>
-            <color key="backgroundColor" name="Super White"/>
+            <color key="backgroundColor" name="Smoky White"/>
             <constraints>
                 <constraint firstItem="WMu-Me-YrA" firstAttribute="leading" secondItem="DPm-wS-kss" secondAttribute="leading" id="KDS-gT-Oyn"/>
                 <constraint firstAttribute="trailing" secondItem="WMu-Me-YrA" secondAttribute="trailing" id="Sed-Xm-GDZ"/>
