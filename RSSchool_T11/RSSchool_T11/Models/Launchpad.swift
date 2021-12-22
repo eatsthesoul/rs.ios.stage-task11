@@ -20,21 +20,29 @@ struct Launchpad: Codable {
     let rockets: [String]
     let launches: [String]
     let status: String
+    let details: String?
     let id: String?
+    let images: LaunchpadImages?
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case fullName = "full_name"
+        case locality
+        case region
+        case timezone
+        case latitude
+        case longitude
+        case launchAttempts = "launch_attempts"
+        case launchSuccesses = "launch_successes"
+        case rockets
+        case launches
+        case status
+        case details
+        case id
+        case images
+    }
 }
 
-enum CodingKeys: String, CodingKey {
-    case name
-    case fullName = "full_name"
-    case locality
-    case region
-    case timezone
-    case latitude
-    case longitude
-    case launchAttempts = "launch_attempts"
-    case launchSuccesses = "launch_successes"
-    case rockets
-    case launches
-    case status
-    case id
+struct LaunchpadImages: Codable {
+    let large: [String]?
 }

@@ -64,4 +64,8 @@ extension UIImage {
     static var xmark: UIImage {
         UIImage(named: "xmark")!
     }
+    
+    static var buttonForward: UIImage {
+        UIImage(named: "button-forward")!
+    }
 }

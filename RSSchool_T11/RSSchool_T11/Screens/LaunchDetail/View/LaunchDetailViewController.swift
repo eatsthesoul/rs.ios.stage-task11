@@ -76,8 +76,8 @@ private extension LaunchDetailViewController {
     func setupRocketImagesCollectionView() {
         rocketImagesCollectionView.delegate = self
         rocketImagesCollectionView.dataSource = output
-        rocketImagesCollectionView.register(RocketImageCell.self,
-                                            forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
+        rocketImagesCollectionView.register(ImageCell.self,
+                                            forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
     }
     
     func setupButtons() {

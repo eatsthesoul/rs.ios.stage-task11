@@ -34,6 +34,7 @@ final class LaunchDetailPresenter: NSObject, LaunchDetailViewOutput, LaunchDetai
     
     override init() {
         networkService = NetworkService()
+        super.init()
     }
     
     // MARK: - LaunchDetailModuleInput

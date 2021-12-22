@@ -15,5 +15,9 @@ final class LaunchpadListRouter: LaunchpadListRouterInput {
 
     // MARK: - LaunchpadListRouterInput
 
-    
+    func showLaunchpadDetailModule(for launchpad: Launchpad) {
+        let launchpadDetailConfigurator = LaunchpadDetailModuleConfigurator()
+        let launchpadDetailViewController = launchpadDetailConfigurator.configure(with: launchpad)
+        view?.push(module: launchpadDetailViewController, animated: true)
+    }
 }

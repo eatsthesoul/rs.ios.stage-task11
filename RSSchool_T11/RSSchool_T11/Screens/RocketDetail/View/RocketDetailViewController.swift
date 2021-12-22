@@ -116,8 +116,8 @@ extension RocketDetailViewController {
         
         wikiButton.addTarget(self, action: #selector(showRocketMaterial(_:)), for: .touchUpInside)
         
-        rocketImagesCollectionView.register(RocketImageCell.self,
-                                            forCellWithReuseIdentifier: RocketImageCell.Constants.reuseIdentifier)
+        rocketImagesCollectionView.register(ImageCell.self,
+                                            forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
         rocketImagesCollectionView.delegate = self
         rocketImagesCollectionView.dataSource = output
     }

@@ -1,31 +1,29 @@
 //
-//  RocketDetailViewCell.swift
+//  MapView.swift
 //  RSSchool_T11
 //
-//  Created by Evgeniy Petlitskiy on 16.11.21.
+//  Created by Evgeniy Petlitskiy on 22.12.21.
 //
 
 import UIKit
+import MapKit
 
-class RocketImageCell: UICollectionViewCell {
-    
-    enum Constants {
-        static let reuseIdentifier = "RocketImageCell"
-    }
+class MapView: UIView {
     
     private enum LayoutConstants {
-        static let imageViewPadding: CGFloat = 3
-        static let cornerRadius: CGFloat = 10
-        static let imageCornerRadius: CGFloat = 7
+        static let mapViewPadding: CGFloat = 5
+        static let cornerRadius: CGFloat = 20
+        static let mapViewCornerRadius: CGFloat = 16
     }
     
-    let imageView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+    let mapView: MKMapView = {
+        let view = MKMapView()
+        view.layer.cornerRadius = LayoutConstants.mapViewCornerRadius
+        view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     private lazy var foregroundLayer: CALayer = {
         let layer = CALayer()
         layer.frame = bounds
@@ -55,43 +53,44 @@ class RocketImageCell: UICollectionViewCell {
         return layer
     }()
     
-    private let shadowLayer = CALayer()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupImageView()
-        setupUI()
+        setupMapView()
+        addShadow()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupMapView()
+        addShadow()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         updateShadowPath()
     }
+}
+
+// MARK: - Private methods
+private extension MapView {
     
-    private func setupUI() {
-        addShadow()
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = LayoutConstants.imageCornerRadius
-    }
-    
-    private func setupImageView() {
-        contentView.addSubview(imageView)
+    func setupMapView() {
+        addSubview(mapView)
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.imageViewPadding),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.imageViewPadding),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.imageViewPadding),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.imageViewPadding)
+            mapView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: LayoutConstants.mapViewPadding),
+            mapView.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.mapViewPadding),
+            mapView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -LayoutConstants.mapViewPadding),
+            mapView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -LayoutConstants.mapViewPadding)
         ])
     }
 }
 
 // MARK: - Shadow methods
-private extension RocketImageCell {
+private extension MapView {
     
     func addShadow() {
          layer.insertSublayer(foregroundLayer, at: 0)

@@ -13,10 +13,10 @@ extension LaunchDetailPresenter: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RocketImageCell.Constants.reuseIdentifier,
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.Constants.reuseIdentifier,
                                                       for: indexPath)
 
-        if let cell = cell as? RocketImageCell {
+        if let cell = cell as? ImageCell {
             if let imageURL = rocket?.images?[indexPath.row] {
                 networkService.imageService.loadImage(for: imageURL) { image, error in
                     if let error = error {

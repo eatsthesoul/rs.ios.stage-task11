@@ -35,6 +35,12 @@ extension LaunchpadListPresenter: LaunchpadListViewOutput {
     func viewDidLoad() {
         loadLaunchpads()
     }
+    
+    func didSelectLaunch(with index: Int) {
+        guard index < launchpads.count else { return }
+        let launchpad = launchpads[index]
+        router?.showLaunchpadDetailModule(for: launchpad)
+    }
 }
 
 //MARK: - Private methods

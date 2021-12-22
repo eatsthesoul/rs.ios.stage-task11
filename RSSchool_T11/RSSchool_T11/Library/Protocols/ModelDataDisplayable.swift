@@ -36,9 +36,13 @@ extension ModelDataDisplayable {
     func checkIfDataExist(_ data: Any?) -> Bool {
         
         if data == nil { return false }
+        
         if let string = data as? String {
-            let result = string.isEmpty ? false : true
-            return result
+            return string.isEmpty ? false : true
+        }
+        
+        if let array = data as? Array<Any> {
+            return array.isEmpty ? false : true
         }
         return true
     }

@@ -14,11 +14,26 @@ class LaunchpadListCollectionViewCell: UICollectionViewCell {
         static let reuseIdentifier = "LaunchpadCell"
     }
     
-    private lazy var launchpadView: UILaunchpadView = {
-        let launchView = UILaunchpadView()
-        launchView.layer.cornerRadius = 15
-        launchView.translatesAutoresizingMaskIntoConstraints = false
-        return launchView
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.roboto(24, .bold)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var regionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.roboto(17, .medium)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var statusLabel: UIShadowLabelView = {
+        let view = UIShadowLabelView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     override init(frame: CGRect) {
@@ -45,21 +60,38 @@ class LaunchpadListCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1
     }
     
-    private func setupSubviews() {
-        addSubview(launchpadView)
+    func setupSubviews() {
+        addSubview(nameLabel)
+        addSubview(regionLabel)
+        addSubview(statusLabel)
+        
+        
         NSLayoutConstraint.activate([
-            launchpadView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            launchpadView.topAnchor.constraint(equalTo: topAnchor),
-            launchpadView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            launchpadView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            heightAnchor.constraint(equalToConstant: 145),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -20),
+            
+            regionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            regionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            regionLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -20),
+            
+            statusLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            statusLabel.topAnchor.constraint(greaterThanOrEqualTo: regionLabel.bottomAnchor, constant: 10),
+            statusLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -23),
+            statusLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -20),
         ])
     }
 }
 
 // MARK: - API
-extension LaunchpadListCollectionViewCell {
+extension LaunchpadListCollectionViewCell: ModelDataDisplayable {
     
     func configure(with launchpad: Launchpad) {
-        launchpadView.setData(for: launchpad)
+        setupLabelStackData([nameLabel], with: launchpad.name)
+        setupLabelStackData([regionLabel], with: launchpad.region)
+        
+        statusLabel.setText(launchpad.status)
     }
 }

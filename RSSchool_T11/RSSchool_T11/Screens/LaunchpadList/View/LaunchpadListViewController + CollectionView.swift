@@ -13,7 +13,7 @@ extension LaunchpadListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-//        output?.didSelectLaunch(with: indexPath.row)
+        output?.didSelectLaunch(with: indexPath.row)
     }
 }
 

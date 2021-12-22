@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LaunchpadListRouterInput {
-    
+    func showLaunchpadDetailModule(for launchpad: Launchpad)
 }
