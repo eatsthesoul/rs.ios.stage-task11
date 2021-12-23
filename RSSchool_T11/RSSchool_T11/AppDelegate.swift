@@ -59,6 +59,7 @@ extension AppDelegate {
         tabBarAppearance.unselectedItemTintColor = .champagne
         tabBarAppearance.barTintColor = .queenBlue
         tabBarAppearance.backgroundImage = UIImage()
+        tabBarAppearance.isTranslucent = false
         
         let tabBarItemAppearance = UITabBarItem.appearance()
         tabBarItemAppearance.setTitleTextAttributes([.font: UIFont.roboto(10, .medium),

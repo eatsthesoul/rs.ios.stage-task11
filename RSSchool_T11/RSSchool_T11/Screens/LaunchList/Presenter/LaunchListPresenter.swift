@@ -18,6 +18,7 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     
     let networkService: NetworkServiceProtocol
     var launches: [Launch]
+    var launchIDs: [String]?
     
     //MARK: - Initializers
     
@@ -52,7 +53,22 @@ extension LaunchListPresenter {
                 return
             }
             guard let launches = launches else { return }
-            self?.launches = launches
+            
+            switch self?.launchIDs {
+            //case when we need present launches with a specific ID
+            case .some(let launchIDs):
+                let filteringRockets = launches.filter { launch in
+                    for launchID in launchIDs {
+                        if launch.id == launchID { return true }
+                    }
+                    return false
+                }
+                self?.launches = filteringRockets
+            //case when we need present all launches
+            case .none:
+                self?.launches = launches
+            }
+            
             self?.view?.reloadCollectionView()
             self?.view?.stopLoader()
         }

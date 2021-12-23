@@ -19,7 +19,7 @@ final class RocketsListRouter: RocketsListRouterInput {
     func showRocketDetailModule(for rocket: Rocket) {
         let rocketDetailConfigurator = RocketDetailModuleConfigurator()
         let rocketDetailViewController = rocketDetailConfigurator.configure(with: rocket)
-        view?.push(module: rocketDetailViewController, animated: true)
+        view?.push(module: rocketDetailViewController, animated: true, hideTabBar: true)
     }
 
 }

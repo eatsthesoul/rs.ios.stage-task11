@@ -19,6 +19,6 @@ final class LaunchListRouter: LaunchListRouterInput {
     func showLaunchDetailModule(for launch: Launch) {
         let launchDetailConfigurator = LaunchDetailModuleConfigurator()
         let launchDetailViewController = launchDetailConfigurator.configure(with: launch)
-        view?.push(module: launchDetailViewController, animated: true)
+        view?.push(module: launchDetailViewController, animated: true, hideTabBar: true)
     }
 }

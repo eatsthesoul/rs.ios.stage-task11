@@ -10,4 +10,6 @@ import Foundation
 
 protocol LaunchpadDetailRouterInput {
     func showPictureInDetail(for url: String)
+    func showRocketsWith(ids: [String])
+    func showLaunchesWith(ids: [String])
 }

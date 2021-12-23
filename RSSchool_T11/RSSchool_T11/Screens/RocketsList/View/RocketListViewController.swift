@@ -49,7 +49,6 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -72,7 +71,7 @@ private extension RocketListViewController {
             
             rocketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             rocketsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.sidePadding),
-            rocketsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            rocketsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             rocketsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.sidePadding)
         ])
     }

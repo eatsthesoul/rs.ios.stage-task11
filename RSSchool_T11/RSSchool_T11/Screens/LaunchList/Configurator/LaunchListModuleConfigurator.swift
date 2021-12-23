@@ -12,7 +12,7 @@ final class LaunchListModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure(output: LaunchListModuleOutput? = nil) -> LaunchListViewController {
+    func configure(with launchIDs: [String]? = nil, output: LaunchListModuleOutput? = nil) -> LaunchListViewController {
         let view = LaunchListViewController()
         let presenter = LaunchListPresenter()
         let router = LaunchListRouter()
@@ -22,6 +22,8 @@ final class LaunchListModuleConfigurator {
         presenter.output = output
         router.view = view
         view.output = presenter
+        
+        presenter.launchIDs = launchIDs
 
         return view
     }

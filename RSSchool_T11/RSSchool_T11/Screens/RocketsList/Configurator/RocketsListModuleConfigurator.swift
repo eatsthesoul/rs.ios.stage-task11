@@ -12,7 +12,7 @@ final class RocketsListModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure(output: RocketListModuleOutput? = nil) -> RocketListViewController {
+    func configure(with rocketIDs: [String]? = nil, output: RocketListModuleOutput? = nil) -> RocketListViewController {
         let view = RocketListViewController()
         let presenter = RocketListPresenter()
         let router = RocketsListRouter()
@@ -22,6 +22,8 @@ final class RocketsListModuleConfigurator {
         presenter.output = output
         router.view = view
         view.output = presenter
+        
+        presenter.rocketIDs = rocketIDs
 
         return view
     }

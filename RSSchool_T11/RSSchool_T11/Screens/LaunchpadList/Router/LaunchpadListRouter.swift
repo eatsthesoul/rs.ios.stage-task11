@@ -18,6 +18,6 @@ final class LaunchpadListRouter: LaunchpadListRouterInput {
     func showLaunchpadDetailModule(for launchpad: Launchpad) {
         let launchpadDetailConfigurator = LaunchpadDetailModuleConfigurator()
         let launchpadDetailViewController = launchpadDetailConfigurator.configure(with: launchpad)
-        view?.push(module: launchpadDetailViewController, animated: true)
+        view?.push(module: launchpadDetailViewController, animated: true, hideTabBar: true)
     }
 }

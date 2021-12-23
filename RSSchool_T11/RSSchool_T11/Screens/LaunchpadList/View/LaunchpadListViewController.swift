@@ -45,7 +45,6 @@ final class LaunchpadListViewController: UIViewController, LaunchpadListViewInpu
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     

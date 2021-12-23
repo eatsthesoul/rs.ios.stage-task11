@@ -11,4 +11,5 @@ import UIKit
 protocol LaunchpadDetailViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectImage(with index: Int)
+    func showLaunchMaterial(_ type: LaunchpadLinkType)
 }

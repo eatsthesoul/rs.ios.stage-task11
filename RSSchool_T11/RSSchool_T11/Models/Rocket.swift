@@ -22,6 +22,7 @@ struct Rocket: Codable {
     let secondStage: SecondRocketStage?
     let landingLegs: LandingLegs?
     let wikipedia: String?
+    let id: String?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -38,6 +39,7 @@ struct Rocket: Codable {
         case secondStage = "second_stage"
         case landingLegs = "landing_legs"
         case wikipedia
+        case id
     }
 }
 

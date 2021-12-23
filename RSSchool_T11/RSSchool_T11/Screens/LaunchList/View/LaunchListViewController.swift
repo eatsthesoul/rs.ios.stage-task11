@@ -50,7 +50,6 @@ final class LaunchListViewController: UIViewController, LaunchListViewInput, Mod
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tabBarController?.tabBar.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -74,7 +73,7 @@ private extension LaunchListViewController {
             
             launchesCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             launchesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: LayoutConstants.sidePadding),
-            launchesCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            launchesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             launchesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.sidePadding)
         ])
     }

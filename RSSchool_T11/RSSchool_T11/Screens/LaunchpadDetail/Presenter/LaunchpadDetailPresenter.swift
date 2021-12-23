@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum LaunchpadLinkType {
+    case rockets
+    case launches
+}
+
 final class LaunchpadDetailPresenter: NSObject, LaunchpadDetailModuleInput {
 
     // MARK: - Properties
@@ -38,5 +43,19 @@ extension LaunchpadDetailPresenter: LaunchpadDetailViewOutput {
     func didSelectImage(with index: Int) {
         guard let imageURL = launchpad?.images?.large?[index] else { return }
         router?.showPictureInDetail(for: imageURL)
+    }
+    
+    func showLaunchMaterial(_ type: LaunchpadLinkType) {
+        
+        guard let launchpad = launchpad else { return }
+        
+        switch type {
+        case .rockets:
+            let rockets = launchpad.rockets
+            router?.showRocketsWith(ids: rockets)
+        case .launches:
+            let launches = launchpad.launches
+            router?.showLaunchesWith(ids: launches)
+        }
     }
 }

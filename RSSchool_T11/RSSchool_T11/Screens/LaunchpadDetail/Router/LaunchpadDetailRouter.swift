@@ -22,4 +22,16 @@ final class LaunchpadDetailRouter: LaunchpadDetailRouterInput {
         imageDetailViewController.modalPresentationStyle = .fullScreen
         view?.presentModule(imageDetailViewController, animated: true, completion: nil)
     }
+    
+    func showRocketsWith(ids: [String]) {
+        let rocketsListModuleConfigurator = RocketsListModuleConfigurator()
+        let rocketsListViewController = rocketsListModuleConfigurator.configure(with: ids)
+        view?.push(module: rocketsListViewController, animated: true, hideTabBar: true)
+    }
+    
+    func showLaunchesWith(ids: [String]) {
+        let launchesListModuleConfigurator = LaunchListModuleConfigurator()
+        let launchesListViewController = launchesListModuleConfigurator.configure(with: ids)
+        view?.push(module: launchesListViewController, animated: true, hideTabBar: true)
+    }
 }

@@ -51,7 +51,7 @@ final class LaunchpadDetailViewController: UIViewController, ModuleTransitionabl
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .smokyWhite
-        setupImagesCollectionView()
+        setupSubviews()
         output?.viewDidLoad()
     }
     
@@ -106,11 +106,14 @@ extension LaunchpadDetailViewController: LaunchpadDetailViewInput, ModelDataDisp
 // MARK: - Private methods
 private extension LaunchpadDetailViewController {
     
-    func setupImagesCollectionView() {
+    func setupSubviews() {
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = output
         imagesCollectionView.register(ImageCell.self,
                                             forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
+        
+        rocketsButton.addTarget(self, action: #selector(showLaunchpadMaterial(_:)), for: .touchUpInside)
+        launchesButton.addTarget(self, action: #selector(showLaunchpadMaterial(_:)), for: .touchUpInside)
     }
     
     func setupMapViewWith(latitude: Double?, longitude: Double?, title: String?) {
@@ -130,5 +133,16 @@ private extension LaunchpadDetailViewController {
         annotation.coordinate = coordinate
         annotation.title = title
         mapView.mapView.addAnnotation(annotation)
+    }
+    
+    @objc func showLaunchpadMaterial(_ sender: UIButton) {
+        switch sender {
+        case rocketsButton:
+            output?.showLaunchMaterial(.rockets)
+        case launchesButton:
+            output?.showLaunchMaterial(.launches)
+        default:
+            break
+        }
     }
 }
