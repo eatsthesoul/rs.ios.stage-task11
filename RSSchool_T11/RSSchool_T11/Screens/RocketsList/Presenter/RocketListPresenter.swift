@@ -20,6 +20,7 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     let service: NetworkServiceProtocol
     var rockets: [Rocket]
     var rocketIDs: [String]?
+    var rocketsSortingParameter: Rocket.SortingParameter?
     
     //MARK: - Initializers
     
@@ -38,6 +39,35 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     
     func didSelectRocket(with index: Int) {
         router?.showRocketDetailModule(for: rockets[index])
+    }
+    
+    func sortRocketsBy(_ parameter: Rocket.SortingParameter) {
+        switch parameter {
+        case .firstLaunch:
+            if let sortingParameter = rocketsSortingParameter, sortingParameter == .firstLaunch {
+                rockets.sort { $0.firstLaunch! > $1.firstLaunch! }
+                rocketsSortingParameter = nil
+            } else {
+                rockets.sort { $0.firstLaunch! < $1.firstLaunch! }
+                rocketsSortingParameter = .firstLaunch
+            }
+        case .launchCost:
+            if let sortingParameter = rocketsSortingParameter, sortingParameter == .launchCost {
+                rockets.sort { $0.launchCost! > $1.launchCost! }
+                rocketsSortingParameter = nil
+            } else {
+                rockets.sort { $0.launchCost! < $1.launchCost! }
+                rocketsSortingParameter = .launchCost
+            }
+        case .successRate:
+            if let sortingParameter = rocketsSortingParameter, sortingParameter == .successRate {
+                rockets.sort { $0.success! > $1.success! }
+                rocketsSortingParameter = nil
+            } else {
+                rockets.sort { $0.success! < $1.success! }
+                rocketsSortingParameter = .successRate
+            }
+        }
     }
 
     // MARK: - RocketsListModuleInput

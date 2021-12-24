@@ -43,6 +43,7 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
         view.backgroundColor = .queenBlue
         addSubviews()
         setupLayout()
+        setupNavigationBar()
         output?.viewDidLoad()
     }
     
@@ -62,11 +63,11 @@ final class RocketListViewController: UIViewController, RocketListViewInput, Mod
 // MARK: - Private Methods
 
 private extension RocketListViewController {
-    private func addSubviews() {
+    func addSubviews() {
         view.addSubview(rocketsCollectionView)
     }
     
-    private func setupLayout() {
+    func setupLayout() {
         NSLayoutConstraint.activate([
             
             rocketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -74,5 +75,42 @@ private extension RocketListViewController {
             rocketsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             rocketsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.sidePadding)
         ])
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .arrowUpArrowDown, style: .plain, target: self, action: #selector(openSortingSheet))
+    }
+    
+    @objc func openSortingSheet() {
+        let sortingAlert = UIAlertController(title: "Choose your option", message: nil, preferredStyle: .actionSheet)
+        sortingAlert.view.tintColor = .coral
+        
+        //firstLaunchAlertAction
+        let firstLaunchAlertAction = UIAlertAction(title: "First launch", style: .default) { _ in
+            self.output?.sortRocketsBy(.firstLaunch)
+            self.rocketsCollectionView.reloadData()
+        }
+        sortingAlert.addAction(firstLaunchAlertAction)
+        
+        //launchCostAlertAction
+        let launchCostAlertAction = UIAlertAction(title: "Launch cost", style: .default) { _ in
+            self.output?.sortRocketsBy(.launchCost)
+            self.rocketsCollectionView.reloadData()
+        }
+        sortingAlert.addAction(launchCostAlertAction)
+        
+        //successRateAlertAction
+        let successRateAlertAction = UIAlertAction(title: "Success rate", style: .default) { _ in
+            self.output?.sortRocketsBy(.successRate)
+            self.rocketsCollectionView.reloadData()
+        }
+        sortingAlert.addAction(successRateAlertAction)
+        
+        //cancelAlertAction
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
+        cancelAlertAction.setValue(UIColor.systemRed, forKey: "titleTextColor")
+        sortingAlert.addAction(cancelAlertAction)
+        
+        self.present(sortingAlert, animated: true, completion: nil)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModuleInput {
+final class LaunchListPresenter: NSObject, LaunchListModuleInput {
     
     // MARK: - Properties
 
@@ -19,6 +19,7 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     let networkService: NetworkServiceProtocol
     var launches: [Launch]
     var launchIDs: [String]?
+    var launchesSortingParameter: Launch.SortingParameter?
     
     //MARK: - Initializers
     
@@ -27,9 +28,10 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
         launches = [Launch]()
         super.init()
     }
+}
 
-    // MARK: - LaunchListViewOutput
-    
+// MARK: - LaunchListViewOutput
+extension LaunchListPresenter: LaunchListViewOutput {
     func viewDidLoad() {
         loadLaunches()
     }
@@ -37,9 +39,27 @@ final class LaunchListPresenter: NSObject, LaunchListViewOutput, LaunchListModul
     func didSelectLaunch(with index: Int) {
         router?.showLaunchDetailModule(for: launches[index])
     }
-
-    // MARK: - LaunchListModuleInput
-
+    
+    func sortLaunchesBy(_ parameter: Launch.SortingParameter) {
+        switch parameter {
+        case .launchDate:
+            if let sortingParameter = launchesSortingParameter, sortingParameter == .launchDate {
+                launches.sort { $0.launchDate! > $1.launchDate! }
+                launchesSortingParameter = nil
+            } else {
+                launches.sort { $0.launchDate! < $1.launchDate! }
+                launchesSortingParameter = .launchDate
+            }
+        case .title:
+            if let sortingParameter = launchesSortingParameter, sortingParameter == .title {
+                launches.sort { $0.name! > $1.name! }
+                launchesSortingParameter = nil
+            } else {
+                launches.sort { $0.name! < $1.name! }
+                launchesSortingParameter = .title
+            }
+        }
+    }
 }
 
 //MARK: - Private methods

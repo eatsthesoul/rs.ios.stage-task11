@@ -120,3 +120,11 @@ struct LandingLegs: Codable {
     }
 }
 
+// MARK: - Sorting parameters
+extension Rocket {
+    enum SortingParameter {
+        case firstLaunch
+        case launchCost
+        case successRate
+    }
+}

@@ -66,3 +66,11 @@ struct Flickr: Codable {
     let small: [String]?
     let original: [String]?
 }
+
+// MARK: - Sorting parameters
+extension Launch {
+    enum SortingParameter {
+        case launchDate
+        case title
+    }
+}

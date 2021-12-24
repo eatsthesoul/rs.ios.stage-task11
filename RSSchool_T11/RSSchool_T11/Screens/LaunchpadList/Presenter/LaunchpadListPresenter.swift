@@ -18,6 +18,7 @@ final class LaunchpadListPresenter: NSObject {
     
     let networkService: NetworkServiceProtocol
     var launchpads: [Launchpad]
+    var launchpadsSortingParameter: Launchpad.SortingParameter?
     
     //MARK: - Initializers
     
@@ -40,6 +41,35 @@ extension LaunchpadListPresenter: LaunchpadListViewOutput {
         guard index < launchpads.count else { return }
         let launchpad = launchpads[index]
         router?.showLaunchpadDetailModule(for: launchpad)
+    }
+    
+    func sortLaunchpadsBy(_ parameter: Launchpad.SortingParameter) {
+        switch parameter {
+        case .title:
+            if let sortingParameter = launchpadsSortingParameter, sortingParameter == .title {
+                launchpads.sort { $0.name! > $1.name! }
+                launchpadsSortingParameter = nil
+            } else {
+                launchpads.sort { $0.name! < $1.name! }
+                launchpadsSortingParameter = .title
+            }
+        case .region:
+            if let sortingParameter = launchpadsSortingParameter, sortingParameter == .region {
+                launchpads.sort { $0.region! > $1.region! }
+                launchpadsSortingParameter = nil
+            } else {
+                launchpads.sort { $0.region! < $1.region! }
+                launchpadsSortingParameter = .region
+            }
+        case .status:
+            if let sortingParameter = launchpadsSortingParameter, sortingParameter == .status {
+                launchpads.sort { $0.status > $1.status }
+                launchpadsSortingParameter = nil
+            } else {
+                launchpads.sort { $0.status < $1.status }
+                launchpadsSortingParameter = .status
+            }
+        }
     }
 }
 

@@ -44,6 +44,7 @@ final class LaunchListViewController: UIViewController, LaunchListViewInput, Mod
         view.backgroundColor = .queenBlue
         addSubviews()
         setupLayout()
+        setupNavigationBar()
         output?.viewDidLoad()
     }
     
@@ -76,5 +77,35 @@ private extension LaunchListViewController {
             launchesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             launchesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -LayoutConstants.sidePadding)
         ])
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .arrowUpArrowDown, style: .plain, target: self, action: #selector(openSortingSheet))
+    }
+    
+    @objc func openSortingSheet() {
+        let sortingAlert = UIAlertController(title: "Choose your option", message: nil, preferredStyle: .actionSheet)
+        sortingAlert.view.tintColor = .coral
+        
+        //launchDateAlertAction
+        let launchDateAlertAction = UIAlertAction(title: "Launch date", style: .default) { _ in
+            self.output?.sortLaunchesBy(.launchDate)
+            self.launchesCollectionView.reloadData()
+        }
+        sortingAlert.addAction(launchDateAlertAction)
+        
+        //titleAlertAction
+        let titleAlertAction = UIAlertAction(title: "Title", style: .default) { _ in
+            self.output?.sortLaunchesBy(.title)
+            self.launchesCollectionView.reloadData()
+        }
+        sortingAlert.addAction(titleAlertAction)
+        
+        //cancelAlertAction
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
+        cancelAlertAction.setValue(UIColor.systemRed, forKey: "titleTextColor")
+        sortingAlert.addAction(cancelAlertAction)
+        
+        self.present(sortingAlert, animated: true, completion: nil)
     }
 }

@@ -68,4 +68,8 @@ extension UIImage {
     static var buttonForward: UIImage {
         UIImage(named: "button-forward")!
     }
+    
+    static var arrowUpArrowDown: UIImage {
+        UIImage(named: "arrow.up.arrow.down")!
+    }
 }

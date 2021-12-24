@@ -10,4 +10,5 @@ import UIKit
 protocol LaunchpadListViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectLaunch(with: Int)
+    func sortLaunchpadsBy(_ parameter: Launchpad.SortingParameter)
 }
