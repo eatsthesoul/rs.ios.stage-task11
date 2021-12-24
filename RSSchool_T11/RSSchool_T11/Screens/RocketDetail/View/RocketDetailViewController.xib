@@ -90,7 +90,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="2123"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMu-Me-YrA">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="WMu-Me-YrA">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="2123"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-uh-0ol" userLabel="ContentView">
@@ -102,6 +102,15 @@
                                         <constraint firstAttribute="width" secondItem="lpU-uL-RM2" secondAttribute="height" multiplier="414:383" id="C5c-Zh-Ap6"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvW-jO-NxR">
+                                    <rect key="frame" x="20" y="50" width="15" height="25"/>
+                                    <color key="tintColor" name="Coral"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="left"/>
+                                    <connections>
+                                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="HlO-sB-lut"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsM-aT-WnA">
                                     <rect key="frame" x="20" y="296.5" width="282.5" height="56.5"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="48"/>
@@ -624,6 +633,7 @@
                             <color key="backgroundColor" name="Smoky White"/>
                             <constraints>
                                 <constraint firstItem="GsM-aT-WnA" firstAttribute="leading" secondItem="lpU-uL-RM2" secondAttribute="leading" constant="20" id="8V3-Tw-Ws1"/>
+                                <constraint firstItem="SvW-jO-NxR" firstAttribute="top" secondItem="cSu-uh-0ol" secondAttribute="top" constant="50" id="C29-L7-8ye"/>
                                 <constraint firstItem="GsM-aT-WnA" firstAttribute="bottom" secondItem="lpU-uL-RM2" secondAttribute="bottom" constant="-30" id="CtX-w5-DV2"/>
                                 <constraint firstItem="lpU-uL-RM2" firstAttribute="top" secondItem="cSu-uh-0ol" secondAttribute="top" id="QTl-m4-wOr"/>
                                 <constraint firstItem="PjP-bW-wxY" firstAttribute="leading" secondItem="cSu-uh-0ol" secondAttribute="leading" id="RKp-fE-fd0"/>
@@ -644,8 +654,8 @@
                         <constraint firstItem="cSu-uh-0ol" firstAttribute="leading" secondItem="WMu-Me-YrA" secondAttribute="leading" id="lDc-tl-0ar"/>
                         <constraint firstAttribute="bottom" secondItem="cSu-uh-0ol" secondAttribute="bottom" id="sMx-ZX-QGx"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="zDE-Dg-FdV"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="twF-Qn-09s"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="GQg-Za-0Wu"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="fow-om-E5J"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Pbm-Oe-khQ"/>
@@ -654,6 +664,7 @@
                 <constraint firstItem="WMu-Me-YrA" firstAttribute="leading" secondItem="DPm-wS-kss" secondAttribute="leading" id="KDS-gT-Oyn"/>
                 <constraint firstAttribute="trailing" secondItem="WMu-Me-YrA" secondAttribute="trailing" id="Sed-Xm-GDZ"/>
                 <constraint firstAttribute="top" secondItem="WMu-Me-YrA" secondAttribute="top" id="TOU-ex-uTv"/>
+                <constraint firstItem="SvW-jO-NxR" firstAttribute="leading" secondItem="Pbm-Oe-khQ" secondAttribute="leading" constant="20" id="k24-5U-lWU"/>
                 <constraint firstItem="WMu-Me-YrA" firstAttribute="bottom" secondItem="DPm-wS-kss" secondAttribute="bottom" id="qQy-MQ-Bms"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -661,8 +672,12 @@
         </view>
     </objects>
     <resources>
+        <image name="left" width="15" height="25"/>
         <image name="link" width="16" height="16"/>
         <image name="spaceXTemplate" width="1024" height="1024"/>
+        <namedColor name="Coral">
+            <color red="0.98900002241134644" green="0.52100002765655518" blue="0.31999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Slate Gray">
             <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

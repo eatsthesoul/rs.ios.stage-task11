@@ -97,6 +97,21 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
     //materials
     @IBOutlet weak var materialsStackView: UIStackView!
     @IBOutlet weak var wikiButton: UIShadowButton!
+    
+    @IBAction func goBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    lazy var coverImageGradientLayer: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        let blackColor = UIColor.black.withAlphaComponent(0.7)
+        layer.colors = [UIColor.clear.cgColor, blackColor.cgColor]
+        layer.locations = [0.5, 1]
+        layer.startPoint = CGPoint(x: 0, y: 0)
+        layer.endPoint = CGPoint(x: 0, y: 1)
+        return layer
+    }()
+    
 
     // MARK: - UIViewController
 
@@ -110,7 +125,12 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
         super.viewWillAppear(animated)
         
         tabBarController?.tabBar.isHidden = true
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        coverImageGradientLayer.frame = coverImage.layer.bounds
     }
 }
 
@@ -118,6 +138,8 @@ final class RocketDetailViewController: UIViewController, RocketDetailViewInput,
 extension RocketDetailViewController {
     
     private func setupViews() {
+        
+        coverImage.layer.addSublayer(coverImageGradientLayer)
         
         wikiButton.addTarget(self, action: #selector(showRocketMaterial(_:)), for: .touchUpInside)
         
