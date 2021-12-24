@@ -131,6 +131,8 @@ extension LaunchDetailViewController {
     
     func setup(with launch: Launch) {
         
+        navigationItem.title = launch.name
+        
         //launch view
         launchView.setData(for: launch)
         

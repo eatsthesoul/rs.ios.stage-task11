@@ -70,6 +70,9 @@ final class LaunchpadDetailViewController: UIViewController, ModuleTransitionabl
 extension LaunchpadDetailViewController: LaunchpadDetailViewInput, ModelDataDisplayable {
     
     func setup(with launchpad: Launchpad) {
+        
+        navigationItem.title = launchpad.name
+        
         nameLabel.text = launchpad.name
         fullNameLabel.text = launchpad.fullName
         
