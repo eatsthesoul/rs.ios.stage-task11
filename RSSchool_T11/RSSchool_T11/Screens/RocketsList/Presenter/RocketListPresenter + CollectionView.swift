@@ -10,7 +10,7 @@ import UIKit
 extension RocketListPresenter: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rockets.count
+        return displayingRockets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -19,7 +19,7 @@ extension RocketListPresenter: UICollectionViewDataSource {
         if let cell = cell as? RocketListCell {
             
             //rocket data
-            let rocket = rockets[indexPath.row]
+            let rocket = displayingRockets[indexPath.row]
             cell.configure(with: rocket)
             
             //rocket image

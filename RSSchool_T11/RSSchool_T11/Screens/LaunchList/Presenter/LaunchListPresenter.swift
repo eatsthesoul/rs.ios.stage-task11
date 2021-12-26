@@ -17,14 +17,16 @@ final class LaunchListPresenter: NSObject, LaunchListModuleInput {
     var output: LaunchListModuleOutput?
     
     let networkService: NetworkServiceProtocol
+    var displayingLaunches: [Launch]
     var launches: [Launch]
     var launchIDs: [String]?
-    var launchesSortingParameter: Launch.SortingParameter?
+    private var sortingParameters: (parameter: Launch.SortingParameter, isAscending: Bool)?
     
     //MARK: - Initializers
     
     override init() {
         networkService = NetworkService()
+        displayingLaunches = [Launch]()
         launches = [Launch]()
         super.init()
     }
@@ -37,27 +39,21 @@ extension LaunchListPresenter: LaunchListViewOutput {
     }
     
     func didSelectLaunch(with index: Int) {
-        router?.showLaunchDetailModule(for: launches[index])
+        router?.showLaunchDetailModule(for: displayingLaunches[index])
     }
     
     func sortLaunchesBy(_ parameter: Launch.SortingParameter) {
-        switch parameter {
-        case .launchDate:
-            if let sortingParameter = launchesSortingParameter, sortingParameter == .launchDate {
-                launches.sort { $0.launchDate! > $1.launchDate! }
-                launchesSortingParameter = nil
-            } else {
-                launches.sort { $0.launchDate! < $1.launchDate! }
-                launchesSortingParameter = .launchDate
-            }
-        case .title:
-            if let sortingParameter = launchesSortingParameter, sortingParameter == .title {
-                launches.sort { $0.name! > $1.name! }
-                launchesSortingParameter = nil
-            } else {
-                launches.sort { $0.name! < $1.name! }
-                launchesSortingParameter = .title
-            }
+        if var sortingParameters = self.sortingParameters, sortingParameters.parameter == parameter {
+            //set parameters
+            sortingParameters.isAscending = !sortingParameters.isAscending
+            self.sortingParameters = sortingParameters
+            //sorting
+            displayingLaunches = sortingParameters.isAscending ?
+            sortLaunches(displayingLaunches, by: parameter, isAscending: true) :
+            sortLaunches(displayingLaunches, by: parameter, isAscending: false)
+        } else {
+            self.sortingParameters = (parameter, true)
+            displayingLaunches = sortLaunches(displayingLaunches, by: parameter, isAscending: true)
         }
     }
 }
@@ -83,14 +79,31 @@ extension LaunchListPresenter {
                     }
                     return false
                 }
+                self?.displayingLaunches = filteringRockets
                 self?.launches = filteringRockets
             //case when we need present all launches
             case .none:
+                self?.displayingLaunches = launches
                 self?.launches = launches
             }
             
             self?.view?.reloadCollectionView()
             self?.view?.stopLoader()
         }
+    }
+    
+    func sortLaunches(_ launches: [Launch], by parameter: Launch.SortingParameter, isAscending: Bool) -> [Launch] {
+        var sortedLaunches = launches
+        
+        switch parameter {
+        case .launchDate:
+            isAscending ?
+            sortedLaunches.sort { $0.launchDate! < $1.launchDate! } :
+            sortedLaunches.sort { $0.launchDate! > $1.launchDate! }
+        case .title:
+            isAscending ? sortedLaunches.sort { $0.name! < $1.name! } : sortedLaunches.sort { $0.name! > $1.name! }
+        }
+        
+        return sortedLaunches
     }
 }

@@ -11,7 +11,7 @@ extension LaunchListPresenter: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return launches.count
+        return displayingLaunches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -21,7 +21,7 @@ extension LaunchListPresenter: UICollectionViewDataSource {
         if let cell = cell as? LaunchListCollectionViewCell {
             
             //launch data
-            let launch = launches[indexPath.row]
+            let launch = displayingLaunches[indexPath.row]
             cell.configure(with: launch)
             
             //launch image

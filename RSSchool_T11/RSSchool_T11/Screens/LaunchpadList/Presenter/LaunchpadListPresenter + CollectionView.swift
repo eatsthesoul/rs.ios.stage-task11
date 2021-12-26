@@ -10,7 +10,7 @@ import UIKit
 extension LaunchpadListPresenter: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return launchpads.count
+        return displayingLaunchpads.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -19,7 +19,7 @@ extension LaunchpadListPresenter: UICollectionViewDataSource {
         
         if let cell = cell as? LaunchpadListCollectionViewCell {
             //launch data
-            let launchpad = launchpads[indexPath.row]
+            let launchpad = displayingLaunchpads[indexPath.row]
             cell.configure(with: launchpad)
         }
         return cell

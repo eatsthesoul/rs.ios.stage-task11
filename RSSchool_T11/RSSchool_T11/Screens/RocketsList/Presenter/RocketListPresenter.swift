@@ -19,14 +19,16 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     
     let service: NetworkServiceProtocol
     var rockets: [Rocket]
+    var displayingRockets: [Rocket]
     var rocketIDs: [String]?
-    var rocketsSortingParameter: Rocket.SortingParameter?
+    private var sortingParameters: (parameter: Rocket.SortingParameter, isAscending: Bool)?
     
     //MARK: - Initializers
     
     override init() {
         service = NetworkService()
         rockets = [Rocket]()
+        displayingRockets = rockets
         super.init()
     }
     
@@ -38,35 +40,21 @@ final class RocketListPresenter: NSObject, RocketListViewOutput, RocketListModul
     }
     
     func didSelectRocket(with index: Int) {
-        router?.showRocketDetailModule(for: rockets[index])
+        router?.showRocketDetailModule(for: displayingRockets[index])
     }
     
     func sortRocketsBy(_ parameter: Rocket.SortingParameter) {
-        switch parameter {
-        case .firstLaunch:
-            if let sortingParameter = rocketsSortingParameter, sortingParameter == .firstLaunch {
-                rockets.sort { $0.firstLaunch! > $1.firstLaunch! }
-                rocketsSortingParameter = nil
-            } else {
-                rockets.sort { $0.firstLaunch! < $1.firstLaunch! }
-                rocketsSortingParameter = .firstLaunch
-            }
-        case .launchCost:
-            if let sortingParameter = rocketsSortingParameter, sortingParameter == .launchCost {
-                rockets.sort { $0.launchCost! > $1.launchCost! }
-                rocketsSortingParameter = nil
-            } else {
-                rockets.sort { $0.launchCost! < $1.launchCost! }
-                rocketsSortingParameter = .launchCost
-            }
-        case .successRate:
-            if let sortingParameter = rocketsSortingParameter, sortingParameter == .successRate {
-                rockets.sort { $0.success! > $1.success! }
-                rocketsSortingParameter = nil
-            } else {
-                rockets.sort { $0.success! < $1.success! }
-                rocketsSortingParameter = .successRate
-            }
+        if var sortingParameters = self.sortingParameters, sortingParameters.parameter == parameter {
+            //set parameters
+            sortingParameters.isAscending = !sortingParameters.isAscending
+            self.sortingParameters = sortingParameters
+            //sorting
+            displayingRockets = sortingParameters.isAscending ?
+            sortRockets(displayingRockets, by: parameter, isAscending: true) :
+            sortRockets(displayingRockets, by: parameter, isAscending: false)
+        } else {
+            self.sortingParameters = (parameter, true)
+            displayingRockets = sortRockets(displayingRockets, by: parameter, isAscending: true)
         }
     }
 
@@ -98,13 +86,36 @@ private extension RocketListPresenter {
                     return false
                 }
                 self?.rockets = filteringRockets
+                self?.displayingRockets = filteringRockets
             //case when we need present all rockets
             case .none:
                 self?.rockets = rockets
+                self?.displayingRockets = rockets
             }
             
             self?.view?.reloadCollectionView()
             self?.view?.stopLoader()
         }
+    }
+    
+    func sortRockets(_ rockets: [Rocket], by parameter: Rocket.SortingParameter, isAscending: Bool) -> [Rocket] {
+        var sortedRockets = rockets
+        
+        switch parameter {
+        case .launchCost:
+            isAscending ?
+            sortedRockets.sort { $0.launchCost! < $1.launchCost!} :
+            sortedRockets.sort { $0.launchCost! > $1.launchCost! }
+        case .successRate:
+            isAscending ?
+            sortedRockets.sort { $0.success! < $1.success! } :
+            sortedRockets.sort { $0.success! > $1.success! }
+        case .firstLaunch:
+            isAscending ?
+            sortedRockets.sort { $0.firstLaunch! < $1.firstLaunch! } :
+            sortedRockets.sort { $0.firstLaunch! > $1.firstLaunch! }
+        }
+        
+        return sortedRockets
     }
 }
