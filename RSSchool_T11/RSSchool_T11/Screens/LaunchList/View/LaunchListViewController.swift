@@ -129,6 +129,13 @@ private extension LaunchListViewController {
         }
         sortingAlert.addAction(titleAlertAction)
         
+        //numberAlertAction
+        let numberAlertAction = UIAlertAction(title: "Number", style: .default) { _ in
+            self.output?.sortLaunchesBy(.number)
+            self.launchesCollectionView.reloadData()
+        }
+        sortingAlert.addAction(numberAlertAction)
+        
         //cancelAlertAction
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
         cancelAlertAction.setValue(UIColor.systemRed, forKey: "titleTextColor")

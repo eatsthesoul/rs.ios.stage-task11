@@ -73,6 +73,7 @@ extension Launch {
     enum SortingParameter {
         case launchDate
         case title
+        case number
     }
 
     enum FilteringParameter {

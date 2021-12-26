@@ -123,7 +123,13 @@ extension LaunchListPresenter {
             sortedLaunches.sort { $0.launchDate! < $1.launchDate! } :
             sortedLaunches.sort { $0.launchDate! > $1.launchDate! }
         case .title:
-            isAscending ? sortedLaunches.sort { $0.name! < $1.name! } : sortedLaunches.sort { $0.name! > $1.name! }
+            isAscending ?
+            sortedLaunches.sort { $0.name! < $1.name! } :
+            sortedLaunches.sort { $0.name! > $1.name! }
+        case .number:
+            isAscending ?
+            sortedLaunches.sort { $0.flightNumber! < $1.flightNumber! } :
+            sortedLaunches.sort { $0.flightNumber! > $1.flightNumber! }
         }
         
         return sortedLaunches
