@@ -60,6 +60,28 @@ extension LaunchpadListPresenter: LaunchpadListViewOutput {
             displayingLaunchpads = sortLaunchpads(displayingLaunchpads, by: parameter, isAscending: true)
         }
     }
+    
+    func filterLaunchpadsBy(_ parameter: Launchpad.FilteringParameter) {
+            var filteringLaunchpads = [Launchpad]()
+            
+            switch parameter {
+            case .all:
+                filteringLaunchpads = launchpads
+            case .active:
+                filteringLaunchpads = launchpads.filter { $0.status == "active"}
+            case .retired:
+                filteringLaunchpads = launchpads.filter { $0.status == "retired" }
+            }
+            
+            //sort launchpads if they are needed
+            if let sortingParameters = self.sortingParameters {
+                let parameter = sortingParameters.parameter
+                let isAscending = sortingParameters.isAscending
+                filteringLaunchpads = sortLaunchpads(filteringLaunchpads, by: parameter, isAscending: isAscending)
+            }
+            
+            displayingLaunchpads = filteringLaunchpads
+    }
 }
 
 //MARK: - Private methods

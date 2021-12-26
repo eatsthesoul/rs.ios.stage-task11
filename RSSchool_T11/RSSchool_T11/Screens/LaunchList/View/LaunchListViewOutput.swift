@@ -12,4 +12,5 @@ protocol LaunchListViewOutput: UICollectionViewDataSource {
     func viewDidLoad()
     func didSelectLaunch(with index: Int)
     func sortLaunchesBy(_ parameter: Launch.SortingParameter)
+    func filterLaunchesBy(_ parameter: Launch.FilteringParameter)
 }

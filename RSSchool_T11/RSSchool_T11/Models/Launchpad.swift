@@ -47,11 +47,17 @@ struct LaunchpadImages: Codable {
     let large: [String]?
 }
 
-// MARK: - Sorting parameters
+// MARK: - Sorting and filtering
 extension Launchpad {
     enum SortingParameter {
         case title
         case region
         case status
+    }
+    
+    enum FilteringParameter {
+        case all
+        case active
+        case retired
     }
 }

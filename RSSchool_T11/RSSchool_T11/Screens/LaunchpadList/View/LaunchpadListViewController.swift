@@ -76,6 +76,34 @@ private extension LaunchpadListViewController {
     
     func setupNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .arrowUpArrowDown, style: .plain, target: self, action: #selector(openSortingSheet))
+        
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.backgroundColor = .glaucous
+        segmentedControl.tintColor = .smokyBlack
+        
+        segmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
+        segmentedControl.insertSegment(withTitle: "Active", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "Retired", at: 2, animated: false)
+        
+        segmentedControl.selectedSegmentIndex = 0
+        
+        segmentedControl.addTarget(self, action: #selector(filterLaunchpads(_:)), for: .valueChanged)
+        
+        navigationItem.titleView = segmentedControl
+    }
+    
+    @objc func filterLaunchpads(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            output?.filterLaunchpadsBy(.all)
+        case 1:
+            output?.filterLaunchpadsBy(.active)
+        case 2:
+            output?.filterLaunchpadsBy(.retired)
+        default:
+            break
+        }
+        launchpadsCollectionView.reloadData()
     }
     
     @objc func openSortingSheet() {

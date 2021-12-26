@@ -56,6 +56,28 @@ extension LaunchListPresenter: LaunchListViewOutput {
             displayingLaunches = sortLaunches(displayingLaunches, by: parameter, isAscending: true)
         }
     }
+    
+    func filterLaunchesBy(_ parameter: Launch.FilteringParameter) {
+        var filteringLaunches = [Launch]()
+        
+        switch parameter {
+        case .future:
+            filteringLaunches = launches.filter { $0.upcoming! }
+        case .past:
+            filteringLaunches = launches.filter { !$0.upcoming! }
+        case .all:
+            filteringLaunches = launches
+        }
+        
+        //sort launchpads if they are needed
+        if let sortingParameters = self.sortingParameters {
+            let parameter = sortingParameters.parameter
+            let isAscending = sortingParameters.isAscending
+            filteringLaunches = sortLaunches(filteringLaunches, by: parameter, isAscending: isAscending)
+        }
+        
+        displayingLaunches = filteringLaunches
+    }
 }
 
 //MARK: - Private methods

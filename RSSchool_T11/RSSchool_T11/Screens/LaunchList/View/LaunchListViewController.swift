@@ -81,6 +81,34 @@ private extension LaunchListViewController {
     
     func setupNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: .arrowUpArrowDown, style: .plain, target: self, action: #selector(openSortingSheet))
+        
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.backgroundColor = .glaucous
+        segmentedControl.tintColor = .smokyBlack
+        
+        segmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
+        segmentedControl.insertSegment(withTitle: "Past", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "Future", at: 2, animated: false)
+        
+        segmentedControl.selectedSegmentIndex = 0
+        
+        segmentedControl.addTarget(self, action: #selector(filterLaunches(_:)), for: .valueChanged)
+        
+        navigationItem.titleView = segmentedControl
+    }
+    
+    @objc func filterLaunches(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            output?.filterLaunchesBy(.all)
+        case 1:
+            output?.filterLaunchesBy(.past)
+        case 2:
+            output?.filterLaunchesBy(.future)
+        default:
+            break
+        }
+        launchesCollectionView.reloadData()
     }
     
     @objc func openSortingSheet() {
