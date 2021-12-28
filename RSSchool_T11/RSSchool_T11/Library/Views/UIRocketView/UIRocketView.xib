@@ -118,7 +118,7 @@
         </view>
     </objects>
     <resources>
-        <image name="spaceXTemplate" width="1024" height="1024"/>
+        <image name="spaceXTemplate" width="1584" height="902"/>
         <namedColor name="Slate Gray">
             <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
