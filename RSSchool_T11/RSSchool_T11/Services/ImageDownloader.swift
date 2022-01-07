@@ -33,7 +33,7 @@ class ImageService: ImageServiceProtocol {
             return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+        let dataTask = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             DispatchQueue.main.async {
                 if let error = error {
                     completion(nil, error)
@@ -41,6 +41,7 @@ class ImageService: ImageServiceProtocol {
                 }
                 
                 guard let data = data, let image = UIImage(data: data) else { return }
+                self?.imageCache.setObject(image, forKey: key)
                 completion(image, nil)
             }
         }
